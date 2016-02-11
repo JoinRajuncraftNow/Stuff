@@ -1,5 +1,5 @@
 @ECHO OFF
-::Ok. Lets start a google hangout through email and chat in real time.
+::Ok. Start translating into powershell.
 TITLE Hydra 
 set n=0
 :begin
