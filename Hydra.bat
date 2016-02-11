@@ -1,9 +1,6 @@
 @ECHO OFF
-::I tested some batch files on Brandon's computer. He got freaked out and brought it to the help desk. If he gets his laptop back tomorrow, then it was definitely me.
-::What do you mean? I still have JScript!
-::Is ps blocked, or possible?
-::How did you get batch blocked? (And D and C++ goto exe, which is very suspicious, JScript is .js, which looks like normal javascript.
-::There is a way to check for comparisons, just not using < and >, since they are redirect chars
+::You idiot!
+::Do you think the Batch programmers are going to be in trouble?
 TITLE Hydra 
 set n=0
 :begin
