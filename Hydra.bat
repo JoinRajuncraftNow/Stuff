@@ -1,4 +1,5 @@
 @ECHO OFF
+::Can't test either, they found a way to disable cmd.exe, SO BATCH IS DEAD!
 ::Wrote this on my phone so I cannot test, so can you check for any errors? 
 TITLE Hydra 
 set n=0
