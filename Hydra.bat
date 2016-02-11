@@ -1,6 +1,7 @@
 @ECHO OFF
 ::Can't test either, they found a way to disable cmd.exe, SO BATCH IS DEAD!
 ::We can find a way. 
+::Did they disable yours?
 ::Wrote this on my phone so I cannot test, so can you check for any errors? 
 TITLE Hydra 
 set n=0
