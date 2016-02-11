@@ -1,7 +1,7 @@
 @ECHO OFF
 SET n=0
-:loop
 title Hydra
+:loop
 ::Lets make this uncloseable by all other programs. 
 FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq Hydra" ^| find/c "exe"`) DO (
 SET windowcount=%%F
