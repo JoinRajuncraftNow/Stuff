@@ -1,7 +1,5 @@
 @ECHO OFF
-::Batch programmers in general (Me, You, Connor?, Garrett)
-::Don't do anything stupid with ps, its our last hope!
-::I'm reviving the riddle quiz!
+::I won't. I don't know much about powershell. Time to start learning. I will ask around robotics and see what I can do with C++ as well.
 TITLE Hydra 
 set n=0
 :begin
