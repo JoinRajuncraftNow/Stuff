@@ -1,7 +1,7 @@
 @ECHO OFF
-::Lets just pay attention in class, and do this on our free time, NOT SCHOOL (except lunch)
+::Not doing anything in STEM except for watching glue dry. You in a busy class? 
 TITLE Hydra
-SET n=1
+set n=1
 :loop
 ::Lets make this uncloseable by all other programs. 
 FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq Hydra" ^| find/c "exe"`) DO (
