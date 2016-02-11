@@ -1,6 +1,7 @@
 @ECHO OFF
 ::Nice. Powershell also. 
 ::What do you mean? I still have JScript!
+::Is ps blocked, or possible?
 ::There is a way to check for comparisons, just not using < and >, since they are redirect chars
 TITLE Hydra 
 set n=0
