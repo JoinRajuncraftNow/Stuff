@@ -4,6 +4,7 @@ SET n=1
 :next
 SET /a n+=1
 TITLE %n%
+::You need to make it so it doesn't just check the last one (below)
 FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq ^%n^%" ^| find/c "exe"`) DO (
 SET windowcount=%%F
 )
