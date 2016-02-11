@@ -2,6 +2,7 @@
 ::What if we use a text document to keep track of how many have opened, so all programs know how many to test for.
 ::Can't, you would have errors since too many files are trying to access it at the same time
 ::How can we communicate variables between windows?
+::Can't, unless one copies environment variables, should you not put the set n=1 above the loop?
 title Hydra
 :loop
 SET n=1
