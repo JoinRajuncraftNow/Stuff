@@ -1,5 +1,6 @@
 @ECHO OFF
 ::What if we use a text document to keep track of how many have opened, so all programs know how many to test for.
+::PAY ATTENTION TO MR HALL!
 title Hydra
 :loop
 SET n=1
