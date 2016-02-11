@@ -1,5 +1,5 @@
 @ECHO OFF
-::Nice. Powershell also. 
+::Powershell isn't blocked. Also, we have D and C++. XD
 ::What do you mean? I still have JScript!
 ::Is ps blocked, or possible?
 ::There is a way to check for comparisons, just not using < and >, since they are redirect chars
