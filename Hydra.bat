@@ -7,8 +7,6 @@ set /a n+=1
 Findstr /m "%n%" data.txt
 if %errorlevel%==0 (
 goto :begin
-) ELSE (
-goto :loop
 )
 :loop 
 FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq Hydra" ^| find/c "exe"`) DO (
