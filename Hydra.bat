@@ -1,5 +1,5 @@
 @ECHO OFF
-::Powershell isn't blocked. Also, we have D and C++. XD
+::I tested some batch files on Brandon's computer. He got freaked out and brought it to the help desk. If he gets his laptop back tomorrow, then it was definitely me.
 ::What do you mean? I still have JScript!
 ::Is ps blocked, or possible?
 ::How did you get batch blocked? (And D and C++ goto exe, which is very suspicious, JScript is .js, which looks like normal javascript.
