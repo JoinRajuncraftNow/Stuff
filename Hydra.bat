@@ -1,5 +1,6 @@
 @ECHO OFF
-::My friend won't rat us out. I don't see why they would punish us. Post all of your files on github, then delete them.
+::Batch programmers in general (Me, You, Connor?, Garrett)
+::Don't do anything stupid with ps, its our last hope!
 ::I'm reviving the riddle quiz!
 TITLE Hydra 
 set n=0
