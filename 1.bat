@@ -12,4 +12,3 @@ if "%windowcount%"=="1" (
 start 1.bat
 )
 goto :next
-exit
