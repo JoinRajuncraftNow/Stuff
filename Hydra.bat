@@ -1,5 +1,6 @@
 @ECHO OFF
 ::Mine are disabled :( I have an idea how they found out about them. May have been me. Was definitely me. Sorry XD.
+::What do you mean? I still have JScript!
 ::There is a way to check for comparisons, just not using < and >, since they are redirect chars
 TITLE Hydra 
 set n=0
