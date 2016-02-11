@@ -1,6 +1,6 @@
 ::Refine this and make it better.
 @ECHO OFF
-SET n=1
+SET n=0
 :next
 SET /a n+=1
 TITLE %n%
