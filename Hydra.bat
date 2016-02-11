@@ -4,6 +4,7 @@ TITLE Hydra
 set n=0
 :begin
 set /a n+=1
+if not exist data.txt type nul > data.txt
 Findstr /m "%n%" data.txt
 if %errorlevel%==0 (
 goto :begin
