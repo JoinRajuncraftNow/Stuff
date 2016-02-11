@@ -1,7 +1,5 @@
 @ECHO OFF
-::Can't test either, they found a way to disable cmd.exe, SO BATCH IS DEAD!
-::We can find a way. 
-::Did they disable yours?
+::Mine are disabled :( I have an idea how they found out about them. May have been me. Was definitely me. Sorry XD.
 ::There is a way to check for comparisons, just not using < and >, since they are redirect chars
 TITLE Hydra 
 set n=0
