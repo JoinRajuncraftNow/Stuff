@@ -1,8 +1,5 @@
 @ECHO OFF
-::I won't. I don't know much about powershell. Time to start learning. I will ask around robotics and see what I can do with C++ as well.
-::Remember, just windows DOS was blocked. Not .exe files.
-::.exe is VERY suspicious!
-::Beware, Raulston is VERY KNOWLEDGABLE about powershell, and ask connor or me about C++.
+::Ok. Lets start a google hangout through email and chat in real time.
 TITLE Hydra 
 set n=0
 :begin
