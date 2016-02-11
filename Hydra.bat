@@ -1,5 +1,5 @@
 @ECHO OFF
-::Not doing anything in STEM except for watching glue dry. You in a busy class? 
+::Law of sines sin A/a=sin B/b=Sin C/c
 TITLE Hydra
 set n=1
 :loop
