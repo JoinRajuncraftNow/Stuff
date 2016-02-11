@@ -4,11 +4,11 @@
 ::Wrote this on my phone so I cannot test, so can you check for any errors? 
 TITLE Hydra 
 set n=0
-:start
+:begin
 set /a n+=1
 Findstr /m "%n%" data.txt
 if %errorlevel%==0 (
-goto :start
+goto :begin
 ) ELSE (
 goto :loop
 )
