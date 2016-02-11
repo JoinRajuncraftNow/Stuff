@@ -1,7 +1,7 @@
 @ECHO OFF
 ::What if we use a text document to keep track of how many have opened, so all programs know how many to test for.
 ::Can't, you would have errors since too many files are trying to access it at the same time
-::PAY ATTENTION TO MR HALL!
+::How can we communicate variables between windows?
 title Hydra
 :loop
 SET n=1
