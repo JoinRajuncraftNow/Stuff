@@ -9,4 +9,5 @@ lbegin while(1)
     {
       continue;
     }
+    break;
 }
