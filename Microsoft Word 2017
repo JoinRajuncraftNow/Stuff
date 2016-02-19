@@ -1,0 +1,10 @@
+::One of the first batch files I made.
+@ECHO OFF
+ECHO Name your Document!
+SET /p title=
+:newline
+ECHO Text: 
+SET /p text=
+ECHO %text% >>"%title%.txt"
+ECHO Line Saved!
+GOTO :newline
