@@ -1,7 +1,7 @@
 @ECHO OFF
 ::Puts info about a person into a file. 
 ::This was actually my first I think.
-::Fail, you needed to put two >>'s in order to
+::Fail, you needed to put two >>'s in order to cause it to work
 if not exist data.txt type nul > data.txt
 :loop
 set /p NAME=[NAME]
