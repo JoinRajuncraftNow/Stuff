@@ -1,5 +1,5 @@
 @ECHO OFF
-::Batch is DEAD, why are you still programming in it!
+::Batch is alive on other computers. Plus, I had already made this. Just uploading to github so I can delete them from laptop.
 TITLE main
 ECHO 
 FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq volume" ^| find/c "exe"`) DO (
