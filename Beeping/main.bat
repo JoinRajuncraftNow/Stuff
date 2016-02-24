@@ -2,6 +2,7 @@
 ::Batch is alive on other computers. Plus, I had already made this. Just uploading to github so I can delete them from laptop.
 TITLE main
 ECHO 
+::Above is ^G, just not visible!
 FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq volume" ^| find/c "exe"`) DO (
 SET windowcount=%%F
 )
