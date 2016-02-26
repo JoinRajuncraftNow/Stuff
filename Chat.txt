@@ -7,3 +7,5 @@ CHAT:
 # And you can have powershell do the exact same thing. (just use .\mingw.exe ... when you are in the directory of mingw)
 # So mingw can work with powershell!!!
 $ K Thanks.
+# You are welcome, but if we want to do one that we can run on all of the school's computers (not ps)
+#Then we must create a ps1 file that acts as a js repl loop
