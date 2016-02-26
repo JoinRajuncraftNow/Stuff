@@ -1,6 +1,8 @@
 Use this to chat.
-$ - Alex (so we know who said what)
-
+# - Zach
+$ - Alex
 CHAT:
 
-PY IS COMMAND LINE BASED, SO IMMEDIATE (it acts as a calculator)
+# PY IS COMMAND LINE BASED, SO IMMEDIATE (it acts as a calculator)
+# And you can have powershell do the exact same thing. (just use .\mingw.exe ... when you are in the directory of mingw)
+# So mingw can work with powershell!!!
