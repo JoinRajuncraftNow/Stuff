@@ -11,4 +11,4 @@ IF "%windowcount%" LSS "2" (
 START 1.bat
 )
 GOTO :next
-::If less than 2 windows open, open another. Lets hope both versions open don't open another at the same time XD.
+::Ignore that, was thinking of other file. This will be fine.
