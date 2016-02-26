@@ -1,5 +1,4 @@
 @ECHO OFF
-::Yah, I was on my phone so I copied it by hand. Probably overlooked the double >>.
 if not exist data.txt type nul > data.txt
 :loop
 set /p NAME=[NAME]
