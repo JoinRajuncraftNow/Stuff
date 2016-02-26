@@ -6,3 +6,4 @@ CHAT:
 # PY IS COMMAND LINE BASED, SO IMMEDIATE (it acts as a calculator)
 # And you can have powershell do the exact same thing. (just use .\mingw.exe ... when you are in the directory of mingw)
 # So mingw can work with powershell!!!
+$ K Thanks.
