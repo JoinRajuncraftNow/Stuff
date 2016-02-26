@@ -7,4 +7,4 @@ CHAT:
 # And you can have powershell do the exact same thing. (just use .\mingw.exe ... when you are in the directory of mingw)
 # So mingw can work with powershell!!!
 $ K Thanks.
-# We should get Connor Barker and Garrett Smith on GitHub (good at JS and C++, respectively)
+# We should get Connor Barker and Garrett Smith on GitHub (good at C++ and JavaScript, respectively)
