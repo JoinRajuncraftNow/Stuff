@@ -3,5 +3,4 @@ $ - Alex (so we know who said what)
 
 CHAT:
 
-$ There is one bad thing about C++: I need the command console to use mingw to compile it. Eclipse won't run, so I can't use that. Any other ideas?
-$ Also, I see the geometry things you are making. I am adept enough in C++ to write things like that. If you want to add me as a contributor. ;)
+PY IS COMMAND LINE BASED, SO IMMEDIATE (it acts as a calculator)
