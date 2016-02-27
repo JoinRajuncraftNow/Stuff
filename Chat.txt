@@ -9,5 +9,5 @@ CHAT:
 $ K Thanks.
 # We should get Connor Barker and Garrett Smith on GitHub (good at C++ and JavaScript, respectively)
 $ Connor is not interested. I am starting on my maryville matters, to make a text adventure with C++. XD
-# Tell me if you need help on it!
 # Some third person found our files (gulp)
+# Well, I found Garrett Smith on github (he had one before both of us)
