@@ -9,5 +9,5 @@ IF "%windowcount%"=="0" (
 START volume.bat
 )
 START main.bat
-EXIT
 ::Will that work, or will it slow it down too much?
+::What
