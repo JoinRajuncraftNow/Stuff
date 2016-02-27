@@ -9,3 +9,5 @@ CHAT:
 $ K Thanks.
 # We should get Connor Barker and Garrett Smith on GitHub (good at C++ and JavaScript, respectively)
 $ Connor is not interested. I am starting on my maryville matters, to make a text adventure with C++. XD
+# If needed, I'll try to get Garrett Smith (probably not, he'll never have time)
+# Tell me if you need help on it!
