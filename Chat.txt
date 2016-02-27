@@ -8,3 +8,4 @@ CHAT:
 # So mingw can work with powershell!!!
 $ K Thanks.
 # We should get Connor Barker and Garrett Smith on GitHub (good at C++ and JavaScript, respectively)
+$ Connor is not interested. I am starting on my maryville matters, to make a text adventure with C++. XD
