@@ -26,3 +26,5 @@ $ Should I make my text adventure like scenarios and it asks you what you want t
 # Well, if you want the world to be infinite, then give up! And why are you afraid of if statements? Is it because of your batch? I'm used to having NO goto, since my native programming language is JavaScript, no gotos are in JS! I would say Text adventure, since it is easier to program.
 # And if you use an array, it has to be static sized in C/C++. (Hence why I use D and JavaScript and Python)
 # And you would keep track of position with a one dimensional array, since that records the position!
+$ The world WOULD NOT be infinite. I wanted to experiment with multi-dimensional arrays because I have never used them. I still don't see the point in them because you could accomplish the same things with the normal array. Might as well see what they are like, though
+$ And I mean If statements as in tons of them. And for that, I would also need creativity.
