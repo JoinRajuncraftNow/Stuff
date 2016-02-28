@@ -4,28 +4,4 @@ $ - Alex
 @ - Garrett Smith
 CHAT:
 
-# PY IS COMMAND LINE BASED, SO IMMEDIATE (it acts as a calculator)
-# And you can have powershell do the exact same thing. (just use .\mingw.exe ... when you are in the directory of mingw)
-# So mingw can work with powershell!!!
-$ K Thanks.
-# We should get Connor Barker and Garrett Smith on GitHub (good at C++ and JavaScript, respectively)
-$ Connor is not interested. I am starting on my maryville matters, to make a text adventure with C++. XD
-# Some third person found our files (gulp)
-# Well, I found Garrett Smith on github (he had one before both of us)
-$ What. Oh ok.
-$ I only made a github account for robotics, and I don't even use it for that. We only post things through the account on the robotics computer.
-# Well, please add Garrett Smith as a collaborator
-# And I am starting on my LONG AWAITED PROJECT, a MATHEMATICS BASED PROGRAMMING LANGUAGE!!!!!!!!!
-$ Kewl
-# Okay, thanks for adding Garrett Smith.
-# Who I am better at python than :)
-# Where have you been at lunch?
-# Garrett's probably not going to respond right now
-$ I have started actually doing my HW. That's why I am not at the tech area during lunch anymore. 
-$ Should I make my text adventure like scenarios and it asks you what you want to do (so many if statements OH GOD), or make it a sorta free-roamy thing with commands like north, south, east, and west? (maybe keep track of position with an array? I have never used multi-dimensional arrays, so I wanna give that a shot.)
-# Well, if you want the world to be infinite, then give up! And why are you afraid of if statements? Is it because of your batch? I'm used to having NO goto, since my native programming language is JavaScript, no gotos are in JS! I would say Text adventure, since it is easier to program.
-# And if you use an array, it has to be static sized in C/C++. (Hence why I use D and JavaScript and Python)
-# And you would keep track of position with a one dimensional array, since that records the position!
-$ The world WOULD NOT be infinite. I wanted to experiment with multi-dimensional arrays because I have never used them. I still don't see the point in them because you could accomplish the same things with the normal array. Might as well see what they are like, though
-$ And I mean If statements as in tons of them. And for that, I would also need creativity.
-# Well, just imagine writing Javascript code using only + ( ) [ ] - and !
+# Well, I think a multidimensional array is just an array of arrays with special declaring syntax (order of access, so int var[2][3] is so var[2][3] is legal, not var[3][2])
