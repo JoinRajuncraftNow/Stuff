@@ -15,4 +15,4 @@ x++;
 $ This would just be to keep track of the player sorta thing. 1 is where they are, 0 is where they aren't. 
 $ Don't judge on my syntax. I didn't look up any details. 
 $ This is what I had in mind.
-#Don't worry, that syntax is ammazing, other than the parens, watch out for the fact that int var[2][3] has member var[2][3], not var[3][2]. Keep track of the player position with a one dimensional array, so you don't have to search through the entire array for a 1.
+#Don't worry, that syntax is valid other than the parens, watch out for the fact that int var[2][3] has member var[2][3], not var[3][2]. Keep track of the player position with a one dimensional array, so you don't have to search through the entire array for a 1.
