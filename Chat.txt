@@ -21,3 +21,5 @@ $ Kewl
 # Who I am better at python than :)
 # Where have you been at lunch?
 # Garrett's probably not going to respond right now
+$ I have started actually doing my HW. That's why I am not at the tech area during lunch anymore. 
+$ Should I make my text adventure like scenarios and it asks you what you want to do (so many if statements OH GOD), or make it a sorta free-roamy thing with commands like north, south, east, and west? (maybe keep track of position with an array? I have never used multi-dimensional arrays, so I wanna give that a shot.)
