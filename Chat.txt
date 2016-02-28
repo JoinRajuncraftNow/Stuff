@@ -16,3 +16,4 @@ $ What. Oh ok.
 $ I only made a github account for robotics, and I don't even use it for that. We only post things through the account on the robotics computer.
 # Well, please add Garrett Smith as a collaborator
 # And I am starting on my LONG AWAITED PROJECT, a MATHEMATICS BASED PROGRAMMING LANGUAGE!!!!!!!!!
+$ Kewl
