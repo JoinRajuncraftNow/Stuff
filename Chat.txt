@@ -5,3 +5,13 @@ $ - Alex
 CHAT:
 #Yeah, but multidimensional arrays are much easier to read!
 #And I hate the fact that you got the jQuery sign! It's not a valid C++ variable name, only Java and JS!
+$ Example:
+int array [5] [5]; //5x5 area. Lets just say they all equal 0 right now.
+int x=0, y=0; 
+array[x][y] = 1; //Where the player is now.
+(player moves east) 
+array[x][y] = 0; //The function that would run if the player moves east.
+x++; 
+$ This would just be to keep track of the player sorta thing. 1 is where they are, 0 is where they aren't. 
+$ Don't judge on my syntax. I didn't look up any details. 
+$ This is what I had in mind.
