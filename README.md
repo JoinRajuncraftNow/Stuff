@@ -1,2 +1,3 @@
 # Random Files
-Looking over these, I now see how much my batch skills sucked a year ago.
+Some pretty swood stuff!
+What does swood mean again?
