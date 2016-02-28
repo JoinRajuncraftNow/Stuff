@@ -23,3 +23,4 @@ $ Kewl
 # Garrett's probably not going to respond right now
 $ I have started actually doing my HW. That's why I am not at the tech area during lunch anymore. 
 $ Should I make my text adventure like scenarios and it asks you what you want to do (so many if statements OH GOD), or make it a sorta free-roamy thing with commands like north, south, east, and west? (maybe keep track of position with an array? I have never used multi-dimensional arrays, so I wanna give that a shot.)
+# Well, if you want the world to be infinite, then give up! And why are you afraid of if statements? Is it because of your batch? I'm used to having NO goto, since my native programming language is JavaScript, no gotos are in JS! I would say Text adventure, since it is easier to program.
