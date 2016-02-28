@@ -12,3 +12,4 @@ $ Connor is not interested. I am starting on my maryville matters, to make a tex
 # Some third person found our files (gulp)
 # Well, I found Garrett Smith on github (he had one before both of us)
 $ What. Oh ok.
+$ I only made a github account for robotics, and I don't even use it for that. We only post things through the account on the robotics computer.
