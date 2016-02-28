@@ -1,7 +1,7 @@
 Use this to chat.
 # - Zach
 $ - Alex
-@ - Garrett Smith
+@ - Garrett
 CHAT:
-
-# Well, I think a multidimensional array is just an array of arrays with special declaring syntax (order of access, so int var[2][3] is so var[2][3] is legal, not var[3][2])
+#Yeah, but multidimensional arrays are much easier to read!
+#And I hate the fact that you got the jQuery sign! It's not a valid C++ variable name, only Java and JS!
