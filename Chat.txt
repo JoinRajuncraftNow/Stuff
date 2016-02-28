@@ -1,6 +1,7 @@
 Use this to chat.
 # - Zach
 $ - Alex
+@ - Garrett Smith (If needed)
 CHAT:
 
 # PY IS COMMAND LINE BASED, SO IMMEDIATE (it acts as a calculator)
@@ -13,3 +14,5 @@ $ Connor is not interested. I am starting on my maryville matters, to make a tex
 # Well, I found Garrett Smith on github (he had one before both of us)
 $ What. Oh ok.
 $ I only made a github account for robotics, and I don't even use it for that. We only post things through the account on the robotics computer.
+# Well, please add Garrett Smith as a collaborator
+# And I am starting on my LONG AWAITED PROJECT, a MATHEMATICS BASED PROGRAMMING LANGUAGE!!!!!!!!!
