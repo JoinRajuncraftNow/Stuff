@@ -1,6 +1,7 @@
 @ECHO OFF
 TITLE main
 ECHO 
+::^G, please dont erase this comment
 taskkill /F /FI "WINDOWTITLE ne main"
 FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq volume" ^| find/c "exe"`) DO (
 SET windowcount=%%F
