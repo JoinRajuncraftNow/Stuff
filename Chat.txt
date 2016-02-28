@@ -28,3 +28,4 @@ $ Should I make my text adventure like scenarios and it asks you what you want t
 # And you would keep track of position with a one dimensional array, since that records the position!
 $ The world WOULD NOT be infinite. I wanted to experiment with multi-dimensional arrays because I have never used them. I still don't see the point in them because you could accomplish the same things with the normal array. Might as well see what they are like, though
 $ And I mean If statements as in tons of them. And for that, I would also need creativity.
+# Well, just imagine writing Javascript code using only + ( ) [ ] - and !
