@@ -1,7 +1,7 @@
 Use this to chat.
 # - Zach
 $ - Alex
-@ - Garrett Smith (If needed)
+@ - Garrett Smith
 CHAT:
 
 # PY IS COMMAND LINE BASED, SO IMMEDIATE (it acts as a calculator)
@@ -18,3 +18,4 @@ $ I only made a github account for robotics, and I don't even use it for that. W
 # And I am starting on my LONG AWAITED PROJECT, a MATHEMATICS BASED PROGRAMMING LANGUAGE!!!!!!!!!
 $ Kewl
 # Okay, thanks for adding Garrett Smith.
+# Who I am better at python than :)
