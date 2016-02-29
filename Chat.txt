@@ -19,3 +19,4 @@ $ This is what I had in mind.
 $ Well, this isn't what I was gonna actually use it like. I was just trying to think of a quick example. Again, I know I can do everything with a 1D array, but I want to try out multi-dimensional arrays. 
 # Well, if you have obstacles/things that the player can run into, then use multidimensional arrays, if you have the obstacles all be the same, to keep track of **things**, not just a single thing
 $ I would make it keep track of where the player is like up there (north=x=1, south=x-1, east=y+1, west=y-1 or something like that. Might make it have a z for up and down too.) but it wouldn't change the array. Like, it would test what value is in the selected things. If its 1, do this. If its 2, do this. You get the point. Thats probably what I will do. 
+$ Of course I would use x++ etc. 
