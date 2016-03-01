@@ -22,3 +22,4 @@ $ I would make it keep track of where the player is like up there (north=x=1, so
 $ Of course I would use x++ etc. 
 # I would use int pos[3] {x,y,z}
 # A FOURTH PERSON HAS VISITED THIS!!!!!
+$ Worked on my text adventure. 100x100x5 randomly generated map. 
