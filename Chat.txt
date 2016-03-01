@@ -23,3 +23,4 @@ $ Of course I would use x++ etc.
 # I would use int pos[3] {x,y,z}
 # A FOURTH PERSON HAS VISITED THIS!!!!!
 $ Worked on my text adventure. 100x100x5 randomly generated map. 
+# Cool, Worked on my AMBPL, Got Number and Most of Finite
