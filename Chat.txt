@@ -3,27 +3,4 @@ Use this to chat.
 $ - Alex
 @ - Garrett
 CHAT:
-#Yeah, but multidimensional arrays are much easier to read!
-#And I hate the fact that you got the jQuery sign! It's not a valid C++ variable name, only Java and JS!
-$ Example:
-int array [5] [5]; //5x5 area. Lets just say they all equal 0 right now.
-int x=0, y=0; 
-array[x][y] = 1; //Where the player is now.
-(player moves east) 
-array[x][y] = 0; //The function that would run if the player moves east.
-x++; 
-$ This would just be to keep track of the player sorta thing. 1 is where they are, 0 is where they aren't. 
-$ Don't judge on my syntax. I didn't look up any details. 
-$ This is what I had in mind.
-#Don't worry, that syntax is valid other than the parens, watch out for the fact that int var[2][3] has member var[2][3], not var[3][2]. Keep track of the player position with a one dimensional array, so you don't have to search through the entire array for a 1.
-$ Well, this isn't what I was gonna actually use it like. I was just trying to think of a quick example. Again, I know I can do everything with a 1D array, but I want to try out multi-dimensional arrays. 
-# Well, if you have obstacles/things that the player can run into, then use multidimensional arrays, if you have the obstacles all be the same, to keep track of **things**, not just a single thing
-$ I would make it keep track of where the player is like up there (north=x=1, south=x-1, east=y+1, west=y-1 or something like that. Might make it have a z for up and down too.) but it wouldn't change the array. Like, it would test what value is in the selected things. If its 1, do this. If its 2, do this. You get the point. Thats probably what I will do. 
-$ Of course I would use x++ etc. 
-# I would use int pos[3] {x,y,z}
-# A FOURTH PERSON HAS VISITED THIS!!!!!
-$ Worked on my text adventure. 100x100x5 randomly generated map. 
-# Cool, Worked on my AMBPL, Got Number and Most of Finite
-$ Listen to this. My flash drive. I accidentally pulled it out while moving the file. My entire text adventure so far is corrupted.
-$ It won't open.
-# Use github!
+#Do you know Seth Goins?
