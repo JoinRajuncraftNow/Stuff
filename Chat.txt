@@ -3,4 +3,7 @@ Use this to chat.
 $ - Alex
 @ - Garrett
 CHAT:
-#Do you know Seth Goins?
+#They are thinking of disabling .exe files that are not in the system folders!
+#So, no D or minGW, or Python (or at least my installation of it).
+#So, powershell and JScript are our last hopes, LONG LIVE JAVASCRIPT
+#We can always use html files :_
