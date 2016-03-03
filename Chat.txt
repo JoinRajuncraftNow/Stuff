@@ -3,9 +3,5 @@ Use this to chat.
 $ - Alex
 @ - Garrett
 CHAT:
-#They are thinking of disabling .exe files that are not in the system folders!
-#So, no D or minGW, or Python (or at least my installation of it).
-#So, powershell and JScript are our last hopes, LONG LIVE JAVASCRIPT
-#We can always use html files :) :) :) :) LONG LIVE JAVASCRIPT!!!!!!
-#Hopefully Raulston is not buried socially within the circle of programming kids enough to find out about THIS, or we're screwed!
 #DON'T SHUT DOWN THE COMPUTER!!!!! THE POLICY UPDATES MAY TAKE EFFECT!!!!!
+#RESPOND!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
