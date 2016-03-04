@@ -6,3 +6,4 @@ CHAT:
 #DON'T SHUT DOWN THE COMPUTER!!!!! THE POLICY UPDATES MAY TAKE EFFECT!!!!!
 #RESPOND!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 $ My text adventure is done! It has all of the basics. I am going to add some more features in and clean up the code a bit before I post it though. 
+# post it now!
