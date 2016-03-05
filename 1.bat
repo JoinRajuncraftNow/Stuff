@@ -1,12 +1,12 @@
 @ECHO OFF
 ::SET n=0
+TITLE 1
 :next
 ::SET /a n+=1
-TITLE 1
-FOR /F "tokens=* USEBACKQ" %%F IN (`tasklist /FI "WINDOWTITLE eq 1" ^| find/c "exe"`) DO (
+FOR /F "tokens=* USEBACKQ" %%F IN (`TASKLIST /FI "WINDOWTITLE eq 1" ^| FIND/C "exe"`) DO (
 SET windowcount=%%F
 )
-taskkill /F /FI "WINDOWTITLE ne 1"
+TASKKILL /F /FI "WINDOWTITLE ne 1"
 IF "%windowcount%" LSS "2" (
 START 1.bat
 )
