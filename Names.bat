@@ -1,4 +1,4 @@
-@ECHO OFF
+@echo off
 if not exist data.txt type nul > data.txt
 :loop
 set /p NAME=[NAME]
