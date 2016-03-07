@@ -106,7 +106,7 @@ void boss(int& health, int def, int& m)
 		{
 			cout << "The Destroyer Attacks!" <<  endl;
 			damage=gen(15,75)-def;
-			if(def>damage||def==damage||f==1)
+			if(def>=damage||f==1)
 			{
 				cout << "Your armor blocked the damage!" << endl;
                 		damage=0;
@@ -157,7 +157,7 @@ void boss(int& health, int def, int& m)
 	}
 	while(whealth<1)
 	{
-		cout << "#Congrats! You won!#";
+		cout << "#Congrats! You won!#"; //Won't this crash the game?
 	}
 }
 
@@ -304,7 +304,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					{
 						cout << monster << " Charges!" <<  endl;
 						damage=gen(10,25)-def;
-						if(def>damage||def==damage||f==1)
+						if(def>=damage||f==1)
 						{
 							cout << "Your armor blocked the damage!" << endl;
 							damage=0;
@@ -457,7 +457,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				{
 					cout << monster << " Attacks!" <<  endl;
 					damage=gen(7,25)-def;
-					if(def>damage||def==damage||f==1)
+					if(def>=damage||f==1)
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
@@ -484,7 +484,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					{
 						cout << monster << " Charges!" <<  endl;
 						damage=gen(15,135)-def;
-						if(def>damage||def==damage||f==1)
+						if(def>=damage||f==1)
 						{
 							cout << "Your armor blocked the damage!" << endl;
 							damage=0;
@@ -664,7 +664,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					{
 						cout << monster << " Charges!" <<  endl;
 						damage=gen(15,135)-def;
-						if(def>damage||def==damage||f==1)
+						if(def>=def==damage||f==1)
 						{
 							cout << "Your armor blocked the damage!" << endl;
 							damage=0;
