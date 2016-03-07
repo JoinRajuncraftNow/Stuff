@@ -3,7 +3,10 @@
 #include <cstdlib>
 
 using namespace std;
-
+string vowel(string arg)
+{
+		return ( arg[0]=="A" || arg[0]=="E" || arg[0]=="I" || arg[0]=="O" || arg[0]=="U" ) ? "n" : "";
+}
 int gen(int x, int y) //Generates a random number between x and y.
 {
 	return (rand() % y + x);
@@ -159,7 +162,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			}
 		}
 		int g, c=0, chance, damage, charge=0, whealth=gen(100,200), t=0, f=0;
-		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
+		cout << "Something approaches..." << endl << "A" << vowel(monster) << " " << monster << " jumps out!" << endl;
 		while(c==0)
 			{
 			string att;
@@ -301,7 +304,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			}
 		}
 		int g, c, chance, damage, charge=0, t=0, f=0, whealth=gen(200,300);
-		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
+		cout << "Something approaches..." << endl << "A" << vowel(monster) << " " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
 			{
@@ -442,7 +445,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			}
 		}
 		int g, c, chance, damage, charge=0, t=0, f=0, gen(200,300);
-		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
+		cout << "Something approaches..." << endl << "A" << vowel(monster) << " " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
 			{
