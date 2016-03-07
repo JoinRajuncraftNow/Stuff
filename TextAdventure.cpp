@@ -159,7 +159,8 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			}
 		}
 		int g, c=0, chance, damage, charge=0, whealth=gen(100,200), t=0, f=0;
-		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
+		string is_n= (monster[0]=="A" || monster[0]=="E" || monster[0]=="I" || monster[0]=="O" || monster[0]=="U" ? "n " : " ")
+		cout << "Something approaches..." << endl << "A" << is_n << monster << " jumps out!" << endl;
 		while(c==0)
 			{
 			string att;
