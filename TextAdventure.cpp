@@ -444,14 +444,14 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				monster="Giant Mole";
 			}
 		}
-		int g, c, chance, damage, charge=0, t=0, f=0, gen(200,300);
+		int g, c, chance, damage, charge=0, t=0, f=0;//, gen(200,300);
 		cout << "Something approaches..." << endl << "A" << vowel(monster) << " " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
 			{
 			string att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
-			cout << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
+			cout << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl; //problems occur here, no reason why!
 			cout << "Command: ";
 			if(t==0)
 			{
