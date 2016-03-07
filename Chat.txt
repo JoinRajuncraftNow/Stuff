@@ -12,3 +12,4 @@ $ My text adventure is done! It has all of the basics. I am going to add some mo
 # RESPOND!!!!!!
 # Post the code to Github, PLEASE!!!!!!!!!!!!!!!!!!
 $ You want the code? It works but is extremely messy. Clean it up if you want. I have made it look simple enough for Maryville Matters. I am going to add comments later.
+$ BTW. I didn't use greater than or equal to because it caused errors when I compiled it. I think I may have messed up a file somewhere.
