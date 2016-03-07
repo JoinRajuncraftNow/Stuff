@@ -81,21 +81,21 @@ void boss(int& health, int def, int& m)
 					}
 				}
 			}
-			cout << endl;
-		}			
-	}
-	if(uselessthingidkwhy!=1)
-    {
+				cout << endl;
+			}			
 		stun=0;
 		damage=0;
 		if(charge==0)
 		{
 			cout << "The Destroyer Attacks!" <<  endl;
-			damage=gen(15,75)-def;
-			if(def>damage||def==damage||f==1)
+			damage=gen(20,100)-def;
+			if(def>damage||def==damage)
 			{
-				cout << "Your armor blocked the damage!" << endl;
-                damage=0;
+				if(f==1)
+				{
+					cout << "Your armor blocked the damage!" << endl;
+				}
+				damage=0;
 			}
 			health-=damage;
 			chance=gen(1,4);
@@ -114,28 +114,30 @@ void boss(int& health, int def, int& m)
 				stun=1;
 				cout << "The Destroyer Charges!" <<  endl << "You have been stunned!" << endl;
 				damage=gen(25, 200)-def;
-				if(def>damage||def==damage||f==1)
+				if(def>damage||def==damage)
 				{
-					cout << "Your armor blocked the damage!" << endl;
+					if(f==1)
+					{
+						cout << "Your armor blocked the damage!" << endl;
+					}
 					damage=0;
 				}
-				health-=damage;
-				charge=0;
+					health-=damage;
+					charge=0;
+				}
 			}
+			g=0;
+			cout << "You took " << damage << " damage!" << endl;
+			f=0;
+			charge=0;
+		if(health<1)
+		{
+			death();
 		}
-		g=0;
-		cout << "You took " << damage << " damage!" << endl;
-	}else{
-		f=0;
-		charge=0;
-	}
-	if(health<1)
-	{
-		death();
-	}
-	while(whealth<1)
-	{
-		cout << "#Congrats! You won!#";
+		while(whealth<1)
+		{
+			cout << "#Congrats! You won!";
+		}
 	}
 }
 
@@ -235,7 +237,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				{
 					cout << monster << " Attacks!" <<  endl;
 					damage=gen(5,25)-def;
-					if(def>damage||def==damage||f==1)
+					if(def>damage||def==damage&&f==0)
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
@@ -256,7 +258,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					}else{
 						cout << monster << " Charges!" <<  endl;
 						damage=gen(10,25)-def;
-						if(def>damage||def==damage||f==1)
+						if(def>damage||def==damage&&f==0)
 						{
 							cout << "Your armor blocked the damage!" << endl;
 							damage=0;
@@ -385,7 +387,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				{
 					cout << monster << " Attacks!" <<  endl;
 					damage=gen(7,25)-def;
-					if(def>damage||def==damage||f==1)
+					if(def>damage||def==damage&&f==0)
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
@@ -406,7 +408,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					}else{
 						cout << monster << " Charges!" <<  endl;
 						damage=gen(15,135)-def;
-						if(def>damage||def==damage||f==1)
+						if(def>damage||def==damage&&f==0)
 						{
 							cout << "Your armor blocked the damage!" << endl;
 							damage=0;
@@ -535,7 +537,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				{
 					cout << monster << " Attacks!" <<  endl;
 					damage=gen(7,25)-def;
-					if(def>damage||def==damage||f==1)
+					if(def>damage||def==damage&&f==0)
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
@@ -556,7 +558,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					}else{
 						cout << monster << " Charges!" <<  endl;
 						damage=gen(15,135)-def;
-						if(def>damage||def==damage||f==1)
+						if(def>damage||def==damage&&f==0)
 						{
 							cout << "Your armor blocked the damage!" << endl;
 							damage=0;
@@ -641,16 +643,6 @@ void down(int& x, int& y, int& z, int h)
 	}else{
 	cout << "You can't go down from here" << endl;
 	}
-}
-
-void attack()
-{
-	
-}
-
-void interact()
-{
-	
 }
 
 void north(int& x, int& y, int& z)
@@ -741,7 +733,7 @@ int tile(int z, int& num, int& health, int& def, int& m)
 {
 	if(z==4)
 	{
-		if(num==1||num==3||num==12) //ADD THE TEENS INTO THIS AND ALSO CHANGE COMBAT TO SET IT TO TEENS AFTER DEATH, AND FIX THE HEALTH SYSTEM, COMMAND DETECTION SYSTEM, AND ENEMY ATTACK SYSTEM!
+		if(num==1||num==3||num==12)
 		{
 			cout << "[Forest]" << endl;
 			return 1;
@@ -766,9 +758,10 @@ int tile(int z, int& num, int& health, int& def, int& m)
 							combat(z, num, health, def, m);
 							return 12;
 						}else{
-							if(num==5)
+							if(num==5||num==15)
 							{
 								cout << "[Ruins]" << endl;
+								return 15;
 							}
 						}
 					}
