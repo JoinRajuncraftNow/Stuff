@@ -6,7 +6,7 @@ using namespace std;
 
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return (rand() % y + x);
+	return rand() % y + x;
 }
 
 void death() //Outputs "You have died!" then stops.
@@ -839,4 +839,5 @@ int main()
 		command(com, x, y, z, num);
 		cout << "---------------------------------------------------------------------------" << endl;
 	}
+	return 0; //Added return 0
 } 
