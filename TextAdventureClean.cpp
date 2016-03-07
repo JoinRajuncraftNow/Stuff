@@ -6,7 +6,7 @@ using namespace std;
 
 int gen(int x, int y)
 {
-	return (rand() % y + x);
+	return rand() % y + x;
 }
 
 void death()
@@ -38,10 +38,14 @@ void boss(int& health, int def, int& m)
 					if(chance==1)
 					{
 						cout << "Dodged!" << endl;
-					}else{
+					}
+					else
+					{
 						whealth-=gen(15,50);
 					}
-				}else{
+				}
+				else
+				{
 					if(att=="q"||att=="Q")
 					{
 						cout << endl << "Quick Slash!" << endl;
@@ -50,10 +54,14 @@ void boss(int& health, int def, int& m)
 						if(chance==1)
 						{
 							cout << "Dodged!" << endl;
-						}else{
+						}
+						else
+						{
 							whealth-=gen(5,15);
 						}
-					}else{
+					}
+					else
+					{
 						if(att=="d"||att=="D")
 						{
 							cout << endl << "Dodge!" << endl;
@@ -63,17 +71,23 @@ void boss(int& health, int def, int& m)
 							{
 								f=1;
 								cout << "Success" << endl;
-							}else{
+							}
+							else
+							{
 								cout << "Failed." << endl;
 							}
-						}else{
+						}
+						else
+						{
 							if(att=="m"||att=="M")
 							{
 								cout << endl << "Used a medkit." << endl;
 								m--;
 								health=1000;
 								f=1;
-							}else{
+							}
+							else
+							{
 								cout << "Not a valid command!" << endl;
 								f=1;
 							}
@@ -85,7 +99,7 @@ void boss(int& health, int def, int& m)
 		}			
 	}
 	if(uselessthingidkwhy!=1)
-    {
+    	{
 		stun=0;
 		damage=0;
 		if(charge==0)
@@ -95,26 +109,32 @@ void boss(int& health, int def, int& m)
 			if(def>damage||def==damage||f==1)
 			{
 				cout << "Your armor blocked the damage!" << endl;
-                damage=0;
+                		damage=0;
 			}
 			health-=damage;
 			chance=gen(1,4);
 			if(chance==1)
 			{
 				charge++;
-			}else{
+			}
+			else
+			{
 				charge=0;
 			}
-		}else{
+		}
+		else
+		{
 			if(charge==1)
 			{
 				cout << "The Destroyer is charging up for a heavy attack!" << endl;
 				charge++;
-			}else{
+			}
+			else
+			{
 				stun=1;
 				cout << "The Destroyer Charges!" <<  endl << "You have been stunned!" << endl;
 				damage=gen(25, 200)-def;
-				if(def>damage||def==damage||f==1)
+				if(def>=damage||f==1)
 				{
 					cout << "Your armor blocked the damage!" << endl;
 					damage=0;
@@ -125,7 +145,9 @@ void boss(int& health, int def, int& m)
 		}
 		g=0;
 		cout << "You took " << damage << " damage!" << endl;
-	}else{
+	}
+	else
+	{
 		f=0;
 		charge=0;
 	}
@@ -141,18 +163,22 @@ void boss(int& health, int def, int& m)
 
 void combat(int z, int& num, int& health, int& def, int& m)
 {
-	int uselessthingidkwhy=0, j=gen(1,3);;
+	int uselessthingidkwhy=0, j=gen(1,3); //What's with the double semicolon?
 	string monster;
 	if(z==4)
 	{
 		if(j==3)
 		{
 			monster="Bandit";
-		}else{
+		}
+		else
+		{
 			if(j==2)
 			{
 				monster="Wyvern";
-			}else{
+			}
+			else
+			{
 				monster="Giant Snake";
 			}
 		}
@@ -162,7 +188,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 		c=0;
 		int t=0;
 		while(c==0)
-			{
+		{
 			int f=0;
 			string att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
@@ -179,10 +205,14 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					if(chance==1)
 					{
 						cout << "Dodged!" << endl;
-					}else{
+					}
+					else
+					{
 						whealth-=gen(15,50);
 					}
-				}else{
+				}
+				else
+				{
 					if(att=="q"||att=="Q")
 					{
 						cout << endl << "Quick Slash!" << endl;
@@ -191,45 +221,57 @@ void combat(int z, int& num, int& health, int& def, int& m)
 						if(chance==1)
 						{
 							cout << "Dodged!" << endl;
-						}else{
+						}
+						else
+						{
 							whealth-=gen(5,15);
 						}
-					}else{
+					}
+					else
+					{
 						if(att=="d"||att=="D")
 						{
 							cout << endl << "Dodge!" << endl;
 							chance=gen(1,4);
 							f=0;
 							if(chance==1||chance==2||chance==3)
-                            {
-                                f=1;
-                                cout << "Success" << endl;
-                            }else{
-                                cout << "Failed." << endl;
-                            }
-                        }else{
-                            if(att=="m"||att=="M")
-                            {
-                                f=1;
-                                if(m>0)
-                                {
-                                    cout << endl << "Used a medkit." << endl;
-                                    m--;
-                                    health=1000;
-                                }else{
-                                    cout << "You have no medkits!" << endl;
-                                }
-                            }else{
-                                cout << "Not a valid command!" << endl;
-                                f=1;
-                            }
+                            				{
+                                				f=1;
+                                				cout << "Success" << endl;
+                            				}
+                            				else
+                            				{
+                                				cout << "Failed." << endl;
+                            				}
+                        			}
+                        			else
+                        			{
+                            				if(att=="m"||att=="M")
+                            				{
+                                				f=1;
+                                				if(m>0)
+                                				{
+                                    					cout << endl << "Used a medkit." << endl;
+                                    					m--;
+                                    					health=1000;
+                                				}
+                                				else
+                                				{
+                                    					cout << "You have no medkits!" << endl;
+                                				}
+                            				}
+                            				else
+                            				{
+                                				cout << "Not a valid command!" << endl;
+                                				f=1;
+                            				}
 						}
 					}
 				}
 			}
 			cout << endl;
 			if(uselessthingidkwhy!=1)
-            {
+            		{
 				damage=0;
 				if(charge==0)
 				{
@@ -245,15 +287,21 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					if(chance==1)
 					{
 						charge++;
-					}else{
+					}
+					else
+					{
 						charge=0;
 					}
-				}else{
+				}
+				else
+				{
 					if(charge==1)
 					{
 						cout << "The " << monster << " is charging up for a heavy attack!" << endl;
 						charge++;
-					}else{
+					}
+					else
+					{
 						cout << monster << " Charges!" <<  endl;
 						damage=gen(10,25)-def;
 						if(def>damage||def==damage||f==1)
@@ -267,7 +315,9 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				}
 				g=0;
 				cout << "You took " << damage << " damage!" << endl;
-			}else{
+			}
+			else
+			{
 				f=0;
 				charge=0;
 			}
@@ -282,14 +332,16 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				if(chance==1)
 				{
 					def++;
-					cout << "You loot some armor off of the corpse... Defence +1" << endl;
-				}else{
-                    if(chance==2||chance==3)
-                    {
-                        m++;
-                        cout << "You loot a medkit off of the corpse..." << endl;
-                    }
-                }
+					cout << "You loot some armor off of the corpse... Defense +1" << endl; //You stupid Brit! In America it's defense
+				}
+				else
+				{
+                    			if(chance==2||chance==3)
+                    			{
+                        			m++;
+                        			cout << "You loot a medkit off of the corpse..." << endl;
+                    			}
+                		}
 				t=1;
 				c=1;
 			}
@@ -300,11 +352,15 @@ void combat(int z, int& num, int& health, int& def, int& m)
 		if(j==3)
 		{
 			monster="Giant Spider";
-		}else{
+		}
+		else
+		{
 			if(j==2)
 			{
 				monster="Giant Scorpion";
-			}else{
+			}
+			else
+			{
 				monster="Insane Bandit";
 			}
 		}
@@ -313,7 +369,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
-			{
+		{
 			string att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
 			cout << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
@@ -329,10 +385,14 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					if(chance==1)
 					{
 						cout << "Dodged!" << endl;
-					}else{
+					}
+					else
+					{
 						whealth-=gen(15,50);
 					}
-				}else{
+				}
+				else
+				{
 					if(att=="q"||att=="Q")
 					{
 						cout << endl << "Quick Slash!" << endl;
@@ -341,45 +401,57 @@ void combat(int z, int& num, int& health, int& def, int& m)
 						if(chance==1)
 						{
 							cout << "Dodged!" << endl;
-						}else{
+						}
+						else
+						{
 							whealth-=gen(5,15);
 						}
-					}else{
+					}
+					else
+					{
 						if(att=="d"||att=="D")
 						{
 							cout << endl << "Dodge!" << endl;
 							chance=gen(1,4);
 							f=0;
 							if(chance==1||chance==2||chance==3)
-                            {
-                                f=1;
-                                cout << "Success" << endl;
-                            }else{
-                                cout << "Failed." << endl;
-                            }
-                        }else{
-                            if(att=="m"||att=="M")
-                            {
-                                f=1;
-                                if(m>0)
-                                {
-                                    cout << endl << "Used a medkit." << endl;
-                                    m--;
-                                    health=1000;
-                                }else{
-                                    cout << "You have no medkits!" << endl;
-                                }
-                            }else{
-                                cout << "Not a valid command!" << endl;
-                                f=1;
-                            }
+                            				{
+                                				f=1;
+                                				cout << "Success" << endl;
+                            				}
+                            				else
+                            				{
+                                				cout << "Failed." << endl;
+                            				}
+                        			}
+                        			else
+                        			{
+                            				if(att=="m"||att=="M")
+                            				{
+                                				f=1;
+                                				if(m>0)
+                                				{
+                                    					cout << endl << "Used a medkit." << endl;
+                                    					m--;
+                                    					health=1000;
+                                				}
+                                				else
+                                				{
+                                    					cout << "You have no medkits!" << endl;
+                                				}
+                            				}
+                            				else
+                            				{
+                                				cout << "Not a valid command!" << endl;
+                                				f=1;
+                            				}
 						}
 					}
 				}
 			}
 			cout << endl; 
 			if(uselessthingidkwhy!=1)
-            {
+            		{
 				damage=0;
 				if(charge==0)
 				{
@@ -395,15 +467,21 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					if(chance==1)
 					{
 						charge++;
-					}else{
+					}
+					else
+					{
 						charge=0;
 					}
-				}else{
+				}
+				else
+				{
 					if(charge==1)
 					{
 						cout << "The " << monster << " is charging up for a heavy attack!" << endl;
 						charge++;
-					}else{
+					}
+					else
+					{
 						cout << monster << " Charges!" <<  endl;
 						damage=gen(15,135)-def;
 						if(def>damage||def==damage||f==1)
@@ -417,7 +495,9 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				}
 				g=0;
 				cout << "You took " << damage << " damage!" << endl;
-			}else{
+			}
+			else
+			{
 				f=0;
 				charge=0;
 			}
@@ -433,13 +513,15 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				{
 					def++;
 					cout << "You loot some armor off of the corpse... Defence +1" << endl;
-				}else{
-                    if(chance==2||chance==3)
-                    {
-                        m++;
-                        cout << "You loot a medkit off of the corpse..." << endl;
-                    }
-                }
+				}
+				else
+				{
+                    			if(chance==2||chance==3)
+                    			{
+                        			m++;
+                        			cout << "You loot a medkit off of the corpse..." << endl;
+                    			}
+                		}
 				t=1;
 				c=1;
 			}
@@ -450,11 +532,15 @@ void combat(int z, int& num, int& health, int& def, int& m)
 		if(j==3)
 		{
 			monster="Earth Elemental";
-		}else{
+		}
+		else
+		{
 			if(j==2)
 			{
 				monster="Undead Bandit";
-			}else{
+			}
+			else
+			{
 				monster="Giant Mole";
 			}
 		}
@@ -463,7 +549,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
-			{
+		{
 			string att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
 			cout << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
@@ -479,10 +565,14 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					if(chance==1)
 					{
 						cout << "Dodged!" << endl;
-					}else{
+					}
+					else
+					{
 						whealth-=gen(15,50);
 					}
-				}else{
+				}
+				else
+				{
 					if(att=="q"||att=="Q")
 					{
 						cout << endl << "Quick Slash!" << endl;
@@ -491,38 +581,50 @@ void combat(int z, int& num, int& health, int& def, int& m)
 						if(chance==1)
 						{
 							cout << "Dodged!" << endl;
-						}else{
+						}
+						else
+						{
 							whealth-=gen(5,15);
 						}
-					}else{
+					}
+					else
+					{
 						if(att=="d"||att=="D")
 						{
 							cout << endl << "Dodge!" << endl;
 							chance=gen(1,4);
 							f=0;
 							if(chance==1||chance==2||chance==3)
-                            {
-                                f=1;
-                                cout << "Success" << endl;
-                            }else{
-                                cout << "Failed." << endl;
-                            }
-                        }else{
-                            if(att=="m"||att=="M")
-                            {
-                                f=1;
-                                if(m>0)
-                                {
-                                    cout << endl << "Used a medkit." << endl;
-                                    m--;
-                                    health=1000;
-                                }else{
-                                    cout << "You have no medkits!" << endl;
-                                }
-                            }else{
-                                cout << "Not a valid command!" << endl;
-                                f=1;
-                            }
+                            				{
+                                				f=1;
+                                				cout << "Success" << endl;
+                            				}
+                            				else
+                            				{
+                                				cout << "Failed." << endl;
+                            				}
+                        			}
+                        			else
+                        			{
+                            				if(att=="m"||att=="M")
+                            				{
+                                				f=1;
+                                				if(m>0)
+                                				{
+                                    					cout << endl << "Used a medkit." << endl;
+                                    					m--;
+                                    					health=1000;
+                                				}
+                                				else
+                                				{
+                                    					cout << "You have no medkits!" << endl;
+                                				}
+                            				}
+                            				else
+                            				{
+                                				cout << "Not a valid command!" << endl;
+                                				f=1;
+                            				}
 						}
 					}
 				}
