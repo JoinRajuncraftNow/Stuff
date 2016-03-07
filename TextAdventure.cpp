@@ -5,7 +5,7 @@
 using namespace std;
 string vowel(string arg)
 {
-		return ( arg[0]=="A" || arg[0]=="E" || arg[0]=="I" || arg[0]=="O" || arg[0]=="U" ) ? "n" : "";
+		return ( arg[0]=='A' || arg[0]=='E' || arg[0]=='I' || arg[0]=='O' || arg[0]=='U' ) ? "n" : "";
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
