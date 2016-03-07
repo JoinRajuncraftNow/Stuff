@@ -445,7 +445,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				monster="Giant Mole";
 			}
 		}
-		int g, c, chance, damage, charge=0, t=0, f=0;//, gen(200,300);
+		int g, c, chance, damage, charge=0, t=0, f=0,whealth = gen(200,300); //I assume this is what you meant, because integer overflows cause the enemy to be HARD (30000+ health!)
 		cout << "Something approaches..." << endl << "A" << vowel(monster) << " " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
