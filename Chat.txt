@@ -15,3 +15,4 @@ $ You want the code? It works but is extremely messy. Clean it up if you want. I
 $ BTW. I didn't use greater than or equal to because it caused errors when I compiled it. I think I may have messed up a file somewhere.
 $ Also, defense can be spelled as defence also. It is just more common as defense in the US.
 # You have so many errors, block statements!!!!!
+# Well, why did you give the undead bandit so much health, more than the boss!
