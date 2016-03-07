@@ -280,7 +280,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				if(chance==1)
 				{
 					def++;
-					cout << "You loot some armor off of the corpse... Defence +1" << endl;
+					cout << "You loot some armor off of the corpse... Defense +1" << endl;
 				}else{
                     if(chance==2||chance==3)
                     {
@@ -312,7 +312,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 		while(c==0)
 			{
 			string att;
-			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
+			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "Defense: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
 			if(t==0)
 			{
 				getline(cin, att);
@@ -427,7 +427,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				if(chance==1)
 				{
 					def++;
-					cout << "You loot some armor off of the corpse... Defence +1" << endl;
+					cout << "You loot some armor off of the corpse... Defense +1" << endl;
 				}else{
                     if(chance==2||chance==3)
                     {
@@ -454,13 +454,13 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			}
 		}
 		int g, c, chance, damage, charge=0, t=0, f=0, gen(200,300);
-		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
+		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl; //Add a condition for a vowel
 		c=0;
 		while(c==0)
 			{
 			string att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
-			cout << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
+			cout << "Health: " << health << endl << "Defense: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
 			cout << "Command: ";
 			if(t==0)
 			{
@@ -576,7 +576,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				if(chance==1)
 				{
 					def++;
-					cout << "You loot some armor off of the corpse... Defence +1" << endl;
+					cout << "You loot some armor off of the corpse... Defense +1" << endl;
 				}else{
                     if(chance==2||chance==3)
                     {
