@@ -4,4 +4,5 @@ $ - Alex
 @ - Garrett
 CHAT:
 #My code that I corrected of you, made Undead bandits and Earth Elementals have over 30,000 Health!!!!!!!!!!! I assume that the code is how you want it now, since it's free of errors!
-$ LOL Must be a typo from pasting it into github. In the notepad++ copy I have it's fine. 
+$ LOL Must be a typo from pasting it into github. In the notepad++ copy I have it's fine.
+# Well, I fixed the code on github and played and beat the game several times on LINUX (even once with the 30,000 glitch, avoided all the 0-1 enemies)
