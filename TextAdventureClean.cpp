@@ -836,27 +836,39 @@ void command(string input, int& x, int& y, int& z, int& h)
 		if(input=="s"||input=="S")
 		{
 			south(x, y, z);
-		} else {
+		}
+		else
+		{
 			if(input=="e"||input=="E")
 			{
 				east(x, y, z);
-			} else {
+			}
+			else
+			{
 				if(input=="w"||input=="W")
 				{
 					west(x, y, z);
-				} else {
+				}
+				else
+				{
 					if(input=="h"||input=="H")
 					{
-					cout << "Commands:" << endl << "E-east" << endl << "W-west" << endl << "N-north" << endl << "S-South" << endl << "D-down" << endl << "U-up" << endl;
-					} else {
+						cout << "Commands:" << endl << "E-east" << endl << "W-west" << endl << "N-north" << endl << "S-South" << endl << "D-down" << endl << "U-up" << endl;
+					}
+					else
+					{
 						if(input=="u"||input=="U")
 						{	
 							up(x, y, z, h);
-						} else {
+						}
+						else
+						{
 							if(input=="D"||input=="d")
 							{
 								down(x, y, z, h);
-							} else {
+							}
+							else
+							{
 								cout << "That is not a valid command, type H for help." << endl;
 							}
 						}
@@ -875,27 +887,37 @@ int tile(int z, int& num, int& health, int& def, int& m)
 		{
 			cout << "[Forest]" << endl;
 			return 1;
-		}else{
+		}
+		else
+		{
 			if(num==4||num==6)
 			{
 				cout << "[Swamp]" << endl;
 				return 4;
-			}else{
+			}
+			else
+			{
 				if(num==7||num==8||num==9)
 				{
 					cout << "[Desert]" << endl;
 					return 7;
-				}else{
+				}
+				else
+				{
 					if(num==10)
 					{
 						cout << "[Cave Entrance]" << endl;
 						return 10;
-					}else{
+					}
+					else
+					{
 						if(num==2)
 						{
 							combat(z, num, health, def, m);
 							return 12;
-						}else{
+						}
+						else
+						{
 							if(num==5)
 							{
 								cout << "[Ruins]" << endl;
@@ -905,27 +927,37 @@ int tile(int z, int& num, int& health, int& def, int& m)
 				}
 			}
 		}
-	}else{
+	}
+	else
+	{
 		if(num==1||num==3||num==12)
 		{
 			cout << "[Cavern]" << endl;
 			return 1;
-		}else{
+		}
+		else
+		{
 			if(num==4||num==5||num==6)
 			{
 				cout << "[Tunnel]" << endl;
 				return 4;
-			}else{
+			}
+			else
+			{
 				if(num==7||num==8||num==9)
 				{
 					cout << "[Cave]" << endl;
 					return 7;
-				}else{
+				}
+				else
+				{
 					if(num==10)
 					{
 						cout << "[Stairway]" << endl;
 						return 10;
-					}else{
+					}
+					else
+					{
 						if(num==2)
 						{
 							combat(z, num, health, def, m);
@@ -965,13 +997,13 @@ int main()
 		x++;
 		y=0;
 	}
-    map[99][99][0]=11;
+    	map[99][99][0]=11;
 	x=0;
 	y=0;
 	z=4;
 	cout << "Done!" << endl << endl;
-    cout << "This is a text adventure by Alex Trahan." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit any key to continue." << endl;
-    getline(cin, pause);
+    	cout << "This is a text adventure by Alex Trahan, This version Cleaned up by Zachary Taylor" << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit any key to continue." << endl;
+    	getline(cin, pause);
 	int l=0;
 	int health=1000;
 	while(death==0)
