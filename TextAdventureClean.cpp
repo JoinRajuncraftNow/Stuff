@@ -631,13 +631,13 @@ void combat(int z, int& num, int& health, int& def, int& m)
 			}
 			cout << endl; 
 			if(uselessthingidkwhy!=1)
-            {
+            		{
 				damage=0;
 				if(charge==0)
 				{
 					cout << monster << " Attacks!" <<  endl;
 					damage=gen(7,25)-def;
-					if(def>damage||def==damage||f==1)
+					if(def>=damage||f==1) //ever heard of greater than or equal to?
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
@@ -647,15 +647,21 @@ void combat(int z, int& num, int& health, int& def, int& m)
 					if(chance==1)
 					{
 						charge++;
-					}else{
+					}
+					else
+					{
 						charge=0;
 					}
-				}else{
+				}
+				else
+				{
 					if(charge==1)
 					{
 						cout << "The " << monster << " is charging up for a heavy attack!" << endl;
 						charge++;
-					}else{
+					}
+					else
+					{
 						cout << monster << " Charges!" <<  endl;
 						damage=gen(15,135)-def;
 						if(def>damage||def==damage||f==1)
@@ -669,7 +675,9 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				}
 				g=0;
 				cout << "You took " << damage << " damage!" << endl;
-			}else{
+			}
+			else
+			{
 				f=0;
 				charge=0;
 			}
@@ -685,13 +693,15 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				{
 					def++;
 					cout << "You loot some armor off of the corpse... Defence +1" << endl;
-				}else{
-                    if(chance==2||chance==3)
-                    {
-                        m++;
-                        cout << "You loot a medkit off of the corpse..." << endl;
-                    }
-                }
+				}
+				else
+				{
+                    			if(chance==2||chance==3)
+                    			{
+                        			m++;
+                        			cout << "You loot a medkit off of the corpse..." << endl;
+                    			}
+                		}
 				t=1;
 				c=1;
 			}
@@ -721,11 +731,15 @@ void up(int& x, int& y, int& z, int h)
 		{
 			z++;
 			cout << "You climb up the stairs, but a doorway closes behind you... You are locked out!" << endl;
-		} else {
+		}
+		else
+		{
 			cout << "You jump as high as you can, but sadly you cannot fly." << endl;	
 		}
-	}else{
-	cout << "You can't go up from here" << endl;
+	}
+	else
+	{
+		cout << "You can't go up from here" << endl;
 	}
 }
 
@@ -737,11 +751,15 @@ void down(int& x, int& y, int& z, int h)
 		{
 			z--;
 			cout << "You start to climb down, then the ground collapses underneath you!" << endl;
-		} else {
+		}
+		else
+		{
 			cout << "There are no tunnels leading down from here..." << endl;	
 		}
-	}else{
-	cout << "You can't go down from here" << endl;
+	}
+	else
+	{
+		cout << "You can't go down from here" << endl;
 	}
 }
 
@@ -759,9 +777,11 @@ void north(int& x, int& y, int& z)
 {
 	if(x!=99)
 	{
-        cout << "You trek north" << endl;
+        	cout << "You trek north" << endl;
 		x++;
-	} else {
+	}
+	else
+	{
 		cout << "Something tells you that you can't leave the area..." << endl;	
 	}
 }
@@ -770,9 +790,11 @@ void south(int& x, int& y, int& z)
 {
 	if(x!=0)
 	{
-        cout << "You trek south" << endl;
+        	cout << "You trek south" << endl;
 		x--;
-	} else {
+	}
+	else
+	{
 		cout << "Something tells you that you can't leave the area..." << endl;	
 	}
 }
@@ -781,9 +803,11 @@ void east(int& x, int& y, int& z)
 {
 	if(y!=99)
 	{
-        cout << "You trek east" << endl;
+        	cout << "You trek east" << endl;
 		y++;
-	} else {
+	}
+	else
+	{
 		cout << "Something tells you that you can't leave the area..." << endl;	
 	}
 }
@@ -792,9 +816,11 @@ void west(int& x, int& y, int& z)
 {
 	if(y!=0)
 	{
-        cout << "You trek west" << endl;
+        	cout << "You trek west" << endl;
 		y--;
-	} else {
+	}
+	else
+	{
 		cout << "Something tells you that you can't leave the area..." << endl;	
 	}
 }
@@ -804,7 +830,9 @@ void command(string input, int& x, int& y, int& z, int& h)
 	if(input=="n"||input=="N")
 	{
 		north(x, y, z);
-	} else {
+	}
+	else
+	{
 		if(input=="s"||input=="S")
 		{
 			south(x, y, z);
