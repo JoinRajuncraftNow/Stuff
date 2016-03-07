@@ -6,7 +6,7 @@ using namespace std;
 
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return rand() % y + x;
+	return (rand() % y + x);
 }
 
 void death() //Outputs "You have died!" then stops.
@@ -20,7 +20,7 @@ void death() //Outputs "You have died!" then stops.
 
 void boss(int& health, int def, int& m) //Boss Battle
 {
-	int g, c=0, chance, damage, charge=0, t=0, whealth=1000, uselessthingidkwhy=0, f=0, stun=0;
+	int g, c=0, chance, damage, charge=0, t=0, whealth=1000, f=0, stun=0;
 	while(health>0,whealth>0)
 	{
 		string att;
@@ -143,7 +143,7 @@ void boss(int& health, int def, int& m) //Boss Battle
 
 void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 {
-	int uselessthingidkwhy=0, j=gen(1,3);;
+	int j=gen(1,3);;
 	string monster;
 	if(z==4)
 	{
@@ -226,49 +226,43 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				}
 			}
 			cout << endl;
-			if(uselessthingidkwhy!=1)
-            {
-				damage=0;
-				if(charge==0)
+			damage=0;
+			if(charge==0)
+			{
+				cout << monster << " Attacks!" <<  endl;
+				damage=gen(5,25)-def;
+				if(def>damage||def==damage&&f==0)
 				{
-					cout << monster << " Attacks!" <<  endl;
-					damage=gen(5,25)-def;
+					cout << "Your armor blocked the damage!" << endl;
+					damage=0;
+				}
+				health-=damage;
+				chance=gen(1,4);
+				if(chance==1)
+				{
+					charge++;
+				}else{
+					charge=0;
+				}
+			}else{
+				if(charge==1)
+				{
+					cout << "The " << monster << " is charging up for a heavy attack!" << endl;
+					charge++;
+				}else{
+					cout << monster << " Charges!" <<  endl;
+					damage=gen(10,25)-def;
 					if(def>damage||def==damage&&f==0)
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
 					}
 					health-=damage;
-					chance=gen(1,4);
-					if(chance==1)
-					{
-						charge++;
-					}else{
-						charge=0;
-					}
-				}else{
-					if(charge==1)
-					{
-						cout << "The " << monster << " is charging up for a heavy attack!" << endl;
-						charge++;
-					}else{
-						cout << monster << " Charges!" <<  endl;
-						damage=gen(10,25)-def;
-						if(def>damage||def==damage&&f==0)
-						{
-							cout << "Your armor blocked the damage!" << endl;
-							damage=0;
-						}
-						health-=damage;
-						charge=0;
-					}
+					charge=0;
 				}
-				g=0;
-				cout << "You took " << damage << " damage!" << endl;
-			}else{
-				f=0;
-				charge=0;
 			}
+			g=0;
+			cout << "You took " << damage << " damage!" << endl;
 			if(health<1)
 			{
 				death();
@@ -280,7 +274,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				if(chance==1)
 				{
 					def++;
-					cout << "You loot some armor off of the corpse... Defense +1" << endl;
+					cout << "You loot some armor off of the corpse... Defence +1" << endl;
 				}else{
                     if(chance==2||chance==3)
                     {
@@ -312,7 +306,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 		while(c==0)
 			{
 			string att;
-			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "Defense: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
+			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
 			if(t==0)
 			{
 				getline(cin, att);
@@ -373,49 +367,43 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				}
 			}
 			cout << endl; 
-			if(uselessthingidkwhy!=1)
-            {
-				damage=0;
-				if(charge==0)
+			damage=0;
+			if(charge==0)
+			{
+				cout << monster << " Attacks!" <<  endl;
+				damage=gen(7,25)-def;
+				if(def>damage||def==damage&&f==0)
 				{
-					cout << monster << " Attacks!" <<  endl;
-					damage=gen(7,25)-def;
+					cout << "Your armor blocked the damage!" << endl;
+					damage=0;
+				}
+				health-=damage;
+				chance=gen(1,4);
+				if(chance==1)
+				{
+					charge++;
+				}else{
+					charge=0;
+				}
+			}else{
+				if(charge==1)
+				{
+					cout << "The " << monster << " is charging up for a heavy attack!" << endl;
+					charge++;
+				}else{
+					cout << monster << " Charges!" <<  endl;
+					damage=gen(15,135)-def;
 					if(def>damage||def==damage&&f==0)
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
 					}
 					health-=damage;
-					chance=gen(1,4);
-					if(chance==1)
-					{
-						charge++;
-					}else{
-						charge=0;
-					}
-				}else{
-					if(charge==1)
-					{
-						cout << "The " << monster << " is charging up for a heavy attack!" << endl;
-						charge++;
-					}else{
-						cout << monster << " Charges!" <<  endl;
-						damage=gen(15,135)-def;
-						if(def>damage||def==damage&&f==0)
-						{
-							cout << "Your armor blocked the damage!" << endl;
-							damage=0;
-						}
-						health-=damage;
-						charge=0;
-					}
+					charge=0;
 				}
-				g=0;
-				cout << "You took " << damage << " damage!" << endl;
-			}else{
-				f=0;
-				charge=0;
 			}
+			g=0;
+			cout << "You took " << damage << " damage!" << endl;
 			if(health<1)
 			{
 				death();
@@ -427,7 +415,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				if(chance==1)
 				{
 					def++;
-					cout << "You loot some armor off of the corpse... Defense +1" << endl;
+					cout << "You loot some armor off of the corpse... Defence +1" << endl;
 				}else{
                     if(chance==2||chance==3)
                     {
@@ -454,13 +442,13 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			}
 		}
 		int g, c, chance, damage, charge=0, t=0, f=0, gen(200,300);
-		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl; //Add a condition for a vowel
+		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
 			{
 			string att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
-			cout << "Health: " << health << endl << "Defense: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
+			cout << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
 			cout << "Command: ";
 			if(t==0)
 			{
@@ -522,49 +510,43 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				}
 			}
 			cout << endl; 
-			if(uselessthingidkwhy!=1)
-            {
-				damage=0;
-				if(charge==0)
+			damage=0;
+			if(charge==0)
+			{
+				cout << monster << " Attacks!" <<  endl;
+				damage=gen(7,25)-def;
+				if(def>damage||def==damage&&f==0)
 				{
-					cout << monster << " Attacks!" <<  endl;
-					damage=gen(7,25)-def;
+					cout << "Your armor blocked the damage!" << endl;
+					damage=0;
+				}
+				health-=damage;
+				chance=gen(1,4);
+				if(chance==1)
+				{
+					charge++;
+				}else{
+					charge=0;
+				}
+			}else{
+				if(charge==1)
+				{
+					cout << "The " << monster << " is charging up for a heavy attack!" << endl;
+					charge++;
+				}else{
+					cout << monster << " Charges!" <<  endl;
+					damage=gen(15,135)-def;
 					if(def>damage||def==damage&&f==0)
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
 					}
 					health-=damage;
-					chance=gen(1,4);
-					if(chance==1)
-					{
-						charge++;
-					}else{
-						charge=0;
-					}
-				}else{
-					if(charge==1)
-					{
-						cout << "The " << monster << " is charging up for a heavy attack!" << endl;
-						charge++;
-					}else{
-						cout << monster << " Charges!" <<  endl;
-						damage=gen(15,135)-def;
-						if(def>damage||def==damage&&f==0)
-						{
-							cout << "Your armor blocked the damage!" << endl;
-							damage=0;
-						}
-						health-=damage;
-						charge=0;
-					}
+					charge=0;
 				}
-				g=0;
-				cout << "You took " << damage << " damage!" << endl;
-			}else{
-				f=0;
-				charge=0;
 			}
+			g=0;
+			cout << "You took " << damage << " damage!" << endl;
 			if(health<1)
 			{
 				death();
@@ -576,7 +558,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				if(chance==1)
 				{
 					def++;
-					cout << "You loot some armor off of the corpse... Defense +1" << endl;
+					cout << "You loot some armor off of the corpse... Defence +1" << endl;
 				}else{
                     if(chance==2||chance==3)
                     {
@@ -839,5 +821,4 @@ int main()
 		command(com, x, y, z, num);
 		cout << "---------------------------------------------------------------------------" << endl;
 	}
-	return 0; //Added return 0
 } 
