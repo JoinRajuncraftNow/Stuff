@@ -146,7 +146,8 @@ void boss(int& health, int def, int& m) //Boss Battle
 
 void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 {
-	int j=gen(1,3);;
+	int whealth;
+	int j=gen(1,3);
 	string monster;
 	if(z==4)
 	{
