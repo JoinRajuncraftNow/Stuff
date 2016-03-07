@@ -4,12 +4,12 @@
 
 using namespace std;
 
-int gen(int x, int y)
+int gen(int x, int y) //Generates a random number between x and y.
 {
 	return (rand() % y + x);
 }
 
-void death()
+void death() //Outputs "You have died!" then stops.
 {
 	cout << "You have died!";
 	while(true)
@@ -18,7 +18,7 @@ void death()
 	}
 }
 
-void boss(int& health, int def, int& m)
+void boss(int& health, int def, int& m) //Boss Battle
 {
 	int g, c=0, chance, damage, charge=0, t=0, whealth=1000, uselessthingidkwhy=0, f=0, stun=0;
 	while(health>0,whealth>0)
@@ -141,7 +141,7 @@ void boss(int& health, int def, int& m)
 	}
 }
 
-void combat(int z, int& num, int& health, int& def, int& m)
+void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 {
 	int uselessthingidkwhy=0, j=gen(1,3);;
 	string monster;
@@ -158,14 +158,10 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				monster="Giant Snake";
 			}
 		}
-		int g, c, chance, damage, charge=0;
-		int whealth=gen(100,200);
+		int g, c=0, chance, damage, charge=0, whealth=gen(100,200), t=0, f=0;
 		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
-		c=0;
-		int t=0;
 		while(c==0)
 			{
-			int f=0;
 			string att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
 			cout << "Health: " << health << endl << "def: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
@@ -310,16 +306,13 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				monster="Insane Bandit";
 			}
 		}
-		int g, c, chance, damage, charge=0, t=0, f=0;
-		int whealth=gen(200,300);
+		int g, c, chance, damage, charge=0, t=0, f=0, whealth=gen(200,300);
 		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
 			{
 			string att;
-			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
-			cout << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
-			cout << "Command: ";
+			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
 			if(t==0)
 			{
 				getline(cin, att);
@@ -460,8 +453,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 				monster="Giant Mole";
 			}
 		}
-		int g, c, chance, damage, charge=0, t=0, f=0;
-		int whealth=gen(200,300);
+		int g, c, chance, damage, charge=0, t=0, f=0, gen(200,300);
 		cout << "Something approaches..." << endl << "A " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
@@ -599,7 +591,7 @@ void combat(int z, int& num, int& health, int& def, int& m)
 	}
 }
 
-int count(string count, char test) //Tests for # of times char is in string.
+int count(string count, char test) //Tests for # of times char is in string. Useless unless I add an inventory system.
 {
 	int x=0, output=0;
 	while(x<count.size())
@@ -613,7 +605,7 @@ int count(string count, char test) //Tests for # of times char is in string.
 	return output;
 }
 
-void up(int& x, int& y, int& z, int h)
+void up(int& x, int& y, int& z, int h) //Move the player up if you can
 {
 	if(h==10)
 	{
@@ -629,7 +621,7 @@ void up(int& x, int& y, int& z, int h)
 	}
 }
 
-void down(int& x, int& y, int& z, int h)
+void down(int& x, int& y, int& z, int h) //Move the player down if you can
 {
 	if(h==10)
 	{
@@ -645,7 +637,7 @@ void down(int& x, int& y, int& z, int h)
 	}
 }
 
-void north(int& x, int& y, int& z)
+void north(int& x, int& y, int& z) //Move north if you can
 {
 	if(x!=99)
 	{
@@ -656,7 +648,7 @@ void north(int& x, int& y, int& z)
 	}
 }
 
-void south(int& x, int& y, int& z)
+void south(int& x, int& y, int& z) //Move south if you can
 {
 	if(x!=0)
 	{
@@ -667,7 +659,7 @@ void south(int& x, int& y, int& z)
 	}
 }
 
-void east(int& x, int& y, int& z)
+void east(int& x, int& y, int& z) //Move east if you can
 {
 	if(y!=99)
 	{
@@ -678,7 +670,7 @@ void east(int& x, int& y, int& z)
 	}
 }
 
-void west(int& x, int& y, int& z)
+void west(int& x, int& y, int& z) //Move west if you can
 {
 	if(y!=0)
 	{
@@ -689,7 +681,7 @@ void west(int& x, int& y, int& z)
 	}
 }
 
-void command(string input, int& x, int& y, int& z, int& h)
+void command(string input, int& x, int& y, int& z, int& h) //Tests for which command you inputted
 {
 	if(input=="n"||input=="N")
 	{
@@ -729,7 +721,7 @@ void command(string input, int& x, int& y, int& z, int& h)
 	}
 }
 
-int tile(int z, int& num, int& health, int& def, int& m)
+int tile(int z, int& num, int& health, int& def, int& m) //Tests for what value you are on
 {
 	if(z==4)
 	{
@@ -811,7 +803,7 @@ int main()
 	string com, pause;
 	int x=0, y=0, z=0, death=0, def=0, num, m=0;
 	int map[100][100][5];
-	cout << "Generating Map..." << endl;
+	cout << "Generating Map..." << endl; //Randomly generates map.
 	while(x<100)
 	{
 		while(y<100)
@@ -832,17 +824,15 @@ int main()
 	x=0;
 	y=0;
 	z=4;
-	cout << "Done!" << endl << endl;
-    cout << "This is a text adventure by Alex Trahan." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit any key to continue." << endl;
+    cout << endl << "This is a text adventure by Alex Trahan." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit any key to continue." << endl;
     getline(cin, pause);
-	int l=0;
-	int health=1000;
-	while(death==0)
+	int health=1000, l=0;
+	while(true) //Never stop looping
 	{
-		num=map[x][y][z];
-		map[x][y][z]=tile(z, num, health, def, m);
-		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl;
-		cout << "Command: ";
+		num=map[x][y][z]; //Copies the value so I don't have to pass an array by reference. There is an easier way of doing this, but whatever.
+		map[x][y][z]=tile(z, num, health, def, m); //Uses this so that the tile function can easily change the map.
+		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl; //Outputs Coordinates
+		cout << "Command: "; 
 		getline(cin, com);
 		cout << endl << endl;
 		cout << "---------------------------------------------------------------------------" << endl;
