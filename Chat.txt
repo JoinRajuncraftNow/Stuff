@@ -11,3 +11,4 @@ $ My text adventure is done! It has all of the basics. I am going to add some mo
 # Get off of the server!!!!! - posted at 9:25 PM during March 4
 # RESPOND!!!!!!
 # Post the code to Github, PLEASE!!!!!!!!!!!!!!!!!!
+$ You want the code? It works but is extremely messy. Clean it up if you want. I have made it look simple enough for Maryville Matters. I am going to add comments later.
