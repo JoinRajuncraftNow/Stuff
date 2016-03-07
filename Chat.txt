@@ -3,16 +3,4 @@ Use this to chat.
 $ - Alex
 @ - Garrett
 CHAT:
-#DON'T SHUT DOWN THE COMPUTER!!!!! THE POLICY UPDATES MAY TAKE EFFECT!!!!!
-#RESPOND!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-$ My text adventure is done! It has all of the basics. I am going to add some more features in and clean up the code a bit before I post it though. 
-# post it now!
-# MIDNIGHT?!?!?!?!?!?!?!?!?!?!
-# Get off of the server!!!!! - posted at 9:25 PM during March 4
-# RESPOND!!!!!!
-# Post the code to Github, PLEASE!!!!!!!!!!!!!!!!!!
-$ You want the code? It works but is extremely messy. Clean it up if you want. I have made it look simple enough for Maryville Matters. I am going to add comments later.
-$ BTW. I didn't use greater than or equal to because it caused errors when I compiled it. I think I may have messed up a file somewhere.
-$ Also, defense can be spelled as defence also. It is just more common as defense in the US.
-# You have so many errors, block statements!!!!!
-# Well, why did you give the undead bandit so much health, more than the boss!
+#My code that I corrected of you, made Undead bandits and Earth Elementals have over 30,000 Health!!!!!!!!!!! I assume that the code is how you want it now, since it's free of errors!
