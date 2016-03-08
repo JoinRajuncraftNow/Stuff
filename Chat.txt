@@ -3,12 +3,4 @@ Use this to chat.
 $ - Alex
 @ - Garrett
 CHAT:
-#My code that I corrected of you, made Undead bandits and Earth Elementals have over 30,000 Health!!!!!!!!!!! I assume that the code is how you want it now, since it's free of errors!
-$ LOL Must be a typo from pasting it into github. In the notepad++ copy I have it's fine.
-# Well, I fixed the code on github and played and beat the game several times on LINUX (even once with the 30,000 glitch, avoided all the 0-1 enemies)
-# And I finally am on the step of my language of creating the tokenizer/compiler/..., That is going to be as hard as heck, so I stall on windows unicode (NOT IN EXISTANCE)
-$ Is the boss stunning properly? I may have to make the game harder... Or maybe several challenge settings that add to the enemy health and damage, the hardcore mode could be with only 1 medkit but more in depth combat or something. 
-#boss stun is not functioning
-$ IDK what but something stopped me from adding a file... Its up now so check out that commit for some goals of what I want to do in hardcore mode.
-$ The Boss isn't charging. I will fix later.
-# And /*LOL This was originally And fix tell me ... */ tell me what you modified so I can keep up with it in the version for myself (clean and not for non-programmers)
+#SEVEN PEOPLE, MORE CHANCE OF IT BEING RAULSTON
