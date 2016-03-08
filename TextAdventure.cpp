@@ -91,33 +91,10 @@ void boss(int& health, int def, int& m) //Boss Battle
 		damage=0;
 		if(charge==0)
 		{
-			cout << "The Destroyer Attacks!" <<  endl;
-			damage=gen(20,100)-def;
-			if(def>damage||def==damage)
+			if(f==0)
 			{
-				if(f==1)
-				{
-					cout << "Your armor blocked the damage!" << endl;
-				}
-				damage=0;
-			}
-			health-=damage;
-			chance=gen(1,4);
-			if(chance==1)
-			{
-				charge++;
-			}else{
-				charge=0;
-			}
-		}else{
-			if(charge==1)
-			{
-				cout << "The Destroyer is charging up for a heavy attack!" << endl;
-				charge++;
-			}else{
-				stun=1;
-				cout << "The Destroyer Charges!" <<  endl << "You have been stunned!" << endl;
-				damage=gen(25, 200)-def;
+				cout << "The Destroyer Attacks!" <<  endl;
+				damage=gen(20,100)-def;
 				if(def>damage||def==damage)
 				{
 					if(f==1)
@@ -126,8 +103,34 @@ void boss(int& health, int def, int& m) //Boss Battle
 					}
 					damage=0;
 				}
-					health-=damage;
+				health-=damage;
+				chance=gen(1,4);
+				if(chance==1)
+				{
+					charge++;
+				}else{
 					charge=0;
+				}
+			}else{
+				if(charge==1)
+				{
+					cout << "The Destroyer is charging up for a heavy attack!" << endl;
+					charge++;
+				}else{
+					stun=1;
+					cout << "The Destroyer Charges!" <<  endl << "You have been stunned!" << endl;
+					damage=gen(25, 200)-def;
+					if(def>damage||def==damage)
+					{
+						if(f==1)
+						{
+							cout << "Your armor blocked the damage!" << endl;
+						}
+						damage=0;
+					}else{
+						health-=damage;
+						charge=0;
+					}
 				}
 			}
 			g=0;
