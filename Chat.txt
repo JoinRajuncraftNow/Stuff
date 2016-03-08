@@ -9,3 +9,4 @@ $ LOL Must be a typo from pasting it into github. In the notepad++ copy I have i
 # And I finally am on the step of my language of creating the tokenizer/compiler/..., That is going to be as hard as heck, so I stall on windows unicode (NOT IN EXISTANCE)
 $ Is the boss stunning properly? I may have to make the game harder... Or maybe several challenge settings that add to the enemy health and damage, the hardcore mode could be with only 1 medkit but more in depth combat or something. 
 #boss stun is not functioning
+$ IDK what but something stopped me from adding a file... Its up now so check out that commit for some goals of what I want to do in hardcore mode.
