@@ -11,4 +11,4 @@ $ Is the boss stunning properly? I may have to make the game harder... Or maybe 
 #boss stun is not functioning
 $ IDK what but something stopped me from adding a file... Its up now so check out that commit for some goals of what I want to do in hardcore mode.
 $ The Boss isn't charging. I will fix later.
-# And fix tell me what you modified so I can keep up with it in the version for myself (clean and not for non-programmers)
+# And /*LOL This was originally And fix tell me ... */ tell me what you modified so I can keep up with it in the version for myself (clean and not for non-programmers)
