@@ -105,7 +105,7 @@ void boss(int& health, int def, int& m) //Boss Battle
 				}
 				health-=damage;
 				chance=gen(1,3);
-				if(chance==1)
+				if(chance==2)
 				{
 					charge++;
 				}else{
