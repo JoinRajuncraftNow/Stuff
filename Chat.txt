@@ -8,3 +8,4 @@ $ LOL Must be a typo from pasting it into github. In the notepad++ copy I have i
 # Well, I fixed the code on github and played and beat the game several times on LINUX (even once with the 30,000 glitch, avoided all the 0-1 enemies)
 # And I finally am on the step of my language of creating the tokenizer/compiler/..., That is going to be as hard as heck, so I stall on windows unicode (NOT IN EXISTANCE)
 $ Is the boss stunning properly? I may have to make the game harder... Or maybe several challenge settings that add to the enemy health and damage, the hardcore mode could be with only 1 medkit but more in depth combat or something. 
+#boss stun is not functioning
