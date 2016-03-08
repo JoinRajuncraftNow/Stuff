@@ -30,62 +30,63 @@ void boss(int& health, int def, int& m) //Boss Battle
 		if(stun==0)
 		{
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "def: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
-			if(t==0)
+			getline(cin, att);
+			if(att=="b"||att=="B")
 			{
-				getline(cin, att);
-				if(att=="b"||att=="B")
+				cout << endl << "Big Slash!" << endl;
+				chance=gen(1,4);
+				f=0;
+				if(chance==1)
 				{
-					cout << endl << "Big Slash!" << endl;
-					chance=gen(1,4);
+					cout << "Dodged!" << endl;
+				}else{
+					whealth-=gen(15,50);
+				}
+			}else{
+				if(att=="q"||att=="Q")
+				{
+					cout << endl << "Quick Slash!" << endl;
+					chance=gen(1,20);
 					f=0;
 					if(chance==1)
 					{
 						cout << "Dodged!" << endl;
 					}else{
-						whealth-=gen(15,50);
+						whealth-=gen(5,15);
 					}
 				}else{
-					if(att=="q"||att=="Q")
+					if(att=="d"||att=="D")
 					{
-						cout << endl << "Quick Slash!" << endl;
-						chance=gen(1,20);
+						cout << endl << "Dodge!" << endl;
+						chance=gen(1,4);
 						f=0;
-						if(chance==1)
+						if(chance==1||chance==2||chance==3)
 						{
-							cout << "Dodged!" << endl;
+							f=1;
+							cout << "Success" << endl;
 						}else{
-							whealth-=gen(5,15);
+							cout << "Failed." << endl;
 						}
 					}else{
-						if(att=="d"||att=="D")
+						if(att=="m"||att=="M")
 						{
-							cout << endl << "Dodge!" << endl;
-							chance=gen(1,4);
-							f=0;
-							if(chance==1||chance==2||chance==3)
-							{
-								f=1;
-								cout << "Success" << endl;
-							}else{
-								cout << "Failed." << endl;
-							}
+							cout << endl << "Used a medkit." << endl;
+							m--;
+							health=1000;
+							f=1;
 						}else{
-							if(att=="m"||att=="M")
-							{
-								cout << endl << "Used a medkit." << endl;
-								m--;
-								health=1000;
-								f=1;
-							}else{
-								cout << "Not a valid command!" << endl;
-								f=1;
-							}
+							cout << "Not a valid command!" << endl;
+							f=1;
 						}
 					}
 				}
 			}
-				cout << endl;
-			}			
+			cout << endl;
+		}else{
+			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "def: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
+			getline(cin, att);
+			cout << "###############" << endl << "You are stunned!" << "###############" << endl; //To make it easier to read.
+		}		
 		stun=0;
 		damage=0;
 		if(charge==0)
