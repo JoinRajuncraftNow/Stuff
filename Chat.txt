@@ -10,3 +10,4 @@ $ LOL Must be a typo from pasting it into github. In the notepad++ copy I have i
 $ Is the boss stunning properly? I may have to make the game harder... Or maybe several challenge settings that add to the enemy health and damage, the hardcore mode could be with only 1 medkit but more in depth combat or something. 
 #boss stun is not functioning
 $ IDK what but something stopped me from adding a file... Its up now so check out that commit for some goals of what I want to do in hardcore mode.
+$ The Boss isn't charging. I will fix later.
