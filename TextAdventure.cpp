@@ -64,6 +64,7 @@ void boss(int& health, int def, int& m) //Boss Battle
 						{
 							f=1;
 							cout << "Success" << endl;
+							charge++
 						}else{
 							cout << "Failed." << endl;
 						}
