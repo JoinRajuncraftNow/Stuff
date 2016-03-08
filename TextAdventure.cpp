@@ -89,9 +89,9 @@ void boss(int& health, int def, int& m) //Boss Battle
 		}		
 		stun=0;
 		damage=0;
-		if(charge==0)
+		if(f==0)
 		{
-			if(f==0)
+			if(charge==0)
 			{
 				cout << "The Destroyer Attacks!" <<  endl;
 				damage=gen(20,100)-def;
@@ -133,6 +133,7 @@ void boss(int& health, int def, int& m) //Boss Battle
 					}
 				}
 			}
+		}
 			g=0;
 			cout << "You took " << damage << " damage!" << endl;
 			f=0;
