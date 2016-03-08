@@ -136,8 +136,7 @@ void boss(int& health, int def, int& m) //Boss Battle
 		}
 			g=0;
 			cout << "You took " << damage << " damage!" << endl;
-			f=0;
-			charge=0;
+			f=0; //LOL Didn't notice that... XD
 		if(health<1)
 		{
 			death();
