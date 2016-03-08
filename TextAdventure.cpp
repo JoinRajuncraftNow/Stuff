@@ -85,7 +85,7 @@ void boss(int& health, int def, int& m) //Boss Battle
 		}else{
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "def: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
 			getline(cin, att);
-			cout << "###############" << endl << "You are stunned!" << "###############" << endl; //To make it easier to read.
+			cout << "###############" << endl << "You are stunned!" << endl << "###############" << endl; //To make it easier to read.
 		}		
 		stun=0;
 		damage=0;
