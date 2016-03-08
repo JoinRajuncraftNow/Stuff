@@ -700,13 +700,13 @@ void command(string input, int& x, int& y, int& z, int& h) //Tests for which com
 								if(input=="116728") //Test
 								{
 									int set;
-									cout << "X: "
+									cout << "X: ";
 									cin >> set;
 									x=set;
-									cout << "Y: "
+									cout << "Y: ";
 									cin >> set;
 									y=set;
-									cout << "Z: "
+									cout << "Z: ";
 									cin >> set;
 									z=set;
 								}else{
