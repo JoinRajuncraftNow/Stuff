@@ -104,7 +104,7 @@ void boss(int& health, int def, int& m) //Boss Battle
 					damage=0;
 				}
 				health-=damage;
-				chance=gen(1,4);
+				chance=gen(1,3);
 				if(chance==1)
 				{
 					charge++;
@@ -671,7 +671,7 @@ void west(int& x, int& y, int& z) //Move west if you can
 	}
 }
 
-void command(string input, int& x, int& y, int& z, int& h) //Tests for which command you inputted
+void command(string input, int& x, int& y, int& z, int& h, int& health) //Tests for which command you inputted
 {
 	if(input=="n"||input=="N")
 	{
@@ -713,6 +713,9 @@ void command(string input, int& x, int& y, int& z, int& h) //Tests for which com
 									cout << "Z: ";
 									cin >> set;
 									z=set;
+									cout << "Health: ";
+									cin >> set;
+									health=set;
 								}else{
 									cout << "That is not a valid command, type H for help." << endl;
 								}
@@ -840,7 +843,7 @@ int main()
 		getline(cin, com);
 		cout << endl << endl;
 		cout << "---------------------------------------------------------------------------" << endl;
-		command(com, x, y, z, num);
+		command(com, x, y, z, num, health);
 		cout << "---------------------------------------------------------------------------" << endl;
 	}
 } 
