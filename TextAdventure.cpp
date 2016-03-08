@@ -697,7 +697,21 @@ void command(string input, int& x, int& y, int& z, int& h) //Tests for which com
 							{
 								down(x, y, z, h);
 							} else {
-								cout << "That is not a valid command, type H for help." << endl;
+								if(input=="116728") //Test
+								{
+									int set;
+									cout << "X: "
+									cin >> set;
+									x=set;
+									cout << "Y: "
+									cin >> set;
+									y=set;
+									cout << "Z: "
+									cin >> set;
+									z=set;
+								}else{
+									cout << "That is not a valid command, type H for help." << endl;
+								}
 							}
 						}
 					}
