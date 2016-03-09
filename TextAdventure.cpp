@@ -607,7 +607,7 @@ void up(int& x, int& y, int& z, int h) //Move the player up if you can
 			cout << "You jump as high as you can, but sadly you cannot fly." << endl;	
 		}
 	}else{
-	cout << "You can't go up from here" << endl;
+		cout << "You can't go up from here" << endl;
 	}
 }
 
@@ -623,7 +623,7 @@ void down(int& x, int& y, int& z, int h) //Move the player down if you can
 			cout << "There are no tunnels leading down from here..." << endl;	
 		}
 	}else{
-	cout << "You can't go down from here" << endl;
+		cout << "You can't go down from here" << endl;
 	}
 }
 
@@ -631,7 +631,7 @@ void north(int& x, int& y, int& z) //Move north if you can
 {
 	if(x!=99)
 	{
-        cout << "You trek north" << endl;
+        	cout << "You trek north" << endl;
 		x++;
 	} else {
 		cout << "Something tells you that you can't leave the area..." << endl;	
@@ -642,7 +642,7 @@ void south(int& x, int& y, int& z) //Move south if you can
 {
 	if(x!=0)
 	{
-        cout << "You trek south" << endl;
+        	cout << "You trek south" << endl;
 		x--;
 	} else {
 		cout << "Something tells you that you can't leave the area..." << endl;	
@@ -653,7 +653,7 @@ void east(int& x, int& y, int& z) //Move east if you can
 {
 	if(y!=99)
 	{
-        cout << "You trek east" << endl;
+        	cout << "You trek east" << endl;
 		y++;
 	} else {
 		cout << "Something tells you that you can't leave the area..." << endl;	
@@ -664,7 +664,7 @@ void west(int& x, int& y, int& z) //Move west if you can
 {
 	if(y!=0)
 	{
-        cout << "You trek west" << endl;
+        	cout << "You trek west" << endl;
 		y--;
 	} else {
 		cout << "Something tells you that you can't leave the area..." << endl;	
