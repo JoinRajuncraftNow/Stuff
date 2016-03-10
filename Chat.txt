@@ -9,3 +9,5 @@ CHAT:
 #Same, better for talking to Alex, since he's not on that long
 @okay, which comment section do you want to use?
 #Something different from both this and the last one
+
+@Do you want to use gmail?  
