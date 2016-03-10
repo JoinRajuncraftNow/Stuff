@@ -13,3 +13,4 @@ CHAT:
 @Do you want to use gmail?  
 #just a different github comment thread
 #if gmail, then personal gmail
+@Hey, I have to go.  I'll be back on later, but feel free to look over my program and run it yourself.  
