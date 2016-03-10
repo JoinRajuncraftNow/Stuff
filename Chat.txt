@@ -1,8 +1,9 @@
 Use this to chat.
 # - Zach
 $ - Alex
-௵ - Garrett
+@- Garrett
 CHAT:
 
 #Like here
-௵ Using a weird unicode symbol
+@ Using a weird unicode symbol
+#No, and it would have been funnier for 15f9f, DONT DO IT THOUGH
