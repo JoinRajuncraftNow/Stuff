@@ -12,4 +12,4 @@ CHAT:
 
 @Do you want to use gmail?  
 #just a different github comment thread
-#if gmail, then personal
+#if gmail, then personal gmail
