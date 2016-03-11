@@ -9,7 +9,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return (rand() % y + x);
+	return (rand() % (y + 1) + x);
 }
 
 void death() //Outputs "You have died!" then stops.
