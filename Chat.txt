@@ -3,5 +3,3 @@ Use this to chat.
 $ - Alex
 @- Garrett
 CHAT:
-
-#Send me your new personal gmail Garrett!
