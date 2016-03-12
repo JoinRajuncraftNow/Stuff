@@ -3,3 +3,4 @@ Use this to chat.
 $ - Alex
 @- Garrett
 CHAT:
+# Alex, I fixed one bug in your code, the gen left out the upper number!
