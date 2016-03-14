@@ -3,13 +3,13 @@
 #include <cstdlib>
 
 using namespace std;
-string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added dependending on the next word, arg
+string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
 		return ( arg[0]=='A' || arg[0]=='E' || arg[0]=='I' || arg[0]=='O' || arg[0]=='U' ) ? "n" : "";
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return (rand() % (y + 1) + x);
+	return (rand() % (y + 1) + x); //% y gives a number in the range of 0~(y-1), that plus x gives x~(x+y-1), thus %(y+1) is needed
 }
 
 void death() //Outputs "You have died!" then stops.
