@@ -4,3 +4,4 @@ $ - Alex
 @- Garrett
 CHAT:
 # Alex, I fixed one bug in your code, the gen left out the upper number!
+$ Sorry I have not been online. I won't be until school starts. Been really busy. 
