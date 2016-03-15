@@ -12,4 +12,3 @@ START 1.bat
 )
 GOTO :next
 ::Ignore that, was thinking of other file. This will be fine.
-::N was completely unneded
