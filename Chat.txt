@@ -12,5 +12,4 @@ FROM: ZACH TO: ALEX
 #YOU DO NOT EDIT ALEX'S GAME GARRETT
 @I haven't edited his game.
 #OK
-#I feel as if I need some help on my Interpreter, as taking the Complement of an InfiniteSet is taking
-ABOVE 5 MINUTES!!!!
+#Is it abnormal for a program to run for over ten minutes?
