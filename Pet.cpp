@@ -25,4 +25,5 @@ int main()
 	while(true)
 	{
 		cout << read() << endl;
-	}
+	} //idiot, you forgot a brace
+}
