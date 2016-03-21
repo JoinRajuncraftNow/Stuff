@@ -3,13 +3,4 @@ Use this to chat.
 $ - Alex
 @- Garrett
 CHAT:
-#
-πππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππππ
-Posted on 3/14
-WHO DID YOU EMAIL THIS TO????
-FROM: ZACH TO: ALEX
-
-#YOU DO NOT EDIT ALEX'S GAME GARRETT
-@I haven't edited his game.
-#OK
-#Is it abnormal for a program to run for over ten minutes?
+#Who visited my Mathematical-Programming repo?
