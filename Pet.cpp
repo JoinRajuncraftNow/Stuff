@@ -19,11 +19,18 @@ int read()
 	return t-n;
 }
 
+void output()
+{
+	int t=whattime();
+	ifstream out("data.txt")
+	out << t;
+}
+
 int main()
 {
 	int health=1000, sick=0, hunger=0;
 	while(true)
 	{
 		cout << read() << endl;
-	} //idiot, you forgot a brace
+	}
 }
