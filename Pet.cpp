@@ -16,11 +16,8 @@ int read()
 	int n, t=whattime();
 	ifstream in("data.txt");
 	in >> n;
-	return t-n; //Idk if this will work. Trying to make something that returns current time-data in file. Testing now.
+	return t-n;
 }
-/*
-This program is meant to be an interactive pet that keeps track of time with text files. Huge WIP, finish later.
-*/
 
 int main()
 {
