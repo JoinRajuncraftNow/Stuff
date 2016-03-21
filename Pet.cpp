@@ -1,9 +1,22 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include <ifstream>
 
 using namespace std;
 
+int read()
+{
+	int n;
+	ifstream read("data.txt");
+	if(read>>n)
+	{
+		return whattime()-n; //Idk if this will work. Trying to make something that returns current time-data in file. Testing now.
+	}
+}
+
+lines=i-1;
+}
 /*
 This program is meant to be an interactive pet that keeps track of time with text files. Huge WIP, finish later.
 */
