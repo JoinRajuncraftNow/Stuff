@@ -1,7 +1,0 @@
-Use this to chat.
-# - Zach
-$ - Alex
-@- Garrett
-CHAT:
-#Who visited my Mathematical-Programming repo?
-#What is Pet.cpp, I think that you may need to use threading to have multiple processes running at the same time!
