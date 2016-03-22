@@ -7,4 +7,6 @@ CHAT:
 #What is Pet.cpp, I think that you may need to use threading to have multiple processes running at the same time!
 $ Organized. Boom.
 #Did you use a batch file?
-@I like the organization, and it's a cool idea to have a pet in your game.  I'm learning a new language for my Maryville Matters because the language has a framework that will really help me now and in the future.  Hopefully, I'll have an instant messaging app that everyone can get on and post memes and stuff for my Maryville Matters.
+@I like the organization, and it's a cool idea to have a pet in your game.  
+@I'm learning a new language for my Maryville Matters because the language has a framework that will really help me now and in the future
+@Hopefully, I'll have an instant messaging app that everyone can get on and post memes and stuff for my Maryville Matters.
