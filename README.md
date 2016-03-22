@@ -1,2 +1,2 @@
 # Random Files
-Alex Trahan's Batch Files and Maryville Matters, and Zachary Taylor's Translation of some files!
+Some files made by Alex Trahan and Zachary Taylor!
