@@ -16,7 +16,7 @@ int read()
 void output()
 {
 	int t=time(0);
-	ifstream out("data.txt")
+	ifstream out("data.txt"); //Forgot a semicolon, you JS programmer
 	out << t;
 }
 
