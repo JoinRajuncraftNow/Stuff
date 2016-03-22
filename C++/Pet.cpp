@@ -5,15 +5,9 @@
 
 using namespace std;
 
-int whattime()
-{
-	time_t t=time(0);
-	return t;
-}
-
 int read()
 {
-	int n, t=whattime();
+	int n, t=time(0); //Will this work?
 	ifstream in("data.txt");
 	in >> n;
 	return t-n;
@@ -21,7 +15,7 @@ int read()
 
 void output()
 {
-	int t=whattime();
+	int t=time(0);
 	ifstream out("data.txt")
 	out << t;
 }
