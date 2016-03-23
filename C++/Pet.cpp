@@ -5,26 +5,27 @@
 
 using namespace std;
 
-int read()
+int read(string file)
 {
 	int n, t=time(0); //Will this work?
-	ifstream in("data.txt");
+	ifstream in(file);
 	in >> n;
 	return t-n;
 }
 
-void output()
+void output(string file)
 {
 	int t=time(0);
-	ofstream out("data.txt"); //ofstream is output
+	ofstream out(file); // Will this work so that I could just check any file with one function?
 	out << t;
 }
 
 int main()
 {
-	int health=1000, sick=0, hunger=0;
+	string file;
+	int health=1000, sick=0, hunger=0, age=0;
 	while(true)
 	{
-		cout << read() << endl;
+		cout << read(file) << endl;
 	}
 }
