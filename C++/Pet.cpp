@@ -2,12 +2,11 @@
 #include <string>
 #include <ctime>
 #include <fstream>
-
 using namespace std;
 
 int read(string file)
 {
-	int n, t=time(0); //Will this work?
+	int n, t=time(0); //Will this work? Maybe?
 	ifstream in(file);
 	in >> n;
 	return t-n;
