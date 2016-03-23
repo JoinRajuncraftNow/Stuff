@@ -22,7 +22,7 @@ void output(string file)
 
 int main()
 {
-	string file;
+	string file="data.txt";
 	int health=1000, sick=0, hunger=0, age=0;
 	while(true)
 	{
