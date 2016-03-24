@@ -2,6 +2,7 @@
 #include <string>
 #include <ctime>
 #include <fstream>
+
 using namespace std;
 
 int read(string file)
