@@ -1,5 +1,3 @@
 Todo List for Alex:
 1. Finish Pet.cpp's file stuff and start working on the actual mechanics.
-2. Improve combat in TextAdventureHardcore.cpp.
-3. Add inventory system into TextAdventureHardcore.cpp
-4. Take a nap.
+2. Work on planned features for HardcoreTextAdventure.cpp
