@@ -27,3 +27,4 @@ $ No, too close.
 # Danke
 $ Added Connor as a contributor. 
 # Exactly
+$ If you guys are looking over the commits and you see that I made a mistake on something please correct it. I don't have much time outside of school so I can't pay as much attention to it.
