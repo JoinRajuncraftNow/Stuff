@@ -831,8 +831,8 @@ int main()
 	x=0;
 	y=0;
 	z=4;
-    cout << endl << "This is a text adventure by Alex Trahan, and very minor contributions by Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit any key to continue." << endl;
-    getline(cin, pause);
+    cout << endl << "This is a text adventure by Alex Trahan, and very minor contributions by Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
+    cin.get();
 	int health=1000, l=0;
 	while(true) //Never stop looping
 	{
@@ -840,7 +840,7 @@ int main()
 		map[x][y][z]=tile(z, num, health, def, m); //Uses this so that the tile function can easily change the map.
 		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl; //Outputs Coordinates
 		cout << "Command: "; 
-		cin.get();
+		getline(cin, com);
 		cout << endl << endl;
 		cout << "---------------------------------------------------------------------------" << endl;
 		command(com, x, y, z, num, health);
