@@ -840,7 +840,7 @@ int main()
 		map[x][y][z]=tile(z, num, health, def, m); //Uses this so that the tile function can easily change the map.
 		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl; //Outputs Coordinates
 		cout << "Command: "; 
-		getline(cin, com);
+		cin.get();
 		cout << endl << endl;
 		cout << "---------------------------------------------------------------------------" << endl;
 		command(com, x, y, z, num, health);
