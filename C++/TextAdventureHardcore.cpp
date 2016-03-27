@@ -671,7 +671,7 @@ void west(int& x, int& y, int& z) //Move west if you can
 	}
 }
 
-void command(string input, int& x, int& y, int& z, int& h, int& health) //Tests for which command you inputted
+void command(string input, int& x, int& y, int& z, int& h, int& health, int& def, int& m) //Tests for which command you inputted
 {
 	if(input=="n"||input=="N")
 	{
@@ -701,23 +701,29 @@ void command(string input, int& x, int& y, int& z, int& h, int& health) //Tests 
 							{
 								down(x, y, z, h);
 							} else {
-								if(input=="116728") //Test
+								if(input=="116728") //Secret
 								{
-									int set;
+									cout << "Cheat Activated!" << endl;
 									cout << "X: ";
-									cin >> set;
-									x=set;
+									cin >> x;
 									cout << "Y: ";
-									cin >> set;
-									y=set;
+									cin >> y;
 									cout << "Z: ";
-									cin >> set;
-									z=set;
+									cin >> z;
 									cout << "Health: ";
-									cin >> set;
-									health=set;
+									cin >> health;
+									cout << "Defence: ";
+									cin >> def;
+									cout << "Medkits: ";
+									cin >> m;
 								}else{
-									cout << "That is not a valid command, type H for help." << endl;
+									if(input=="M"||input=="m")
+									{
+										m--;
+										health=1000;
+									}else{
+										cout << "That is not a valid command, type H for help." << endl;
+									}
 								}
 							}
 						}
@@ -805,6 +811,16 @@ int tile(int z, int& num, int& health, int& def, int& m) //Tests for what value 
     }
 }
 
+void endline()
+{
+	int x=0;
+	while(x<50)
+	{
+		endl;
+		x++;
+	}
+}
+
 int main()
 {
 	string com, pause;
@@ -827,23 +843,23 @@ int main()
 		x++;
 		y=0;
 	}
-    map[99][99][0]=11;
+	map[99][99][0]=11;
 	x=0;
 	y=0;
 	z=4;
-    cout << endl << "This is a text adventure by Alex Trahan, and very minor contributions by Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
-    cin.get();
+    	cout << endl << "This is a text adventure by Alex Trahan, and very minor contributions by Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
+	cin.get();
 	int health=1000, l=0;
 	while(true) //Never stop looping
 	{
-		num=map[x][y][z]; //Copies the value so I don't have to pass an array by reference. There is an easier way of doing this, but whatever.
+		num=map[x][y][z];
 		map[x][y][z]=tile(z, num, health, def, m); //Uses this so that the tile function can easily change the map.
-		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl; //Outputs Coordinates
+		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
 		cout << "Command: "; 
 		getline(cin, com);
-		cout << endl << endl;
+		endline();
 		cout << "---------------------------------------------------------------------------" << endl;
-		command(com, x, y, z, num, health);
+		command(com, x, y, z, num, health, def, m);
 		cout << "---------------------------------------------------------------------------" << endl;
 	}
 } 
