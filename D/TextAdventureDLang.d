@@ -660,7 +660,7 @@ void west(ref int x,ref int y,ref int z)
 		writeln("Something tells you that you can't leave the area...");
 }
 
-void command(string input,ref int x,ref int y,ref int z,ref int h,ref int health)
+void command(string input,ref int x,ref int y,ref int z,ref int h,ref int health,ref int m)
 {
 	if(input=="n"||input=="N")
 		north(x,y,z);
@@ -694,6 +694,16 @@ void command(string input,ref int x,ref int y,ref int z,ref int h,ref int health
 		z=to!int(getline);
 		write("Health: ");
 		health=to!int(getline);
+	}
+	else if(input=="m"||input=="M")
+	{
+		if(m>0)
+		{
+			m--;
+			writeln("Used a medkit.");
+		}
+		else
+			writeln("You have no medkits!");
 	}
 	else
 		writeln("That is not a valid command, type H for help.");
@@ -815,7 +825,7 @@ void main()
 		writeln;
 		writeln;
 		writeln("---------------------------------------------------------------------------");
-		command(com,x,y,z,num,health);
+		command(com,x,y,z,num,health,m);
 		writeln("---------------------------------------------------------------------------");
 	}
 }
