@@ -13,4 +13,4 @@
 
 About #2, we could set raw mode to two and have it so you don't have to press enter, seems like the easiest thing here
 
-I think cin.get() will pause it until any key is inputted, but I don't quite remember. I will do some testing later. I may just change it to press enter instead of any key. 
+Changed it to enter instead of any key.
