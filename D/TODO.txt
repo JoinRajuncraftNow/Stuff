@@ -1,1 +1,0 @@
-Start working on the mirroring translation of Alex's C++ TextAdventure Hardcore
