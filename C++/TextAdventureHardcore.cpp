@@ -881,7 +881,7 @@ void endline() //What is this?
 	/*
 	Worried about the school's computers reactions
 	*/
-	//system("CLS || clear"); //No-one owns a linux here,do they
+	//system("CLS || clear");cout << flush;
 	
 }
 
