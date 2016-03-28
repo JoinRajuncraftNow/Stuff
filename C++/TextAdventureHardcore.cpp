@@ -754,14 +754,14 @@ void command(string input, int& x, int& y, int& z, int& h, int& health, int& def
 }
 
 void questcomplete(int& m, int& def, int& quest, int& qx, int& qy, int& qz)
-{
+{ //GOD, THIS IS NOT JAVASCRIPT!!!!!
 	cout << "$$$$$$$$$$$$$$$$$$$$" << endl << "You have completed a quest!" << endl;
 	int r=gen(1,10);
-	cout << "You recieved " << r << " Medkits"
-	m+=r
+	cout << "You recieved " << r << " Medkits"; //semicolon
+	m+=r; //semicolon;
 	r=gen(1,10);
 	cout << " and " r << " Armor!" << endl << "$$$$$$$$$$$$$$$$$$$$" << endl;
-	def+=r
+	def+=r; //semicolon
 	quest=0;
 	qx=1000;
 	qy=1000;
@@ -774,7 +774,7 @@ void quest(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I will a
 	{
 		qx=gen(1,98);
 		qy=gen(1,98);
-		qz=gen(1,98);
+		qz=gen(1,4); //Why would you have a village above the height of 4?
 		quest=1;
 		cout << "Please help us! Our village is being terrorized by monsters coming from ( " << qx << ", " << qy << ", " << qz << " )! There will be reward once these creatures are vanquished."
 	}else{
@@ -870,7 +870,7 @@ int tile(int z, int& num, int& health, int& def, int& m, int& quest int& qx, int
     }
 }
 
-void endline()
+void endline() //What is this?
 {
 	int x=0;
 	while(x<50)
