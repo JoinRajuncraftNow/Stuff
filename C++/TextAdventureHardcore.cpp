@@ -913,7 +913,7 @@ int main()
 	{
 		num=map[x][y][z];
 		map[x][y][z]=tile(z, num, health, def, m, quest, qx, qy, qz); //Uses this so that the tile function can easily change the map.
-		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
+		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl  << "Quest Destination: (" << qx << ", " << qy << ", " << qz << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
 		cout << "Command: "; 
 		getline(cin, com);
 		endline();
