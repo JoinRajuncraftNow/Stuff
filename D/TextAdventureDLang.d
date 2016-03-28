@@ -585,7 +585,7 @@ int count(string count,char test)
 	return output;
 }
 
-void up(ref int x,ref int y,ref int z,int h)
+void up(int x,int y,ref int z,int h) //variables are not being modified, so they don't need to be refs
 {
 	if(h==10)
 	{
@@ -601,7 +601,7 @@ void up(ref int x,ref int y,ref int z,int h)
 		writeln("You can't go up from here");
 }
 
-void down(ref int x,ref int y,ref int z,int h)
+void down(int x,int y,ref int z,int h)
 {
 	if(h==10)
 	{
@@ -617,7 +617,7 @@ void down(ref int x,ref int y,ref int z,int h)
 		writeln("You can't go down frrom here");
 }
 
-void north(ref int x,ref int y,ref int z)
+void north(ref int x,int y,int z)
 {
 	if(x!=99)
 	{
@@ -627,7 +627,7 @@ void north(ref int x,ref int y,ref int z)
 	else
 		writeln("Something tells you that you can't leave the area...");
 }
-void south(ref int x,ref int y,ref int z)
+void south(ref int x,int y,int z)
 {
 	if(x!=0)
 	{
@@ -638,7 +638,7 @@ void south(ref int x,ref int y,ref int z)
 		writeln("Something tells you that you can't leave the area...");
 }
 
-void east(ref int x,ref int y,ref int z)
+void east(int x,ref int y,int z)
 {
 	if(y!=99)
 	{
@@ -649,7 +649,7 @@ void east(ref int x,ref int y,ref int z)
 		writeln("Something tells you that you can't leave the area...");
 }
 
-void west(ref int x,ref int y,ref int z)
+void west(int x,ref int y,int z)
 {
 	if(y!=0)
 	{
