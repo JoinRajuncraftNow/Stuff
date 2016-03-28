@@ -4,6 +4,17 @@
 
 using namespace std;
 
+/*
+A Text Adventure by Alex Trahan and Zachary Taylor. 
+A few notes:
+I am only working on this version, and not the older one.
+I use endl because it is neater than /n in my opinion.
+I tried to simplify it so others who don't code could understand for a school presentation.
+Everyone is free to spot bugs and such. After all, it is on github.
+Check out the planned features.
+If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
+*/
+
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
 		return ( arg[0]=='A' || arg[0]=='E' || arg[0]=='I' || arg[0]=='O' || arg[0]=='U' ) ? "n" : "";
@@ -808,6 +819,7 @@ int tile(int z, int& num, int& health, int& def, int& m, int& quest int& qx, int
 						}else{
 							if(num==5||num==15)
 							{
+								cout << "[Glade]" << endl;
 								if(num==5)
 								{
 									cout << "A strange man approaches..." << endl;
