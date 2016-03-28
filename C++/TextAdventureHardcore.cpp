@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-
+//#include <stdlib.h>//for the system function
 using namespace std;
 
 /*
@@ -33,12 +33,12 @@ void death() //Outputs "You have died!" then stops.
 	}
 }
 
-void boss(int& health, int def, int& m, int num) //Boss Battle
+void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroyer better!
 {
 	int g, c=0, chance, damage, charge=0, t=0, whealth=1000, f=0, stun=0;
 	if(num==11)
 	{
-		whealth=2000;	
+		whealth=2000; //why is this needed?
 	}
 	while(health>0,whealth>0)
 	{
@@ -878,6 +878,11 @@ void endline() //What is this?
 		endl;
 		x++;
 	}
+	/*
+	Worried about the school's computers reactions
+	*/
+	//system("CLS || clear"); //No-one owns a linux here,do they
+	
 }
 
 int main()
