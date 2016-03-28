@@ -3,6 +3,7 @@
 #include <cstdlib>
 
 using namespace std;
+
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
 		return ( arg[0]=='A' || arg[0]=='E' || arg[0]=='I' || arg[0]=='O' || arg[0]=='U' ) ? "n" : "";
@@ -21,9 +22,13 @@ void death() //Outputs "You have died!" then stops.
 	}
 }
 
-void boss(int& health, int def, int& m) //Boss Battle
+void boss(int& health, int def, int& m, int num) //Boss Battle
 {
 	int g, c=0, chance, damage, charge=0, t=0, whealth=1000, f=0, stun=0;
+	if(num==11)
+	{
+		whealth=2000;	
+	}
 	while(health>0,whealth>0)
 	{
 		string att;
@@ -94,7 +99,7 @@ void boss(int& health, int def, int& m) //Boss Battle
 		{
 			if(charge==0)
 			{
-				cout << "The Destroyer Attacks!" <<  endl;
+				cout << "The Dragon Attacks!" <<  endl;
 				damage=gen(20,100)-def;
 				if(def>damage||def==damage)
 				{
@@ -115,11 +120,11 @@ void boss(int& health, int def, int& m) //Boss Battle
 			}else{
 				if(charge==1)
 				{
-					cout << "The Destroyer is charging up for a heavy attack!" << endl;
+					cout << "The Dragon is charging up for a heavy attack!" << endl;
 					charge++;
 				}else{
 					stun=1;
-					cout << "The Destroyer Charges!" <<  endl << "You have been stunned!" << endl;
+					cout << "The Dragon Charges!" <<  endl << "You have been stunned!" << endl;
 					damage=gen(25, 200)-def;
 					if(def>damage||def==damage)
 					{
@@ -137,14 +142,17 @@ void boss(int& health, int def, int& m) //Boss Battle
 		}
 			g=0;
 			cout << "You took " << damage << " damage!" << endl;
-			f=0; //LOL Didn't notice that... XD
+			f=0; 
 		if(health<1)
 		{
 			death();
 		}
-		while(whealth<1)
+		if(whealth<1)
 		{
-			cout << "#Congrats! You won!";
+			while(num==11)
+			{
+			 cout << "YOU WIN!" << endl;	
+			}
 		}
 	}
 }
@@ -734,8 +742,43 @@ void command(string input, int& x, int& y, int& z, int& h, int& health, int& def
 	}
 }
 
-int tile(int z, int& num, int& health, int& def, int& m) //Tests for what value you are on
+void questcomplete(int& m, int& def, int& quest, int& qx, int& qy, int& qz)
 {
+	cout << "$$$$$$$$$$$$$$$$$$$$" << endl << "You have completed a quest!" << endl;
+	int r=gen(1,10);
+	cout << "You recieved " << r << " Medkits"
+	m+=r
+	r=gen(1,10);
+	cout << " and " r << " Armor!" << endl << "$$$$$$$$$$$$$$$$$$$$" << endl;
+	def+=r
+	quest=0;
+	qx=1000;
+	qy=1000;
+	qz=1000;
+}
+
+void quest(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I will add more later.
+{
+	if(quest==0)
+	{
+		qx=gen(1,98);
+		qy=gen(1,98);
+		qz=gen(1,98);
+		quest=1;
+		cout << "Please help us! Our village is being terrorized by monsters coming from ( " << qx << ", " << qy << ", " << qz << " )! There will be reward once these creatures are vanquished."
+	}else{
+		
+	}
+}
+
+int tile(int z, int& num, int& health, int& def, int& m, int& quest int& qx, int& qy, int& qz) //Tests for what value you are on
+{
+	if(x==qx&&y==qy&&z==qz)
+	{
+		boss(health, def, m, num);
+		questcomplete(m, def, quest, qx, qy, qz);
+		return 15;
+	}
 	if(z==4)
 	{
 		if(num==1||num==3||num==12)
@@ -765,8 +808,12 @@ int tile(int z, int& num, int& health, int& def, int& m) //Tests for what value 
 						}else{
 							if(num==5||num==15)
 							{
-								cout << "[Ruins]" << endl;
-								return 15;
+								if(num==5)
+								{
+									cout << "A strange man approaches..." << endl;
+									quest(qx, qy, qz, quest);
+								}
+								return 1;
 							}
 						}
 					}
@@ -807,7 +854,7 @@ int tile(int z, int& num, int& health, int& def, int& m) //Tests for what value 
     if(num==11)
     {
         cout << "A feeling of hopelessness overwhelms you..." << endl << "-----BOSS FIGHT-----" << endl;
-        boss(health, def, m);
+        boss(health, def, m, num);
     }
 }
 
@@ -824,7 +871,7 @@ void endline()
 int main()
 {
 	string com, pause;
-	int x=0, y=0, z=0, death=0, def=0, num, m=0;
+	int x=0, y=0, z=0, death=0, def=0, num, m=0, quest=0, qx, qy, qz;
 	int map[100][100][5];
 	cout << "Generating Map..." << endl; //Randomly generates map.
 	while(x<100)
@@ -853,7 +900,7 @@ int main()
 	while(true) //Never stop looping
 	{
 		num=map[x][y][z];
-		map[x][y][z]=tile(z, num, health, def, m); //Uses this so that the tile function can easily change the map.
+		map[x][y][z]=tile(z, num, health, def, m, quest, qx, qy, qz); //Uses this so that the tile function can easily change the map.
 		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
 		cout << "Command: "; 
 		getline(cin, com);
