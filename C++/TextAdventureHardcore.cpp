@@ -15,6 +15,16 @@ Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
 
+void load()
+{
+	
+}
+
+void save()
+{
+	
+}
+
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
 		return ( arg[0]=='A' || arg[0]=='E' || arg[0]=='I' || arg[0]=='O' || arg[0]=='U' ) ? "n" : "";
@@ -886,7 +896,12 @@ void endline() //What is this?
 	/*
 	Worried about the school's computers reactions
 	*/
-	//system("CLS || clear");cout << flush;
+	//system("CLS || clear");cout << flush;         Lol, why did you put a single-line comment here? Just extend the one above.
+	
+}
+
+void menu()
+{
 	
 }
 
