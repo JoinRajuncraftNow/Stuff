@@ -738,8 +738,13 @@ void command(string input, int& x, int& y, int& z, int& h, int& health, int& def
 								}else{
 									if(input=="M"||input=="m")
 									{
-										m--;
-										health=1000;
+										if(m>0)
+										{
+											m--;
+											health=1000;
+										}else{
+											cout << "You have no medkits!" << endl;
+										}
 									}else{
 										cout << "That is not a valid command, type H for help." << endl;
 									}
