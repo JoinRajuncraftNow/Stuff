@@ -2,12 +2,10 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-//Lets end the 'gen' war!
-//Woops, you already imported it
+ 
+//Truce. For now.
+ 
 using namespace std;
-//What are you testing
-/*
-Don't modify it, the random number generator seems to be generating the same seed, 
 /*
 A Text Adventure by Alex Trahan and Zachary Taylor. 
 A few notes:
@@ -18,7 +16,7 @@ Everyone is free to spot bugs and such. After all, it is on github.
 Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
-//Try putting srand(time(NULL)) in your main function.
+
 void load()
 {
 	
