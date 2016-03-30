@@ -31,7 +31,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return (rand() % (y + 1)/* + x*/); //Just testing.
+	return (rand() % (y + 1)/* + x*/); //I tested. Commenting this out fixed all bugs, it generates 2-11 or something instead of 1-10.
 }
 
 void death() //Outputs "You have died!" then stops.
