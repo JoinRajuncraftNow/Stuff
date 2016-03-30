@@ -31,7 +31,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return (rand() % (y + 1) + x);
+	return (rand() % (y + 1/*) + x*/); //Just testing.
 }
 
 void death() //Outputs "You have died!" then stops.
@@ -48,7 +48,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 	int g, c=0, chance, damage, charge=0, t=0, whealth=1000, f=0, stun=0;
 	if(num==11)
 	{
-		whealth=2000; //why is this needed?
+		whealth=2000; //For final boss.
 	}
 	while(health>0,whealth>0)
 	{
@@ -769,14 +769,14 @@ void command(string input, int& x, int& y, int& z, int& h, int& health, int& def
 }
 
 void questcomplete(int& m, int& def, int& quest, int& qx, int& qy, int& qz)
-{ //GOD, THIS IS NOT JAVASCRIPT!!!!!
+{ 
 	cout << "$$$$$$$$$$$$$$$$$$$$" << endl << "You have completed a quest!" << endl;
 	int r=gen(1,10);
 	cout << "You recieved " << r << " Medkits"; //semicolon
-	m+=r; //semicolon;
+	m+=r; 
 	r=gen(1,10);
 	cout << " and " << r << " Armor!" << endl << "$$$$$$$$$$$$$$$$$$$$" << endl;
-	def+=r; //semicolon
+	def+=r; 
 	quest=0;
 	qx=1000;
 	qy=1000;
