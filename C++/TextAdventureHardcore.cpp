@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include <ctime>
 //Woops, you already imported it
 using namespace std;
 //What are you testing
@@ -33,8 +32,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	srand(time(NULL)); //You needed this!
-	return (rand() % (y+1) + x); //On the C++ reference website! It should work!
+	return (rand() % (y + 1) + x); //On the C++ reference website! It should work!
 }
 
 void death() //Outputs "You have died!" then stops.
