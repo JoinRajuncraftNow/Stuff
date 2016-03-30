@@ -797,7 +797,7 @@ void quest(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I will a
 	}
 }
 
-int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& quest int& qx, int& qy, int& qz) //Tests for what value you are on
+int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& quest, int& qx, int& qy, int& qz) //Tests for what value you are on
 {
 	if(x==qx&&y==qy&&z==qz)
 	{
