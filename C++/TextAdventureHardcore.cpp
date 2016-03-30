@@ -797,7 +797,7 @@ void quest(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I will a
 	}
 }
 
-int tile(int z, int& num, int& health, int& def, int& m, int& quest int& qx, int& qy, int& qz) //Tests for what value you are on
+int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& quest int& qx, int& qy, int& qz) //Tests for what value you are on
 {
 	if(x==qx&&y==qy&&z==qz)
 	{
@@ -937,7 +937,7 @@ int main()
 	while(true) //Never stop looping
 	{
 		num=map[x][y][z];
-		map[x][y][z]=tile(z, num, health, def, m, quest, qx, qy, qz); //Uses this so that the tile function can easily change the map.
+		map[x][y][z]=tile(x, y, z, num, health, def, m, quest, qx, qy, qz); //Uses this so that the tile function can easily change the map.
 		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl  << "Quest Destination: (" << qx << ", " << qy << ", " << qz << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
 		cout << "Command: "; 
 		getline(cin, com);
