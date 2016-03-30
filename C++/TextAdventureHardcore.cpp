@@ -35,6 +35,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 int gen(int x, int y) //Generates a random number between x and y.
 {
 	return rand()%(y-x+1)+x; //This is mathematically sound!
+	//Thats the same thing I put, but more organized!
 }
 
 void death() //Outputs "You have died!" then stops.
