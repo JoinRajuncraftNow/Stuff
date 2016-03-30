@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <ctime>
 //Woops, you already imported it
 using namespace std;
 //What are you testing
@@ -16,6 +17,7 @@ Everyone is free to spot bugs and such. After all, it is on github.
 Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
+//Try putting srand(time(NULL)) in your main function.
 void load()
 {
 	
@@ -32,8 +34,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return x + (rand() % (y-x) + 1) //That is how you do it. Now it works. The other way generated things above the max value.
-	//return ((rand() % (y + 1)) + x); Not working, let me try something else.
+	return rand()%(y-x+1)+x; //This is mathematically sound!
 }
 
 void death() //Outputs "You have died!" then stops.
@@ -907,6 +908,7 @@ void menu()
 
 int main()
 {
+	srand(time(NULL));
 	string com, pause;
 	int x=0, y=0, z=0, death=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000;
 	int map[100][100][5];
