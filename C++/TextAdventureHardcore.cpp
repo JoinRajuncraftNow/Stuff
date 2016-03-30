@@ -32,7 +32,8 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return ((rand() % (y + 1)) + x); //I understand it now. this will work for sure. Oops, accidentally deleted some. There we go. The entire thing has to be in parenthesis fore some reason.
+	return x + (rand() % (y-x) + 1) //That is how you do it. Now it works. The other way generated things above the max value.
+	//return ((rand() % (y + 1)) + x); Not working, let me try something else.
 }
 
 void death() //Outputs "You have died!" then stops.
