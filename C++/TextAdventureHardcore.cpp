@@ -32,7 +32,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return (rand() % (y + x); //I understand it now. this will work for sure. 
+	return ((rand() % (y + 1)) + x); //I understand it now. this will work for sure. Oops, accidentally deleted some. There we go. The entire thing has to be in parenthesis fore some reason.
 }
 
 void death() //Outputs "You have died!" then stops.
