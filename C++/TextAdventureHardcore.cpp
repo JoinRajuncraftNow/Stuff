@@ -906,7 +906,7 @@ void menu()
 int main()
 {
 	string com, pause;
-	int x=0, y=0, z=0, death=0, def=0, num, m=0, quest=0, qx, qy, qz;
+	int x=0, y=0, z=0, death=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000;
 	int map[100][100][5];
 	cout << "Generating Map..." << endl; //Randomly generates map.
 	while(x<100)
