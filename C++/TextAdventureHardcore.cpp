@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <ctime>
 //Woops, you already imported it
 using namespace std;
 //What are you testing
+/*
+Don't modify it, the random number generator seems to be generating the same seed, 
 /*
 A Text Adventure by Alex Trahan and Zachary Taylor. 
 A few notes:
@@ -30,6 +33,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
+	srand(time(NULL)); //You needed this!
 	return (rand() % (y+1) + x); //On the C++ reference website! It should work!
 }
 
