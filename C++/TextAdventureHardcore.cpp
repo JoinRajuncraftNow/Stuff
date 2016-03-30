@@ -775,7 +775,7 @@ void questcomplete(int& m, int& def, int& quest, int& qx, int& qy, int& qz)
 	cout << "You recieved " << r << " Medkits"; //semicolon
 	m+=r; //semicolon;
 	r=gen(1,10);
-	cout << " and " r << " Armor!" << endl << "$$$$$$$$$$$$$$$$$$$$" << endl;
+	cout << " and " << r << " Armor!" << endl << "$$$$$$$$$$$$$$$$$$$$" << endl;
 	def+=r; //semicolon
 	quest=0;
 	qx=1000;
@@ -783,7 +783,7 @@ void questcomplete(int& m, int& def, int& quest, int& qx, int& qy, int& qz)
 	qz=1000;
 }
 
-void quest(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I will add more later.
+void queststuff(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I will add more later.
 {
 	if(quest==0)
 	{
@@ -791,9 +791,7 @@ void quest(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I will a
 		qy=gen(1,98);
 		qz=gen(1,4); //Why would you have a village above the height of 4?
 		quest=1;
-		cout << "Please help us! Our village is being terrorized by monsters coming from ( " << qx << ", " << qy << ", " << qz << " )! There will be reward once these creatures are vanquished."
-	}else{
-		
+		cout << "Please help us! Our village is being terrorized by monsters coming from ( " << qx << ", " << qy << ", " << qz << " )! There will be reward once these creatures are vanquished." <<  endl;
 	}
 }
 
@@ -838,7 +836,7 @@ int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& ques
 								if(num==5)
 								{
 									cout << "A strange man approaches..." << endl;
-									quest(qx, qy, qz, quest);
+									queststuff(qx, qy, qz, quest);
 								}
 								return 1;
 							}
@@ -890,7 +888,7 @@ void endline() //What is this?
 	int x=0;
 	while(x<50)
 	{
-		endl;
+		cout << endl; //See, fixed!
 		x++;
 	}
 	/*
