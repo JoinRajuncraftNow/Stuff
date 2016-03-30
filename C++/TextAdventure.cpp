@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <ctime>
 
 using namespace std;
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
@@ -9,6 +10,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
+	srand(time(NULL));
 	return (rand() % (y + 1) + x); //%y did not give the top number, thus one needs % (y+1)
 }
 
