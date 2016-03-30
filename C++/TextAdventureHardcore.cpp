@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-//#include <stdlib.h>//for the system function
+//Woops, you already imported it
 using namespace std;
 //What are you testing
 /*
@@ -14,7 +14,7 @@ Everyone is free to spot bugs and such. After all, it is on github.
 Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
-
+int floor(float)
 void load()
 {
 	
@@ -31,8 +31,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	//return rand() % (y+1) + x - 1
-	return ((rand() % (y + 1 - x)) + x); //I think this will work.
+	return (rand() % (y+1) + x); //On the C++ reference website! It should work!
 }
 
 void death() //Outputs "You have died!" then stops.
