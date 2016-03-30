@@ -2,6 +2,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+//Lets end the 'gen' war!
 //Woops, you already imported it
 using namespace std;
 //What are you testing
