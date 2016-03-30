@@ -8,13 +8,12 @@ using namespace std;
 A Text Adventure by Alex Trahan and Zachary Taylor. 
 A few notes:
 I am only working on this version, and not the older one.
-I use endl because it is neater than /n in my opinion.
+I use endl because it is neater than /n in my opinion. Lol, it's \n, not /n!
 I tried to simplify it so others who don't code could understand for a school presentation.
 Everyone is free to spot bugs and such. After all, it is on github.
 Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
-int floor(float)
 void load()
 {
 	
