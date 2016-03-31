@@ -86,7 +86,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 	int g, c=0, chance, damage, charge=0, t=0, whealth=1000, f=0, stun=0;
 	if(num==11)
 	{
-		whealth=2000; //For final boss.
+		whealth=2000; //For final boss. You used boss twice
 	}
 	while(health>0,whealth>0)
 	{
