@@ -2,8 +2,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
- 
-//Truce. For now.
+#include <fstream>
  
 using namespace std;
 /*
@@ -17,8 +16,14 @@ Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
 
-void load()
+void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz)
 {
+	ifstream in(file);
+	in >> health;	
+	ifstream in(file);
+	in >> health;	
+	ifstream in(file);
+	in >> health;	
 	
 }
 
