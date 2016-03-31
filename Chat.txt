@@ -7,3 +7,4 @@ CHAT:
 #Why don't we try the <random> library in C++11, if it is not supported, then we need to look up some D documentation on how the uniform is implemented.
 $ Crap, didn't charge my laptop. Time to 30% it all the way through the day!
 # Get off of the computer as much as you can then!!!!
+$ Finished the geometry review in like 20 mins.  Now I am sitting here with 7% battery left, waiting for the inevitable.
