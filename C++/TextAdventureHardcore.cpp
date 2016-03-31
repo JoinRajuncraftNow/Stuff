@@ -794,7 +794,7 @@ void queststuff(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I w
 		qy=gen(1,98);
 		qz=gen(1,4); //Why would you have a village above the height of 4?
 		quest=1;
-		cout << "Please help us! Our village is being terrorized by monsters coming from ( " << qx << ", " << qy << ", " << qz << " )! There will be reward once these creatures are vanquished." <<  endl;
+		cout << "Please help us! Our village is being terrorized by a fearsome dragon! We believe it's lair to be at: " << endl << "( " << qx << ", " << qy << ", " << qz << " )" << endl << "There will be reward once this creature has been vanquished." <<  endl;
 	}
 }
 
@@ -873,6 +873,11 @@ int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& ques
 						{
 							combat(z, num, health, def, m);
 							return 12;
+						}else{
+							if(num==15)
+							{
+								cout << "[Ruins]" << endl;
+							}
 						}
 					}
 				}
