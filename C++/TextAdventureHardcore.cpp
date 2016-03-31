@@ -794,7 +794,7 @@ void queststuff(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I w
 		qy=gen(1,98);
 		qz=gen(1,4); //Why would you have a village above the height of 4?
 		quest=1;
-		cout << "Please help us! Our village is being terrorized by a fearsome dragon! We believe its lair to be at: " << endl << "( " << qx << ", " << qy << ", " << qz << " )" << endl << "There will be reward once this creature has been vanquished." <<  endl; //GRAMMAR!
+		cout << "Please help us! Our village is being terrorized by a fearsome dragon! We believe its lair to be at: " << endl << "( " << qx << ", " << qy << ", " << qz << " )" << endl << "There will be a reward once this creature has been vanquished." <<  endl; //GRAMMAR!
 	}
 }
 
