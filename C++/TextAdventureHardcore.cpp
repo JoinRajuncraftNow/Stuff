@@ -40,26 +40,26 @@ void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& q
 	
 }
 
-void save()
+void save(int health, int m,int def,int x,int y,int z,int qx,int qy,int qz)
 {
 	ofstream out("health.txt");
-	out >> health;	
+	out << health;	
 	ofstream out("x.txt");
-	out >> x;	
+	out << x;	
 	ofstream out("y.txt");
-	out >> y;
+	out << y;
 	ofstream out("z.txt");
-	out >> z;	
+	out << z;	
 	ofstream out("m.txt");
-	out >> m;	
+	out << m;	
 	ofstream out("def.txt");
-	out >> def;	
+	out << def;	
 	ofstream out("qx.txt");
-	out >> qx;	
+	out << qx;	
 	ofstream out("qy.txt");
-	out >> qy;	
+	out << qy;	
 	ofstream out("qz.txt");
-	out >> qz;
+	out << qz;
 }
 
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
