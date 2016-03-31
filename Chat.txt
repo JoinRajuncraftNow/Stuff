@@ -5,3 +5,4 @@ $ - Alex
 : - Connor (maybe)
 CHAT:
 #Why don't we try the <random> library in C++11, if it is not supported, then we need to look up some D documentation on how the uniform is implemented.
+$ Crap, didn't charge my laptop. Time to 30% it all the way through the day!
