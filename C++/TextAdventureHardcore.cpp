@@ -15,7 +15,11 @@ Everyone is free to spot bugs and such. After all, it is on github.
 Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
-
+void save(int x,int y,int z,int qx,int qy,int qz,int m,int def,int health)
+{
+	ofstream out("save_file.txt");
+	out << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz << endl << m << endl << def << endl << health << endl;
+}
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
 		return ( arg[0]=='A' || arg[0]=='E' || arg[0]=='I' || arg[0]=='O' || arg[0]=='U' ) ? "n" : "";
