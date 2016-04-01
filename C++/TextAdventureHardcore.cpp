@@ -16,52 +16,6 @@ Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
 
-void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz)
-{
-	ifstream in("health.txt");
-	in >> health;	
-	ifstream in("x.txt");
-	in >> x;	
-	ifstream in("y.txt");
-	in >> y;
-	ifstream in("z.txt");
-	in >> z;	
-	ifstream in("m.txt");
-	in >> m;	
-	ifstream in("def.txt");
-	in >> def;	
-	ifstream in("qx.txt");
-	in >> qx;	
-	ifstream in("qy.txt");
-	in >> qy;	
-	ifstream in("qz.txt");
-	in >> qz;	
-	//Uugh. Loading the map. UUUUGGGH.
-	
-}
-
-void save(int health, int m,int def,int x,int y,int z,int qx,int qy,int qz)
-{
-	ofstream out("health.txt");
-	out << health;	
-	ofstream out("x.txt");
-	out << x;	
-	ofstream out("y.txt");
-	out << y;
-	ofstream out("z.txt");
-	out << z;	
-	ofstream out("m.txt");
-	out << m;	
-	ofstream out("def.txt");
-	out << def;	
-	ofstream out("qx.txt");
-	out << qx;	
-	ofstream out("qy.txt");
-	out << qy;	
-	ofstream out("qz.txt");
-	out << qz;
-}
-
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
 		return ( arg[0]=='A' || arg[0]=='E' || arg[0]=='I' || arg[0]=='O' || arg[0]=='U' ) ? "n" : "";
