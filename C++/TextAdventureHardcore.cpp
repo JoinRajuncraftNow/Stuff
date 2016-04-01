@@ -15,6 +15,16 @@ Everyone is free to spot bugs and such. After all, it is on github.
 Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
+bool exists (string name) {
+    ifstream f(name.c_str());
+    if (f.good()) {
+        f.close();
+        return true;
+    } else {
+        f.close();
+        return false;
+    }   
+}
 void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz)
 {
 	ofstream outf;
@@ -24,6 +34,10 @@ void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int q
 }
 void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz)
 {
+	if(!exists("save_file.txt"))
+	{
+		return; //File doesn't exist, do nothing
+	}
 	ifstream inf;
 	inf.open("save_file.txt");
 	inf >> health;
