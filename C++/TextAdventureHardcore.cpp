@@ -20,6 +20,19 @@ void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int q
 	ofstream out("save_file.txt"); //I think that it defaults to overwriting, does it?
 	out << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz;
 }
+void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz)
+{
+	ifstream in("save_file.txt");
+	in >> health;
+	in >> m;
+	in >> def;
+	in >> x;
+	in >> y;
+	in >> z;
+	in >> qx;
+	in >> qy;
+	in >> qz;
+}
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
 		return ( arg[0]=='A' || arg[0]=='E' || arg[0]=='I' || arg[0]=='O' || arg[0]=='U' ) ? "n" : "";
