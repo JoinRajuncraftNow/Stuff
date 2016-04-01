@@ -5,8 +5,8 @@ using namesoace std;
 
 int main()
 {
-string input;
-getline(cin, input)
-cout << "Hello " << input << "!";
-return 0;
+  string input;
+  getline(cin, input)
+  cout << "Hello " << input << "!";
+  return 0;
 }
