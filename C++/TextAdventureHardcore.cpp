@@ -15,10 +15,10 @@ Everyone is free to spot bugs and such. After all, it is on github.
 Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
-void save(int x,int y,int z,int qx,int qy,int qz,int m,int def,int health)
+void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz)
 {
-	ofstream out("save_file.txt");
-	out << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz << endl << m << endl << def << endl << health << endl;
+	ofstream out("save_file.txt"); //I think that it defaults to overwriting, does it?
+	out << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz;
 }
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
