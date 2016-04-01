@@ -16,7 +16,7 @@ Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
 bool exists (string name) {
-    ifstream f(name);
+    ifstream f(name.c_str());
     if (f.good()) {
         f.close();
         return true;
