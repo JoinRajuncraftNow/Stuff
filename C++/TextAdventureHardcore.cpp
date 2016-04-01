@@ -17,25 +17,25 @@ If you have any suggestions, or just want to contact me. My email is thecajuntha
 */
 void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz)
 {
-	ofstream out;
-	out.open("save_file.txt"); //I think that it defaults to overwriting, does it?
-	out << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz;
-	out.close();
+	ofstream outf;
+	outf.open("save_file.txt"); //I think that it defaults to overwriting, does it?
+	outf << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz;
+	outf.close();
 }
 void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz)
 {
-	ifstream in;
-	in.open("save_file.txt");
-	in >> health;
-	in >> m;
-	in >> def;
-	in >> x;
-	in >> y;
-	in >> z;
-	in >> qx;
-	in >> qy;
-	in >> qz;
-	in.close();
+	ifstream inf;
+	inf.open("save_file.txt");
+	inf >> health;
+	inf >> m;
+	inf >> def;
+	inf >> x;
+	inf >> y;
+	inf >> z;
+	inf >> qx;
+	inf >> qy;
+	inf >> qz;
+	inf.close();
 }
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
