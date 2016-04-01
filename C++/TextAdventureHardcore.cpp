@@ -18,7 +18,7 @@ If you have any suggestions, or just want to contact me. My email is thecajuntha
 void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz)
 {
 	ofstream outf;
-	outf.open("save_file.txt"); //I think that it defaults to overwriting, does it?
+	outf.open("save_file.txt",::std::ofstream::trunc | ::std::ofstream::out);
 	outf << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz;
 	outf.close();
 }
