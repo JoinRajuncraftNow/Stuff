@@ -777,11 +777,12 @@ void questcomplete(int& m, int& def, int& quest, int& qx, int& qy, int& qz)
 
 void queststuff(int& qx, int& qy, int& qz, int& quest) //Only one quest now. I will add more later.
 {
+	cout << "A strange man approaches..." << endl;
 	if(quest==0)
 	{
 		qx=gen(1,98);
 		qy=gen(1,98);
-		qz=gen(1,4); //Why would you have a village above the height of 4?
+		qz=gen(1,4);
 		quest=1;
 		cout << "Please help us! Our village is being terrorized by a fearsome dragon! We believe its lair to be at: " << endl << "( " << qx << ", " << qy << ", " << qz << " )" << endl << "There will be a reward once this creature has been vanquished." <<  endl; //GRAMMAR!
 	}
@@ -827,10 +828,9 @@ int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& ques
 								cout << "[Glade]" << endl;
 								if(num==5)
 								{
-									cout << "A strange man approaches..." << endl;
 									queststuff(qx, qy, qz, quest);
+									return 15;
 								}
-								return 1;
 							}
 						}
 					}
@@ -934,7 +934,13 @@ int main()
 	{
 		num=map[x][y][z];
 		map[x][y][z]=tile(x, y, z, num, health, def, m, quest, qx, qy, qz); //Uses this so that the tile function can easily change the map.
-		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl  << "Quest Destination: (" << qx << ", " << qy << ", " << qz << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
+		if(quest==1)
+		{
+			cout << "Quest Destination: (" << qx << ", " << qy << ", " << qz << ")" << endl
+		}else{
+			cout << "Quest Destination: No Quest" << endl
+		}
+		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
 		cout << "Command: "; 
 		getline(cin, com);
 		endline();
