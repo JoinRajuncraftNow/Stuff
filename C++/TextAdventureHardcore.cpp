@@ -17,12 +17,15 @@ If you have any suggestions, or just want to contact me. My email is thecajuntha
 */
 void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz)
 {
-	ofstream out("save_file.txt"); //I think that it defaults to overwriting, does it?
+	ofstream out;
+	out.open("save_file.txt"); //I think that it defaults to overwriting, does it?
 	out << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz;
+	out.close();
 }
 void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz)
 {
-	ifstream in("save_file.txt");
+	ifstream in;
+	in.open("save_file.txt");
 	in >> health;
 	in >> m;
 	in >> def;
@@ -32,6 +35,7 @@ void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& q
 	in >> qx;
 	in >> qy;
 	in >> qz;
+	in.close();
 }
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
