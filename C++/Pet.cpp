@@ -7,8 +7,8 @@ using namespace std;
 
 int read(string file)
 {
-	int n, t=time(0); //Will this work? Maybe?
-	ifstream in(file);
+	int n, t=time(0);
+	ifstream in("data.txt");
 	in >> n;
 	return t-n;
 }
@@ -16,16 +16,15 @@ int read(string file)
 void output(string file)
 {
 	int t=time(0);
-	ofstream out(file); // Will this work so that I could just check any file with one function?
+	ofstream out("data.txt");
 	out << t;
 }
 
 int main()
 {
-	string file="data.txt";
 	int health=1000, sick=0, hunger=0, age=0;
 	while(true)
 	{
-		cout << read(file) << endl;
+		cout << read() << endl;
 	}
 }
