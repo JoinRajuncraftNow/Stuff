@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-using namesoace std;
+using namespace std;
 
 int main()
 {
