@@ -33,7 +33,7 @@ string movef_(int x,int y,int z,int qx,int qy,int qz,int num)
 }
 void movef(int& att,int x,int y,int z,int qx,int qy,int qz,int num)
 {
-  att=movef(x,y,z,qx,qy,qz,num);
+  att=movef_(x,y,z,qx,qy,qz,num);
   wait();
 }
 string movec_(int health,int def,int m,int charge)
@@ -59,6 +59,6 @@ string movec_(int health,int def,int m,int charge)
 }
 void movec(int& att,int health,int def,int m,int charge)
 {
-  att=movec(health,def,m,charge);
+  att=movec_(health,def,m,charge);
   wait(); //Should wait
 }
