@@ -1,4 +1,8 @@
 //Just a fragment of a file, so it will not work alone
+void wait()
+{
+  //system("");
+}
 string movef_(int x,int y,int z,int qx,int qy,int qz,int num)
 {
   if(qx==100)
@@ -30,15 +34,31 @@ string movef_(int x,int y,int z,int qx,int qy,int qz,int num)
 void movef(int& att,int x,int y,int z,int qx,int qy,int qz,int num)
 {
   att=movef(x,y,z,qx,qy,qz,num);
+  wait();
 }
-string movec(int health,int whealth,int def,int m,int charge)
+string movec_(int health,int def,int m,int charge)
 {
-  int damage;
+  int damage=200;
   if(m>0)
   {
-    if(health<=damage)
+    if(health<=damage-def)
     {
       return "m";
     }
+    if(charge)
+    {
+      return "d";
+    }
+    return "b";
   }
+  if(charge) //We're screwed!
+  {
+    return "d";
+  }
+  return "b";
+}
+void movec(int& att,int health,int def,int m,int charge)
+{
+  att=movec(health,def,m,charge);
+  wait(); //Should wait
 }
