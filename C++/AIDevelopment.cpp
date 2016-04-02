@@ -1,5 +1,5 @@
 //Just a fragment of a file, so it will not work alone
-string movef(int x,int y,int z,int qx,int qy,int qz,int num)
+string movef_(int x,int y,int z,int qx,int qy,int qz,int num)
 {
   if(qx==100)
   {
@@ -12,8 +12,33 @@ string movef(int x,int y,int z,int qx,int qy,int qz,int num)
     if(qz>z) return "u";
     return "d";
   }
+  if(qy!=y)
+  {
+    if(qy>y) return "n";
+    return "s";
+  }
+  if(qx!=x)
+  {
+    if(qx>x) return "e";
+    return "w";
+  }
+  string c[4];
+  c[0]="n";c[1]="s";c[2]="w";c[3]="e";
+  int j=gen(0,3);
+  return c[j];
 }
-
-void movec()
+void movef(int& att,int x,int y,int z,int qx,int qy,int qz,int num)
 {
+  att=movef(x,y,z,qx,qy,qz,num);
+}
+string movec(int health,int whealth,int def,int m,int charge)
+{
+  int damage;
+  if(m>0)
+  {
+    if(health<=damage)
+    {
+      return "m";
+    }
+  }
 }
