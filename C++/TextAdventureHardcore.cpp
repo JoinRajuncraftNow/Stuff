@@ -132,7 +132,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 	if(num==11)
 	{
 		whealth=2000; //For final boss. You used boss twice
-		boss_name="Destroyer"
+		boss_name="Destroyer";
 	}
 	while(health>0,whealth>0) //By the way, comma means throw something out!
 	{
@@ -1028,9 +1028,9 @@ int main()
 		map[x][y][z]=tile(x, y, z, num, health, def, m, quest, qx, qy, qz); //Uses this so that the tile function can easily change the map.
 		if(quest==1)
 		{
-			cout << "Quest Destination: (" << qx << ", " << qy << ", " << qz << ")" << endl
+			cout << "Quest Destination: (" << qx << ", " << qy << ", " << qz << ")" << endl;
 		}else{
-			cout << "Quest Destination: No Quest" << endl
+			cout << "Quest Destination: No Quest" << endl;
 		}
 		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
 		cout << "Command: "; 
