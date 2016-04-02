@@ -205,7 +205,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 		if(stun==0)
 		{
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "def: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
-			getline(cin, att);
+			movec(att,health,def,m,charge);
 			if(att=="b"||att=="B")
 			{
 				cout << endl << "Big Slash!" << endl;
@@ -260,7 +260,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 			cout << endl;
 		}else{
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "def: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
-			getline(cin, att);
+			movec(att,health,def,m,charge);
 			cout << "###############" << endl << "You are stunned!" << endl << "###############" << endl; //To make it easier to read.
 		}		
 		stun=0;
@@ -354,7 +354,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			cout << "Command: ";
 			if(t==0)
 			{
-				getline(cin, att);
+				movec(att,health,def,m,charge);
 				if(att=="b"||att=="B")
 				{
 					cout << endl << "Big Slash!" << endl;
@@ -495,7 +495,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
 			if(t==0)
 			{
-				getline(cin, att);
+				movec(att,health,def,m,charge);
 				if(att=="b"||att=="B")
 				{
 					cout << endl << "Big Slash!" << endl;
@@ -638,7 +638,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			cout << "Command: ";
 			if(t==0)
 			{
-				getline(cin, att);
+				movec(att,health,def,m,charge);
 				if(att=="b"||att=="B")
 				{
 					cout << endl << "Big Slash!" << endl;
@@ -1084,7 +1084,7 @@ int main()
 	x=0;
 	y=0;
 	z=4;
-    	cout << endl << "This is a text adventure by Alex Trahan, and very minor contributions by Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
+    	cout << endl << "This is a text adventure by Alex Trahan, and AI runner  by Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
 	cin.get();
 	int health=1000, l=0;
 	while(true) //Never stop looping
@@ -1096,10 +1096,11 @@ int main()
 			cout << "Quest Destination: (" << qx << ", " << qy << ", " << qz << ")" << endl;
 		}else{
 			cout << "Quest Destination: No Quest" << endl;
+			qx=100; //Just to make sure that it works.
 		}
 		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
 		cout << "Command: "; 
-		getline(cin, com);
+		movef(com,x,y,z,qx,qy,qz,num)
 		endline();
 		cout << "---------------------------------------------------------------------------" << endl;
 		command(com, x, y, z, num, health, def, m);
