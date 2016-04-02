@@ -181,9 +181,16 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 					}else{
 						if(att=="m"||att=="M")
 						{
-							cout << endl << "Used a medkit." << endl;
-							m--;
-							health=1000;
+							if(m>0)
+							{
+								cout << endl << "Used a medkit." << endl;
+								m--;
+								health=1000;
+							}
+							else
+							{
+								cout << endl << "You have no medkits!" << endl;
+							}
 							f=1;
 						}else{
 							cout << "Not a valid command!" << endl;
