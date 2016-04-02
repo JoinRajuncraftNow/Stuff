@@ -25,14 +25,14 @@ bool exists (string name) {
         return false;
     }   
 }
-void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz)
+void save_others(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz)
 {
 	ofstream outf;
 	outf.open("save_file.txt",::std::ofstream::trunc | ::std::ofstream::out);
 	outf << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz;
 	outf.close();
 }
-void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz)
+void load_others(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz)
 {
 	if(!exists("save_file.txt"))
 	{
@@ -50,6 +50,61 @@ void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& q
 	inf >> qy;
 	inf >> qz;
 	inf.close();
+}
+void save_board(int board[100][100][5]) //Reference passed by default for arrays
+{
+	int i=0,j=0,k=0;
+	ofstream outf;
+	outf.open("board_file.txt",::std::ofstream::trunc | ::std::ofstream::out);
+	while(i!=100)
+	{
+		j=0;
+		while(j!=100)
+		{
+			k=0;
+			while(k!=5)
+			{
+				outf << board[i][j][k] << endl;
+				i++;
+			}
+			j++;
+		}
+		i++;
+	}
+	outf.close();
+}
+void load_board(int board[100][100][5])
+{
+	if(!exists("board_file.txt")){ return; }
+	int i=0,j=0,k=0;
+	ifstream inf;
+	inf.open("board_file.txt");
+	while(i!=100)
+	{
+		inf >> board[i][j][k];
+		k++;
+		if(k==5)
+		{
+			k=0;
+			j++;
+			if(j==100)
+			{
+				j=0;
+				i++;
+			}
+		}
+	}
+	inf.close();
+}
+void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz,int board[100][100][5])
+{
+	save_others(health,m,def,x,y,z,qx,qy,qz);
+	save_board(board);
+}
+void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz,int board[100][100][5])
+{
+	load_others(health,m,def,x,y,z,qx,qy,qz);
+	load_board(board);
 }
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
@@ -73,11 +128,13 @@ void death() //Outputs "You have died!" then stops.
 void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroyer better!
 {
 	int g, c=0, chance, damage, charge=0, t=0, whealth=1000, f=0, stun=0;
+	string boss_name="Dragon";
 	if(num==11)
 	{
 		whealth=2000; //For final boss. You used boss twice
+		boss_name="Destroyer"
 	}
-	while(health>0,whealth>0)
+	while(health>0,whealth>0) //By the way, comma means throw something out!
 	{
 		string att;
 		if(stun==0)
@@ -147,7 +204,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 		{
 			if(charge==0)
 			{
-				cout << "The Dragon Attacks!" <<  endl;
+				cout << "The " << boss_name << " Attacks!" <<  endl;
 				damage=gen(20,100)-def;
 				if(def>damage||def==damage)
 				{
@@ -168,11 +225,11 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 			}else{
 				if(charge==1)
 				{
-					cout << "The Dragon is charging up for a heavy attack!" << endl;
+					cout << "The " << boss_name << " is charging up for a heavy attack!" << endl;
 					charge++;
 				}else{
 					stun=1;
-					cout << "The Dragon Charges!" <<  endl << "You have been stunned!" << endl;
+					cout << "The " << boss_name << " Charges!" <<  endl << "You have been stunned!" << endl;
 					damage=gen(25, 200)-def;
 					if(def>damage||def==damage)
 					{
@@ -199,7 +256,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 		{
 			while(num==11)
 			{
-			 cout << "YOU WIN!" << endl;	
+			 	cout << "YOU WIN!" << endl;	
 			}
 		}
 	}
