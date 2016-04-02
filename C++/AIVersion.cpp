@@ -15,7 +15,11 @@ Everyone is free to spot bugs and such. After all, it is on github.
 Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
-//Just a fragment of a file, so it will not work alone
+int gen(int x, int y) //Generates a random number between x and y.
+{
+	return rand()%(y-x+1)+x; //This is mathematically sound!
+	//Thats the same thing I put, but more organized!
+}
 void wait()
 {
   system("sleep 1"); //Have to love universal commands
@@ -174,11 +178,6 @@ void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& q
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
 {
 		return ( arg[0]=='A' || arg[0]=='E' || arg[0]=='I' || arg[0]=='O' || arg[0]=='U' ) ? "n" : "";
-}
-int gen(int x, int y) //Generates a random number between x and y.
-{
-	return rand()%(y-x+1)+x; //This is mathematically sound!
-	//Thats the same thing I put, but more organized!
 }
 
 void death() //Outputs "You have died!" then stops.
