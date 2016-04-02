@@ -1,7 +1,7 @@
 //Just a fragment of a file, so it will not work alone
 void wait()
 {
-  //system("");
+  system("sleep 1"); //Have to love universal commands
 }
 string movef_(int x,int y,int z,int qx,int qy,int qz,int num)
 {
