@@ -1099,7 +1099,7 @@ int main()
 		}
 		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
 		cout << "Command: "; 
-		movef(com,x,y,z,qx,qy,qz,num)
+		movef(com,x,y,z,qx,qy,qz,num);
 		endline();
 		cout << "---------------------------------------------------------------------------" << endl;
 		command(com, x, y, z, num, health, def, m);
