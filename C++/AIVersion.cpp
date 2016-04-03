@@ -66,10 +66,6 @@ string movec_(int health,int def,int m,int charge)
     {
       return "m";
     }
-    if(charge)
-    {
-      return "d";
-    }
     return "b";
   }
   if(charge) //We're screwed!
