@@ -37,14 +37,14 @@ string movef_(int x,int y,int z,int qx,int qy,int qz,int num)
     if(qz>z) return "u";
     return "d";
   }
-  if(qy!=y)
-  {
-    if(qy>y) return "n";
-    return "s";
-  }
   if(qx!=x)
   {
-    if(qx>x) return "e";
+    if(qx>x) return "n";
+    return "s";
+  }
+  if(qy!=y)
+  {
+    if(qy>y) return "e";
     return "w";
   }
   string c[4];
