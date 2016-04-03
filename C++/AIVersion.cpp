@@ -59,10 +59,10 @@ void movef(string& att,int x,int y,int z,int qx,int qy,int qz,int num)
 }
 string movec_(int health,int def,int m,int charge)
 {
-  int damage=200;
+  int damage=300;
   if(m>0)
   {
-    if(health<=damage-def)
+    if(health<=damage-2*def)
     {
       return "m";
     }
