@@ -916,7 +916,7 @@ void questcomplete(int& m, int& def, int& quest, int& qx, int& qy, int& qz)
 { 
 	cout << "$$$$$$$$$$$$$$$$$$$$" << endl << "You have completed a quest!" << endl;
 	int r=gen(1,10);
-	cout << "You recieved " << r << " Medkits"; //semicolon
+	cout << "You recieved " << r << " Medkit" << (r==1 ? "" : "s"); //semicolon, grammar
 	m+=r; 
 	r=gen(1,10);
 	cout << " and " << r << " Armor!" << endl << "$$$$$$$$$$$$$$$$$$$$" << endl;
