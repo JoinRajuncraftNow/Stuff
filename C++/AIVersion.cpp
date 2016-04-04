@@ -24,7 +24,7 @@ void wait()
 {
   system("sleep 1"); //Have to love universal commands
 }
-string movef_(int x,int y,int z,int qx,int qy,int qz,int num)
+string movef_(int& x,int& y,int& z,int qx,int qy,int qz,int num)
 {
   if(qx==100)
   {
@@ -47,14 +47,10 @@ string movef_(int x,int y,int z,int qx,int qy,int qz,int num)
     if(qy>y) return "e";
     return "w";
   }
-  static player=true;
-  if(player)
-  {
-  	cout << "I have not implemented this yet, switching to player control."
-  	string att;
-  	getline(cin,att);
-  	return att;
-  }
+  x=0;
+  y=0;
+  z=4;
+  return "h";
 }
 void movef(string& att,int x,int y,int z,int qx,int qy,int qz,int num)
 {
