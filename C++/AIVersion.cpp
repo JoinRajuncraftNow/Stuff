@@ -47,10 +47,14 @@ string movef_(int x,int y,int z,int qx,int qy,int qz,int num)
     if(qy>y) return "e";
     return "w";
   }
-  string c[4];
-  c[0]="n";c[1]="s";c[2]="w";c[3]="e";
-  int j=gen(0,3);
-  return c[j];
+  static player=true;
+  if(player)
+  {
+  	cout << "I have not implemented this yet, switching to player control."
+  	string att;
+  	getline(cin,att);
+  	return att;
+  }
 }
 void movef(string& att,int x,int y,int z,int qx,int qy,int qz,int num)
 {
