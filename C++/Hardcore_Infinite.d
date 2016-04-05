@@ -5,7 +5,7 @@ bool exists(string name)
 }
 void save_others(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz)
 {
-	import std.file : File;
+	import std.stdio : File; //that's odd
 	import std.conv : to;
 	auto outf = File("save_file.txt","w");
 	void write(string arg)
