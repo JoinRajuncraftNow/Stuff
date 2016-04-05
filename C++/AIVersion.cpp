@@ -52,7 +52,7 @@ string movef_(int& x,int& y,int& z,int qx,int qy,int qz,int num)
   z=4;
   return "h";
 }
-void movef(string& att,int x,int y,int z,int qx,int qy,int qz,int num)
+void movef(string& att,int& x,int& y,int& z,int qx,int qy,int qz,int num)
 {
   att=movef_(x,y,z,qx,qy,qz,num);
   wait();
