@@ -300,8 +300,8 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 						damage=0;
 					}else{
 						health-=damage;
-						charge=0;
 					}
+					charge = 0;
 				}
 			}
 		}
