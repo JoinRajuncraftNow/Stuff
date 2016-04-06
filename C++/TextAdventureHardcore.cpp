@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
- 
+#define par health,m,def,x,y,z,qx,qy,qz,map
 using namespace std;
 /*
 A Text Adventure by Alex Trahan and Zachary Taylor. 
@@ -1003,7 +1003,7 @@ int main()
 {
 	srand(time(NULL));
 	string com, pause;
-	int x=0, y=0, z=0, death=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000;
+	int x=0, y=0, z=0, death=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000,health=1000;
 	int map[100][100][5];
 	cout << "Generating Map..." << endl; //Randomly generates map.
 	while(x<100)
@@ -1028,7 +1028,9 @@ int main()
 	z=4;
     	cout << endl << "This is a text adventure by Alex Trahan, and very minor contributions by Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
 	cin.get();
-	int health=1000, l=0;
+	int l=0;
+	save(par);
+	load(par);
 	while(true) //Never stop looping
 	{
 		num=map[x][y][z];
@@ -1046,5 +1048,7 @@ int main()
 		cout << "---------------------------------------------------------------------------" << endl;
 		command(com, x, y, z, num, health, def, m);
 		cout << "---------------------------------------------------------------------------" << endl;
+		save(par);
+		load(par);
 	}
 } 
