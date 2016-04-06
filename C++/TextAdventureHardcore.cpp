@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
-#define par health,m,def,x,y,z,qx,qy,qz,map
+#define par health,m,def,x,y,z,qx,qy,qz,map,quest
 using namespace std;
 /*
 A Text Adventure by Alex Trahan and Zachary Taylor. 
@@ -25,14 +25,14 @@ bool exists (string name) {
         return false;
     }   
 }
-void save_others(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz)
+void save_others(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz,int quest)
 {
 	ofstream outf;
 	outf.open("save_file.txt",::std::ofstream::trunc | ::std::ofstream::out);
-	outf << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz;
+	outf << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz << endl << quest;
 	outf.close();
 }
-void load_others(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz)
+void load_others(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz,int& quest)
 {
 	if(!exists("save_file.txt"))
 	{
@@ -49,6 +49,7 @@ void load_others(int& health, int& m, int& def, int& x, int& y, int& z, int& qx,
 	inf >> qx;
 	inf >> qy;
 	inf >> qz;
+	inf >> quest;
 	inf.close();
 }
 void save_board(int board[100][100][5]) //Reference passed by default for arrays
@@ -96,14 +97,14 @@ void load_board(int board[100][100][5])
 	}
 	inf.close();
 }
-void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz,int board[100][100][5])
+void save(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz,int board[100][100][5],int quest)
 {
-	save_others(health,m,def,x,y,z,qx,qy,qz);
+	save_others(health,m,def,x,y,z,qx,qy,qz,quest);
 	save_board(board);
 }
-void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz,int board[100][100][5])
+void load(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz,int board[100][100][5],int& quest)
 {
-	load_others(health,m,def,x,y,z,qx,qy,qz);
+	load_others(health,m,def,x,y,z,qx,qy,qz,quest);
 	load_board(board);
 }
 string vowel(string arg) //Little helper function for grammar, just tells if an 'n' should be added depending on the next word, arg
