@@ -8,9 +8,9 @@ void save_others(int health, int m, int def, int x, int y, int z, int qx, int qy
 	import std.stdio : File; //that's odd
 	import std.conv : to;
 	auto outf = File("save_file.txt","w");
-	void write(string arg)
+	void write(int arg)
 	{
-		outf.writeln(arg);
+		outf.writeln(to!string(arg));
 	}
 	write(health);write(m);write(def);write(x);write(y);write(z);write(qx);write(qy);write(qz);
 	outf.close();
