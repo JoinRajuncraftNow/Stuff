@@ -3,10 +3,13 @@
 3. More in-depth combat (any tips?)
 4. Day/Night Cycle
 5. Time-based combat(will be an option for extra challenge)
+  - We will need extra threads, and timing, should'nt we just port it to python or something for this?
 6. Options Screen
-7. Saving/loading games
-8. A main menu
-9. (maybe) A storyline.
+Hopefully Finished: 7. Saving/loading games
+(Next) 8. A main menu
+ 9. (maybe) A storyline.
 10. (In the very far future) an infinite world mode.
-11. Random events that give quests.
+Done: 11. Random events that give quests. 
 12. Spell system.
+
+THIS IS NOT C++, GET OUT OF HERE!
