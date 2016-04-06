@@ -10,3 +10,4 @@ $ Crap, didn't charge my laptop. Time to 30% it all the way through the day!
 $ Finished the geometry review in like 20 mins.  Now I am sitting here with 7% battery left, waiting for the inevitable.
 $ Garrett, look in the comments of this commit.
 $ Have you finished saving/loading yet? I want to know if I can make the main menu yet.
+# Yes, I just fixed the bug that caused me problems, I will wait 'till you finish the menu for the D version.
