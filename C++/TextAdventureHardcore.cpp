@@ -65,7 +65,7 @@ void save_board(int board[100][100][5]) //Reference passed by default for arrays
 			while(k!=5)
 			{
 				outf << board[i][j][k] << endl;
-				i++;
+				k++; //Derp!
 			}
 			j++;
 		}
