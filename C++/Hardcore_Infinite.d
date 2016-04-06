@@ -1,4 +1,4 @@
-bool exists(string name)
+bool exists(string name) //This isn't C++... GET OUTTA HEEERRE!!!
 {
 	import std.file : exists;
 	return exists(name);
