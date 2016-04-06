@@ -1030,7 +1030,6 @@ int main()
     	cout << endl << "This is a text adventure by Alex Trahan, and very minor contributions by Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
 	cin.get();
 	int l=0;
-	save(par);
 	load(par);
 	while(true) //Never stop looping
 	{
@@ -1050,6 +1049,5 @@ int main()
 		command(com, x, y, z, num, health, def, m);
 		cout << "---------------------------------------------------------------------------" << endl;
 		save(par);
-		load(par);
 	}
 } 
