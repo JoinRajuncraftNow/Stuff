@@ -12,3 +12,4 @@ $ Garrett, look in the comments of this commit.
 $ Have you finished saving/loading yet? I want to know if I can make the main menu yet.
 # Yes, I just fixed the bug that caused me problems, I will wait 'till you finish the menu for me to work on the D version.
 # How will the menu work?
+$ Any of y'all know some proxies or web browsers I could run from a flash drive and bypass the filter?
