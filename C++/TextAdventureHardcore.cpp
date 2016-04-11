@@ -981,7 +981,10 @@ int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& ques
         boss(health, def, m, num);
         return 15;
     }
-    return -1; //This should never happen, but if it does, we want some bad things/runtime errors to occur!
+    else
+    {
+    	return -1; //This should never happen, but if it does, we want some bad things/runtime errors to occur!
+    }
 }
 
 void endline() //What is this?
