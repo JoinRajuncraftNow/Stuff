@@ -135,7 +135,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 		whealth=2000; //For final boss. You used boss twice
 		boss_name="Destroyer";
 	}
-	while(health>0,whealth>0) //By the way, comma means throw something out!
+	while(health>0&&whealth>0) //By the way, comma means throw something out!
 	{
 		string att;
 		if(stun==0)
@@ -704,7 +704,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 
 int count(string count, char test) //Tests for # of times char is in string. Useless unless I add an inventory system.
 {
-	int x=0, output=0;
+	unsigned int x=0, output=0;
 	while(x<count.size())
 	{
 		if(count[x]==test)
@@ -931,6 +931,7 @@ int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& ques
 									queststuff(qx, qy, qz, quest);
 									return 15;
 								}
+								return 5;
 							}
 						}
 					}
@@ -965,7 +966,8 @@ int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& ques
 						}else{
 							if(num==15)
 							{
-								cout << "[Ruins]" << endl;
+								cout << "[Ruins]" << endl; //WHAT IS THE NUMBER FOR RUINS?
+								return 5;
 							}
 						}
 					}
@@ -977,6 +979,7 @@ int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& ques
     {
         cout << "A feeling of hopelessness overwhelms you..." << endl << "-----BOSS FIGHT-----" << endl;
         boss(health, def, m, num);
+        return 15;
     }
 }
 
