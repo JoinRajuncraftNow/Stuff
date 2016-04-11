@@ -1027,7 +1027,7 @@ int main()
 	x=0;
 	y=0;
 	z=4;
-    	cout << endl << "This is a text adventure by Alex Trahan, and very minor contributions by Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
+    	cout << endl << "This is a text adventure by Alex Trahan and Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
 	cin.get();
 	while(true) //Never stop looping
 	{
