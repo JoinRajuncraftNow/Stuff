@@ -128,7 +128,7 @@ void death() //Outputs "You have died!" then stops.
 
 void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroyer better!
 {
-	int g,chance, damage, charge=0, whealth=1000, f=0, stun=0;
+	int chance, damage, charge=0, whealth=1000, f=0, stun=0;
 	string boss_name="Dragon";
 	if(num==11)
 	{
@@ -253,7 +253,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroye
 				}
 			}
 		}
-			g=0;
+
 			cout << "You took " << damage << " damage!" << endl;
 			f=0; 
 		if(health<1)
@@ -287,7 +287,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				monster="Giant Snake";
 			}
 		}
-		int g, c=0, chance, damage, charge=0, whealth=gen(100,200), t=0, f=0;
+		int c=0, chance, damage, charge=0, whealth=gen(100,200), t=0, f=0;
 		cout << "Something approaches..." << endl << "A" << vowel(monster) << " " << monster << " jumps out!" << endl;
 		while(c==0)
 		{
@@ -390,7 +390,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				charge=0;
 			}
 		}
-		g=0;
+
 		cout << "You took " << damage << " damage!" << endl;
 		if(health<1)
 		{
@@ -429,7 +429,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				monster="Insane Bandit";
 			}
 		}
-		int g, c, chance, damage, charge=0, t=0, f=0, whealth=gen(200,300);
+		int c, chance, damage, charge=0, t=0, f=0, whealth=gen(200,300);
 		cout << "Something approaches..." << endl << "A" << vowel(monster) << " " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
@@ -531,7 +531,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 					charge=0;
 				}
 			}
-			g=0;
+
 			cout << "You took " << damage << " damage!" << endl;
 			if(health<1)
 			{
@@ -570,7 +570,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				monster="Giant Mole";
 			}
 		}
-		int g, c, chance, damage, charge=0, t=0, f=0,whealth = gen(200,300); //I assume this is what you meant, because integer overflows cause the enemy to be HARD (30000+ health!)
+		int  c, chance, damage, charge=0, t=0, f=0,whealth = gen(200,300); //I assume this is what you meant, because integer overflows cause the enemy to be HARD (30000+ health!)
 		cout << "Something approaches..." << endl << "A" << vowel(monster) << " " << monster << " jumps out!" << endl;
 		c=0;
 		while(c==0)
@@ -674,7 +674,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 					charge=0;
 				}
 			}
-			g=0;
+
 			cout << "You took " << damage << " damage!" << endl;
 			if(health<1)
 			{
@@ -1004,7 +1004,7 @@ int main()
 {
 	srand(time(NULL));
 	string com, pause;
-	int x=0, y=0, z=0, death=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000,health=1000;
+	int x=0, y=0, z=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000,health=1000;
 	int map[100][100][5];
 	cout << "Generating Map..." << endl; //Randomly generates map.
 	while(x<100)
