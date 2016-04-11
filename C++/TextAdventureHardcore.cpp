@@ -29,7 +29,7 @@ void save_others(int health, int m, int def, int x, int y, int z, int qx, int qy
 {
 	ofstream outf;
 	outf.open("save_file.txt",::std::ofstream::trunc | ::std::ofstream::out);
-	outf << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz << endl << quest;
+	outf << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz << endl << quest << endl;
 	outf.close();
 }
 void load_others(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz,int& quest)
