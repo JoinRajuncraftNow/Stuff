@@ -128,7 +128,7 @@ void death() //Outputs "You have died!" then stops.
 
 void boss(int& health, int def, int& m, int num) //Boss Battle, I liked destroyer better!
 {
-	int g, c=0, chance, damage, charge=0, t=0, whealth=1000, f=0, stun=0;
+	int chance, damage, charge=0, whealth=1000, f=0, stun=0;
 	string boss_name="Dragon";
 	if(num==11)
 	{
