@@ -1020,8 +1020,7 @@ int main()
 		{
 			while(z<5)
 			{
-				num=gen(1,10);
-				map[x][y][z]=num;
+				map[x][y][z]=gen(1,10);
 				z++;
 			}
 			y++;
@@ -1031,8 +1030,7 @@ int main()
 		y=0;
 	}
 	map[99][99][0]=11;
-	x=0;
-	y=0;
+	x=0; //y is already 0!
 	z=4;
     	cout << endl << "This is a text adventure by Alex Trahan and Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
 	cin.get();
