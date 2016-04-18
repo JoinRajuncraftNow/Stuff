@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
+//#include <conio>
 #define par health,m,def,x,y,z,qx,qy,qz,map,quest
 using namespace std;
 /*
@@ -995,6 +996,7 @@ void endline() //What is this?
 		cout << endl; //See, fixed!
 		x++;
 	}
+	//clrscr();
 	/*
 	Worried about the school's computers reactions
 	*/
