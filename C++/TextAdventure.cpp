@@ -1008,42 +1008,51 @@ int main()
 {
 	srand(time(NULL));
 	string com, pause;
-	int x=0, y=0, z=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000,health=1000, menu=0;
+	int x=0, y=0, z=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000,health=1000, menu, done=0;
 	int map[100][100][5];
 	//Just made this in like 2 mins. Will finish in english class.
-	if(menu==0)
+	while(done==0)
 	{
-		cout << "Generating Map..." << endl; //Randomly generates map.
-		while(x<100)
-		{
-			while(y<100)
-			{
-				while(z<5)
-				{
-					map[x][y][z]=gen(1,10);
-					z++;
-				}
-				y++;
-				z=0;
-			}
-			x++;
-			y=0;
-		}
-		map[99][99][0]=11;
-		x=0; //y is already 0!
-		z=4;
-	    	cout << endl << "This is a text adventure by Alex Trahan and Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
-		cin.get();
-	}else{
+		
+		cout << "1 - New" << endl << "2- Save" << endl << "3 - Load" << endl;
+		cin >> menu;
 		if(menu==1)
 		{
-			//save
-		}else{
-			if(menu==3)
+			done++;
+			cout << "Generating Map..." << endl; //Randomly generates map.
+			while(x<100)
 			{
-				//load
+				while(y<100)
+				{
+					while(z<5)
+					{
+						map[x][y][z]=gen(1,10);
+						z++;
+					}
+					y++;
+					z=0;
+				}
+				x++;
+				y=0;
+			}
+			map[99][99][0]=11;
+			x=0; //y is already 0!
+			z=4;
+		    	cout << endl << "This is a text adventure by Alex Trahan and Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
+			cin.get();
+		}else{
+			if(menu==2)
+			{
+				done++;
+				//save
 			}else{
-				cout << "Please only input 1-3" << endl;
+				if(menu==3)
+				{
+					done++;
+					//load
+				}else{
+					cout << "Please only input 1-3" << endl;
+				}
 			}
 		}
 	}
