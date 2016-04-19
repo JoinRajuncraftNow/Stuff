@@ -793,7 +793,7 @@ void west(int& x, int& y, int& z) //Move west if you can
 	}
 }
 
-void command(string input, int& x, int& y, int& z, int& h, int& health, int& def, int& m) //Tests for which command you inputted
+void command(string input, int& x, int& y, int& z, int& h, int& health, int& def, int& m, int& qx, int& qy, int& qz, int **map, int& quest) //Tests for which command you inputted
 {
 	if(input=="n"||input=="N")
 	{
@@ -813,7 +813,7 @@ void command(string input, int& x, int& y, int& z, int& h, int& health, int& def
 				} else {
 					if(input=="h"||input=="H")
 					{
-					cout << "Commands:" << endl << "E-east" << endl << "W-west" << endl << "N-north" << endl << "S-South" << endl << "D-down" << endl << "U-up" << endl;
+					cout << "Commands:" << endl << "E-east" << endl << "W-west" << endl << "N-north" << endl << "S-south" << endl << "D-down" << endl << "U-up" << endl << "M-medkit" << "V-save";
 					} else {
 						if(input=="u"||input=="U")
 						{	
@@ -848,7 +848,12 @@ void command(string input, int& x, int& y, int& z, int& h, int& health, int& def
 										}else{
 											cout << "You have no medkits!" << endl;
 										}
-									}else{
+									}
+									else if(input=="V"||input=="v")
+									{
+										save(par);
+									}
+									else
 										cout << "That is not a valid command, type H for help." << endl;
 									}
 								}
@@ -1071,7 +1076,7 @@ int main()
 		getline(cin, com);
 		endline();
 		cout << "---------------------------------------------------------------------------" << endl;
-		command(com, x, y, z, num, health, def, m);
+		command(com, x, y, z, num, health, def, m, qx, qy, qz, map, quest);
 		cout << "---------------------------------------------------------------------------" << endl;
 	}
 } 
