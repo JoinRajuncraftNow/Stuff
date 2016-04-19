@@ -1,0 +1,3 @@
+function command_info()
+{
+}
