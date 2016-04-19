@@ -1050,12 +1050,12 @@ int main()
 			if(menu==2)
 			{
 				done++;
-				//save
+				save(par);
 			}else{
 				if(menu==3)
 				{
 					done++;
-					//load
+					load(par);
 				}else{
 					cout << "Please only input 1-3" << endl;
 				}
