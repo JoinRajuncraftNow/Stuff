@@ -1,3 +1,6 @@
+/*
+All documentation comments are kept in this document
+*/
 void info_map()
 {
   import std.stdio;
