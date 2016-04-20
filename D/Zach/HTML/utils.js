@@ -19,3 +19,7 @@ function readln()
     setTimeout(function(){},250);
   }
 }
+function clear() //Only used in HTML, so it won't look awful
+{
+  document.getElementById("ui").innerHTML="";
+}
