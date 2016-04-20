@@ -10,4 +10,4 @@ void info_map()
   cout << "Q - Up" << endl;
   cout << "Z - Down" << endl;
 }
-void clear(){} //Kept for HTML compatibility
+void clear(){}
