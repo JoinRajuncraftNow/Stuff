@@ -1020,7 +1020,7 @@ int main()
 	while(done==0)
 	{
 		
-		cout << "1 - New" << endl << "2- Save" << endl << "3 - Load" << endl;
+		cout << "1 - New" << endl << "2- Load" << endl;
 		cin >> menu;
 		if(menu==1)
 		{
@@ -1050,15 +1050,7 @@ int main()
 			if(menu==2)
 			{
 				done++;
-				save(par);
-			}else{
-				if(menu==3)
-				{
-					done++;
-					load(par);
-				}else{
-					cout << "Please only input 1-3" << endl;
-				}
+				load(par);
 			}
 		}
 	}
