@@ -23,3 +23,8 @@ void info_battle()
   writeln("M-Medkit: Restores you to full health");
   writeln("H-Help: Display this help message");
 }
+int gen(int low,int high) //Random number generator, excludes `high`
+{
+  import std.random;
+  return uniform(low,high);
+}
