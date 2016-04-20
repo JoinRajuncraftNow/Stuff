@@ -18,3 +18,7 @@ function info_battle()
   WScript.Echo("M-Medkit: Restores you to full health");
   WScript.Echo("H-Help: Display this help message");
 }
+function gen(num)
+{
+  return Math.floor(Math.random()*num);
+}
