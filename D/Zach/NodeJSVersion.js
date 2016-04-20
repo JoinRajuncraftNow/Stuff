@@ -16,4 +16,5 @@ function info_bottle()
   console.log("Q-Quick Slash: 5-12 + `pow` damage, 10% chance of missing");
   console.log("D-Dodge: 75% chance of dodging all damage");
   console.log("M-Medkit: Restores you to full health");
+  console.log("H-Help: Display this help message");
 }
