@@ -9,3 +9,4 @@ void info_map()
   writeln("Q - Up");
   writeln("Z - Down");
 }
+void clear(){}
