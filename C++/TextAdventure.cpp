@@ -1051,6 +1051,8 @@ int main()
 			{
 				done++;
 				load(par);
+			}else{
+				cout << "Please only input 1 or 2!" << endl;
 			}
 		}
 	}
