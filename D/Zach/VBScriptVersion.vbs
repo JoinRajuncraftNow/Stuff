@@ -1,3 +1,6 @@
+Sub clear()
+  'This does nothing
+End Sub
 Sub info_map()
   WScript.Echo "H - Help"
   WScript.Echo "W - North"
@@ -14,3 +17,4 @@ Sub info_battle()
   WScript.Echo "D-Dodge: 75% chance of dodging all damage"
   WScript.Echo "M-Medkit: Restores you to full health"
   WScript.Echo "H-Help: Display this help message"
+End Sub
