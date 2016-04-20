@@ -6,3 +6,5 @@ def info_map():
   print("D - East")
   print("Q - Up")
   print("Z - Down")
+def clear():
+  pass
