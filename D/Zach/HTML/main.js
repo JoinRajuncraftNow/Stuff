@@ -21,3 +21,7 @@ function info_battle()
   writeln("M-Medkit: Restores you to full health");
   writeln("H-Help: Display this help message");
 }
+function gen(num)
+{
+  return Math.floor(Math.random()*num);
+}
