@@ -8,3 +8,6 @@ function info_map()
   WScript.Echo("Q - Up");
   WScript.Echo("Z - Down");
 }
+function clear()
+{
+}
