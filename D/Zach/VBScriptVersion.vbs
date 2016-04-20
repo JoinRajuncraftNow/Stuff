@@ -7,3 +7,6 @@ Sub info_map()
   WScript.Echo "Q - Up"
   WScript.Echo "Z - Down"
 End Sub
+Sub clear()
+  9+9
+End Sub
