@@ -1,4 +1,4 @@
-var IS_READY
+var IS_READY=false;
 function write(arg)
 {
   document.getElementById("ui").innerHTML+=arg;
@@ -14,7 +14,7 @@ function readln()
     if(IS_READY)
     {
       IS_READY=false;
-      return document.getElementById("").value;
+      return document.getElementById("input").value;
     }
     setTimeout(function(){},250);
   }
