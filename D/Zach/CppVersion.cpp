@@ -10,6 +10,7 @@ void info_map()
   cout << "D - East" << endl;
   cout << "Q - Up" << endl;
   cout << "Z - Down" << endl;
+  cout << "M - Medkit" << endl;
 }
 void info_battle()
 {
