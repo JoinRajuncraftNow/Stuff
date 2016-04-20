@@ -12,4 +12,4 @@ void info_map()
   writeln("Q - Up");
   writeln("Z - Down");
 }
-void clear(){}
+void clear(){} //This is kept in the different documents for compatibility with JS
