@@ -8,3 +8,7 @@ function info_map
   echo "Q - Up";
   echo "Z - Down";
 }
+function clear
+{
+  cls;
+}
