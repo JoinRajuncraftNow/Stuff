@@ -18,4 +18,5 @@ void info_battle()
   cout << "Q-Quick Slash: 5-12 + `pow` damage, 10% chance of missing" << endl;
   cout << "D-Dodge: 75% chance of dodging all damage" << endl;
   cout << "M-Medkit: Restores you to full health" << endl;
+  cout << "H-Help: Display this help message" << endl;
 }
