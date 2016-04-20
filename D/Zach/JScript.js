@@ -1,3 +1,4 @@
+function clear(){}
 function info_map()
 {
   WScript.Echo("H - Help");
@@ -8,6 +9,10 @@ function info_map()
   WScript.Echo("Q - Up");
   WScript.Echo("Z - Down");
 }
-function clear()
+function info_battle()
 {
+  WScript.Echo("B-Big Slash: 15-50 + `pow` damage, 25% chance of missing");
+  WScript.Echo("Q-Quick Slash: 5-12 + `pow` damage, 10% chance of missing");
+  WScript.Echo("D-Dodge: 75% chance of dodging all damage");
+  WScript.Echo("M-Medkit: Restores you to full health");
 }
