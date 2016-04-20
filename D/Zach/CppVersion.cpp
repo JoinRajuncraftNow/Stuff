@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 void info_map()
 {
   cout << "H - Help" << endl;
