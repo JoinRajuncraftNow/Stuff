@@ -1,3 +1,4 @@
+Randomize
 Sub clear()
   'This does nothing
 End Sub
@@ -18,3 +19,8 @@ Sub info_battle()
   WScript.Echo "M-Medkit: Restores you to full health"
   WScript.Echo "H-Help: Display this help message"
 End Sub
+Function gen(num)
+  Dim tmp
+  tmp = Rnd
+  gen = Int(Rnd * num)
+End Function
