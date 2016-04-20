@@ -9,6 +9,7 @@ function writeln(arg)
 }
 function readln()
 {
+  var temp=false;
   while(true)
   {
     if(IS_READY)
@@ -16,7 +17,9 @@ function readln()
       IS_READY=false;
       return document.getElementById("input").value;
     }
-    setTimeout(function(){},250);
+    setTimeout(function(){temp=true;},250);
+    while(!temp){}
+    temp=false;
   }
 }
 function clear() //Only used in HTML, so it won't look awful
