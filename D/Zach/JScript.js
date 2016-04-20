@@ -8,6 +8,7 @@ function info_map()
   WScript.Echo("D - East");
   WScript.Echo("Q - Up");
   WScript.Echo("Z - Down");
+  WScript.Echo("M - Medkit");
 }
 function info_battle()
 {
