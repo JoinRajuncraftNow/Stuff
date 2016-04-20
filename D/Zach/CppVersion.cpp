@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 void clear(){}
 void info_map()
@@ -19,4 +21,8 @@ void info_battle()
   cout << "D-Dodge: 75% chance of dodging all damage" << endl;
   cout << "M-Medkit: Restores you to full health" << endl;
   cout << "H-Help: Display this help message" << endl;
+}
+int gen(int num)
+{
+  return rand()%num;
 }
