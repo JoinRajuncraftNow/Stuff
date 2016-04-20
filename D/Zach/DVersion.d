@@ -11,5 +11,6 @@ void info_map()
   writeln("D - East");
   writeln("Q - Up");
   writeln("Z - Down");
+  writeln("M - Medkit");
 }
 void clear(){} //This is kept in the different documents for compatibility with JS
