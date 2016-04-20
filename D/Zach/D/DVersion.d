@@ -1,4 +1,4 @@
-void info_commands()
+void info_map()
 {
   import std.stdio;
   writeln("H - Help");
