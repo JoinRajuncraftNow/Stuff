@@ -18,3 +18,7 @@ function info_bottle()
   console.log("M-Medkit: Restores you to full health");
   console.log("H-Help: Display this help message");
 }
+function gen(num)
+{
+  return Math.floor(Math.random()*num);
+}
