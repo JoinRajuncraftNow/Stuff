@@ -1,4 +1,4 @@
-function command_info() // @void
+function info_map() // @void
 {
   writeln("H - help");
   writeln("W - North");
