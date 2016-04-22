@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-  while(1){
+  for(;;){
     cout << "Lick/"; //Yah, I just made it wierd.
   }
   return 0;
