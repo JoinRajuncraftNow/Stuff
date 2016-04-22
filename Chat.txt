@@ -5,3 +5,4 @@ $ - Alex
 : - Connor (maybe)
 CHAT:
 $ I have been thinking about how to make an infinite world. What if we just kept track of coords, then ran those coords through a seed to generate the tile value as the player moves through it? The only problem is that we couldn't keep track of where the player has taken quests or defeated enemies easily.
+# vector is for infinite arrays, hence why I use D!
