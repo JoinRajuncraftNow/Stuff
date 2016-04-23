@@ -1,1 +1,1 @@
-void main(){import std.stdio;auto i="/"~readln;for(;;)i.write;}
+void main(){import std.stdio;auto i="/"~readln[0..$-1];for(;;)i.write;}
