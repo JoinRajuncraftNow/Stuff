@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
-//#include <conio>
+#include <vector>
 #define par health,m,def,x,y,z,qx,qy,qz,map,quest
 using namespace std;
 /*
