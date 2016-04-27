@@ -944,8 +944,7 @@ int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& ques
 		{
 			cout << "[Cavern]" << endl;
 			return 1;
-		}
-		else if(num==4||num==5||num==6) {
+		} else if(num==4||num==5||num==6) {
 			cout << "[Tunnel]" << endl;
 			return 4;
 		} else if(num==7||num==8||num==9) {
