@@ -916,77 +916,52 @@ int tile(int x, int y, int z, int& num, int& health, int& def, int& m, int& ques
 		{
 			cout << "[Forest]" << endl;
 			return 1;
-		}else{
-			if(num==4||num==6)
+		} else if(num==4||num==6) {
+			cout << "[Swamp]" << endl;
+			return 4;
+		} else if(num==7||num==8||num==9) {
+			cout << "[Desert]" << endl;
+			return 7;
+		} else if(num==10) {
+			cout << "[Cave Entrance]" << endl;
+			return 10;
+		} else if(num==2) {
+			combat(z, num, health, def, m);
+			return 12;
+		} else if(num==5||num==15) {
+			cout << "[Glade]" << endl;
+			if(num==5)
 			{
-				cout << "[Swamp]" << endl;
-				return 4;
-			}else{
-				if(num==7||num==8||num==9)
-				{
-					cout << "[Desert]" << endl;
-					return 7;
-				}else{
-					if(num==10)
-					{
-						cout << "[Cave Entrance]" << endl;
-						return 10;
-					}else{
-						if(num==2)
-						{
-							combat(z, num, health, def, m);
-							return 12;
-						}else{
-							if(num==5||num==15)
-							{
-								cout << "[Glade]" << endl;
-								if(num==5)
-								{
-									queststuff(qx, qy, qz, quest);
-									return 15;
-								}
-								return 5;
-							}
-						}
-					}
-				}
+				queststuff(qx, qy, qz, quest);
+				return 15;
 			}
+			return 5;
+		} else {
+			return -1;
 		}
 	}else{
 		if(num==1||num==3||num==12)
 		{
 			cout << "[Cavern]" << endl;
 			return 1;
-		}else{
-			if(num==4||num==5||num==6)
-			{
-				cout << "[Tunnel]" << endl;
-				return 4;
-			}else{
-				if(num==7||num==8||num==9)
-				{
-					cout << "[Cave]" << endl;
-					return 7;
-				}else{
-					if(num==10)
-					{
-						cout << "[Stairway]" << endl;
-						return 10;
-					}else{
-						if(num==2)
-						{
-							combat(z, num, health, def, m);
-							return 12;
-						}else{
-							if(num==15)
-							{
-								cout << "[Ruins]" << endl; //WHAT IS THE NUMBER FOR RUINS?
-								return 5;
-							}
-						}
-					}
-				}
-			}
+		}
+		else if(num==4||num==5||num==6) {
+			cout << "[Tunnel]" << endl;
+			return 4;
+		} else if(num==7||num==8||num==9) {
+			cout << "[Cave]" << endl;
+			return 7;
+		} else if(num==10) {
+			cout << "[Stairway]" << endl;
+			return 10;
+		} else if(num==2) {
+			combat(z, num, health, def, m);
+			return 12;
+		} else if(num==15) {
+			cout << "[Ruins]" << endl; //WHAT IS THE NUMBER FOR RUINS?
+			return 5;
+		} else {
+			return -1;
 		}
 	}
     if(num==11)
@@ -1025,7 +1000,6 @@ int main()
 	int map[100][100][5];
 	while(done==0)
 	{
-		
 		cout << "1 - New" << endl << "2 - Load" << endl;
 		cin >> menu;
 		if(menu==1)
