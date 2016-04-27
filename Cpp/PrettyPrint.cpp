@@ -1023,11 +1023,10 @@ int main()
 	string com, pause;
 	int x=0, y=0, z=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000,health=1000, menu, done=0;
 	int map[100][100][5];
-	//Just made this in like 2 mins. Will finish in english class.
 	while(done==0)
 	{
 		
-		cout << "1 - New" << endl << "2- Load" << endl;
+		cout << "1 - New" << endl << "2 - Load" << endl;
 		cin >> menu;
 		if(menu==1)
 		{
@@ -1053,14 +1052,11 @@ int main()
 			z=4;
 		    	cout << endl << "This is a text adventure by Alex Trahan and Zachary Taylor." << endl << "Defeat the Boss at (99,99,0) to win!" << endl << "Hit enter to continue." << endl;
 			cin.get();
+		}else if(menu==2){
+			done++;
+			load(par);
 		}else{
-			if(menu==2)
-			{
-				done++;
-				load(par);
-			}else{
-				cout << "Please only input 1 or 2!" << endl;
-			}
+			cout << "Please only input 1 or 2!" << endl;
 		}
 	}
 	while(true) //Never stop looping
