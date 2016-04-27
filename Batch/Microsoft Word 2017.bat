@@ -6,3 +6,4 @@ SET /P text=Text:
 ECHO %text% >>"%titl%.txt"
 ECHO Line Saved!
 GOTO :newline
+
