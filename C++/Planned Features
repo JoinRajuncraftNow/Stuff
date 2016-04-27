@@ -4,6 +4,7 @@
 4. Day/Night Cycle
 5. Time-based combat(will be an option for extra challenge)
   - We will need extra threads, and timing, should'nt we just port it to python or something for this?
+  - Nah, I mean time as in day/night... Sorry if it is confusing. Really should have just said add day/night features or something.
 6. Options Screen
 Hopefully Finished: 7. Saving/loading games
 (Next) 8. A main menu
