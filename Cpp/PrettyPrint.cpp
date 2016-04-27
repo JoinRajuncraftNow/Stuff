@@ -820,7 +820,7 @@ void command(string input, int& x, int& y, int& z, int& h, int& health, int& def
 				} else {
 					if(input=="h"||input=="H")
 					{
-					cout << "Commands:" << endl << "E-east" << endl << "W-west" << endl << "N-north" << endl << "S-south" << endl << "D-down" << endl << "U-up" << endl << "M-medkit" << endl << "V-save";
+					cout << "Commands:" << endl << "E-east" << endl << "W-west" << endl << "N-north" << endl << "S-south" << endl << "D-down" << endl << "U-up" << endl << "M-medkit" << endl << "V-save" << endl;
 					} else {
 						if(input=="u"||input=="U")
 						{	
