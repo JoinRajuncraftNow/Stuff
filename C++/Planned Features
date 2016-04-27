@@ -1,5 +1,7 @@
 Do now:
 -Improve UI
+  Please, elaborate on that.
+  (We could try to get ncurses on windows, maybe)
 -Day/Night Cycle
 -Inventory System (I can do this pretty easily using a string)
 -More variataion to quests (Using new inventory system)
