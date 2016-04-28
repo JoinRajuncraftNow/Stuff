@@ -44,33 +44,32 @@ void move() //Just a test. DON'T MESS WITH THIS
 	}
 }
 #elif __linux__ || __unix || __unix
-#include <cstdio>
-#define KEY_UP 65
-#define KEY_LEFT 68
-#define KEY_DOWN 66
-#define KEY_RIGHT 67
+
 void move()
 {
 	setvbuf(stdin, NULL, _IONBF, 0);
-	int c=0,x=0,y=0,temp1,temp2;
-	temp1=getchar();
-	temp2=getchar();
+	int x=0,y=0;
+	string c;
 	for(;;)
 	{
 		if(temp1==27&&temp2==91)
 		{
-			switch(c=getchar())
+			switch(c=cin.getline())
 			{
-			case KEY_UP:
+			case "w":
+			case "W":
 				x++;    //key up
 				break;
-			case KEY_DOWN:
+			case "s":
+			case "S":
 				x--;   // key down
 				break;
-			case KEY_LEFT:
+			case "a":
+			case "A":
 				y++;  // key left
 				break;
-			case KEY_RIGHT:
+			case "d":
+			case "D":
 				y--;  // key right
 				break;
 			default:
