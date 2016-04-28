@@ -3,7 +3,16 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-#ifdef _WIN32 || _WIN64
+#ifdef _WIN32
+#define _WIN64
+#endif
+#ifdef __unix__
+#define __linux__
+#endif
+#ifdef __unix
+#define __linux__
+#endif
+#ifdef _WIN64
 #include <conio.h>
 #define KEY_UP 119
 #define KEY_DOWN 115
@@ -50,7 +59,7 @@ void move()
 	{
 		if(temp1==27&&temp2==91)
 		{
-			switch(c=getch())
+			switch(c=getchar())
 			{
 			case KEY_UP:
 				x++;    //key up
@@ -74,6 +83,6 @@ void move()
 #endif
 int main()
 {
-   move();
+  	move();
 }
 
