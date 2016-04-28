@@ -113,18 +113,3 @@ class Location
 	void reload(bool);
 	void replace(string);
 }
-//Left off implementing the Document class, on HTML DOM - DOM Document page on w3schools.com
-class Document
-{
-	public:
-	Element activeElement;
-	void addEventListener(string,void function(Event));
-	void addEventListener(string,void function(Event),bool);
-	void adoptNode(Node);
-	ElementA[] anchors;
-	ElementAPPLET[] applets;
-	string baseURI;
-	ElementBODY _body; //body is a keyword, so we use _body instead
-	void close()
-	
-}
