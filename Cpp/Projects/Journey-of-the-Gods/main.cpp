@@ -2,13 +2,13 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+using namespace std;
 #ifdef _WIN32 || _WIN64
 #include <conio.h>
 #define KEY_UP 119
 #define KEY_DOWN 115
 #define KEY_LEFT 97
 #define KEY_RIGHT 100
-using namespace std;
 void move() //Just a test. DON'T MESS WITH THIS
 {
 	int c=0, x=0, y=0;
