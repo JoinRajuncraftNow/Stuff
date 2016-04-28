@@ -7,6 +7,7 @@
 #define KEY_DOWN 115
 #define KEY_LEFT 97
 #define KEY_RIGHT 100
+int x,y;
 using namespace std;
 void move() //Just a test. DON'T MESS WITH THIS
 {
