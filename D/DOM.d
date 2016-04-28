@@ -1,5 +1,3 @@
-the TYPED VERSION OF DOM - D
-
 class Window
 {
 	public:
