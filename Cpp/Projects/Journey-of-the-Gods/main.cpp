@@ -15,7 +15,7 @@ void move() //Just a test. DON'T MESS WITH THIS
 	{
  		//If you put d=getch() and c=getch() what is the point?
 		d=getch();
-		switch(c=getch()) //That was annoying me to death
+		switch(c=getch()) //That was annoying me to death figuratively
 		{
 		case KEY_UP:
 			x++;    //key up
