@@ -17,24 +17,27 @@ void move() //Just a test. DON'T MESS WITH THIS
   	c = 0;
 	  d=0;
 	  d=getch();
-    switch((c=getch())) 
+	  if(d==224)
+	  {
+    		switch((c=getch())) 
 		{
-   case KEY_UP:
-       x++;    //key up
-       break;
-   case KEY_DOWN:
-       x--;   // key down
-       break;
-   case KEY_LEFT:
-       y++;  // key left
-       break;
-   case KEY_RIGHT:
-       y--;  // key right
-       break;
-   default:
-       cout << endl << "null" << endl;  // not arrow
-       break;
+   			case KEY_UP:
+       				x++;    //key up
+       				break;
+   			case KEY_DOWN:
+       				x--;   // key down
+       				break;
+   			case KEY_LEFT:
+       				y++;  // key left
+       				break;
+   			case KEY_RIGHT:
+       				y--;  // key right
+       				break;
+   			default:
+       				cout << endl << "null" << endl;  // not arrow
+				break;
 		}
+	  }
 	}
 }
 int main()
