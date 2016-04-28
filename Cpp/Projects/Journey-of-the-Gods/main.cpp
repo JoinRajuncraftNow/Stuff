@@ -10,13 +10,12 @@
 using namespace std;
 void move() //Just a test. DON'T MESS WITH THIS
 {
-	int c = 0, d=0, x=0, y=0;
-	while(1)
+	int c=0, d=0, x=0, y=0;
+	for(;;)
 	{
-  		c=0;
-		d=0;
+ 		//If you put d=getch() and c=getch() what is the point?
 		d=getch();
-		switch((c=getch())) 
+		switch(c=getch()) //That was annoying me to death
 		{
 		case KEY_UP:
 			x++;    //key up
