@@ -16,7 +16,7 @@ using namespace std;
 #include <cstdlib>
 int getch()
 {
-  system("read -n 1 c;echo $c>c.txt");
+  system("read -n 1 c;echo $c>c.txt;echo -e -n '\\b'");
   ifstream i;
   i.open("c.txt");
   char c;
@@ -27,5 +27,8 @@ int getch()
 #endif
 int main()
 {
-	getch();
+	int u=getch();
+	int v=getch();
+	int w=getch();
+	cout << u << endl << v << endl << w << endl;
 }
