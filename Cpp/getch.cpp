@@ -25,6 +25,7 @@ int getch()
   return c;
 }
 #endif
+#include <iostream>
 int main()
 {
 	int u=getch();
