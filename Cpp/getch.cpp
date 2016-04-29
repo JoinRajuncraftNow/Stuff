@@ -8,4 +8,19 @@
 #define __linux__
 #endif
 using namespace std;
-#ifdef
+#ifdef _WIN64
+#include <conio.h>
+#endif
+#ifdef __linux__
+#include <iostream>
+#include <cstdlib>
+int getch()
+{
+  system("read -n 1 c;echo $c>c.txt");
+  istream i;
+  i.open("c.txt");
+  char c;
+  i >> c;
+  i.close();
+  return c;
+}
