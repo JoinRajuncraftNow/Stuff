@@ -28,8 +28,6 @@ int getch()
 #include <iostream>
 int main()
 {
-	int u=getch();
-	int v=getch();
-	int w=getch();
-	cout << u << endl << v << endl << w << endl;
+	int u;
+	for(;;){u=getch();cout << u << endl;}
 }
