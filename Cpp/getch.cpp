@@ -17,15 +17,17 @@ int getch_()
 #endif
 #ifdef __linux__
 #include <fstream>
-#include <ncurses.h>
-//Must be compiled with lncurses option
+#include <cstdlib>
+//Python must be compiled with curses
 int getch_()
 {
-    WINDOW* scr = initscr();
-    wresize(scr,0,0)
-    int t = getch();
-    endwin();
-    cout << t << endl;
+    system("python -c 'import readchar;u=ord(readchar.readchar());f=open(\"c.txt\",\"w\");f.write(str(u))'"); //Obviously very hacked together
+    ifstream i;
+    i.open("c.txt");
+    int u;
+    i >> u;
+    i.close();
+    return u;
 }
 #endif
 
@@ -33,5 +35,5 @@ int getch_()
 int main()
 {
 	int u;
-	for(;;){u=getch();cout << u << endl;}
+	for(;;){u=getch_();cout << u << endl;}
 }
