@@ -16,7 +16,8 @@ using namespace std;
 #include <cstdlib>
 int getch()
 {
-  system("read -n 1 c;echo $c>c.txt;echo -e -n '\\b'");
+  //system("read -n 1 c;echo $c>c.txt;echo -e -n '\\b'");
+  system("echo 'read -n 1 c <&0;echo $c>c.txt;echo -e -n \"\\\\b\"' | /bin/bash")
   ifstream i;
   i.open("c.txt");
   char c;
