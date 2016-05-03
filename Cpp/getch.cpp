@@ -10,20 +10,22 @@
 using namespace std;
 #ifdef _WIN64
 #include <conio.h>
+int getch_()
+{
+	return getch();
+}
 #endif
 #ifdef __linux__
 #include <fstream>
-#include <cstdlib>
-int getch()
+#include <ncurses.h>
+//Must be compiled with lncurses option
+int getch_()
 {
-  //system("read -n 1 c;echo $c>c.txt;echo -e -n '\\b'");
-  system("echo 'read -n 1 c <&0;echo $c>c.txt;echo -e -n \"\\\\b\"' | /bin/bash")
-  ifstream i;
-  i.open("c.txt");
-  char c;
-  i >> c;
-  i.close();
-  return c;
+    WINDOW* scr = initscr();
+    wresize(scr,0,0)
+    int t = getch();
+    endwin();
+    cout << t << endl;
 }
 #endif
 
