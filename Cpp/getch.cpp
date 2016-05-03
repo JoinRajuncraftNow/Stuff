@@ -21,7 +21,7 @@ int getch_()
 //Python must be compiled with curses
 int getch_()
 {
-    system("python -c 'import readchar;u=ord(readchar.readchar());f=open(\"c.txt\",\"w\");f.write(str(u))'"); //Obviously very hacked together
+    system("python -c 'import readchar;u=ord(readchar.readchar());f=open(\"c.txt\",\"w\");f.write(str(u));f.close()'"); //Obviously very hacked together
     ifstream i;
     i.open("c.txt");
     int u;
