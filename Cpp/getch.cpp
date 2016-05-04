@@ -18,7 +18,7 @@ int getch_()
 #ifdef __linux__
 #include <fstream>
 #include <cstdlib>
-//Python must be compiled with curses
+//Python must be compiled with readchar
 int getch_()
 {
     //system("python -c 'import readchar;u=ord(readchar.readchar());f=open(\"c.txt\",\"w\");f.write(str(u));f.close()'"); //Obviously very hacked together
