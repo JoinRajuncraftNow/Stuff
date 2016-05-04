@@ -10,7 +10,7 @@
 using namespace std;
 #ifdef _WIN64
 #include <conio.h>
-int getch_()
+int key()
 {
 	return getch();
 }
@@ -19,7 +19,7 @@ int getch_()
 #include <fstream>
 #include <cstdlib>
 //Python must be compiled with readchar
-int getch_()
+int key()
 {
     //system("python -c 'import readchar;u=ord(readchar.readchar());f=open(\"c.txt\",\"w\");f.write(str(u));f.close()'"); //Obviously very hacked together
     system("python py.py")
@@ -36,5 +36,5 @@ int getch_()
 int main()
 {
 	int u;
-	for(;;){u=getch_();cout << u << endl;}
+	for(;;){u=key();cout << u << endl;}
 }
