@@ -22,7 +22,7 @@ int key()
 int key()
 {
     //system("python -c 'import readchar;u=ord(readchar.readchar());f=open(\"c.txt\",\"w\");f.write(str(u));f.close()'"); //Obviously very hacked together
-    system("python py.py")
+    system("python py.py");
     ifstream i;
     i.open("c.txt");
     int u;
