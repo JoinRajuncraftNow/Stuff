@@ -11,3 +11,4 @@ def key():
     f.close()
   else:
     os.system("read -n 1 c; echo $c>temp.txt;echo -e -n '\\b'")
+key()
