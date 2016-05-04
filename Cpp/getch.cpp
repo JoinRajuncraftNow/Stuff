@@ -18,7 +18,7 @@ int key()
 #ifdef __linux__
 #include <fstream>
 #include <cstdlib>
-//Python must be compiled with readchar
+//Python must be compiled with readchar, or read -n must work
 int key()
 {
     //system("python -c 'import readchar;u=ord(readchar.readchar());f=open(\"c.txt\",\"w\");f.write(str(u));f.close()'"); //Obviously very hacked together
