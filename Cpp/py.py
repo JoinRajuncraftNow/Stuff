@@ -7,7 +7,7 @@ except:
 def key():
   if has_r:
     f=open("c.txt","w")
-    f.write(ord(readchar.readchar()))
+    f.write(str(ord(readchar.readchar())))
     f.close()
   else:
     os.system("read -n 1 c; echo $c>temp.txt;echo -e -n '\\b'")
