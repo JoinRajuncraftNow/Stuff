@@ -19,7 +19,6 @@ int key()
 #include <fstream>
 #include <cstdlib>
 #include <vector>
-#include <iostream>
 //Python must be compiled with readchar, or read -n must work
 int key()
 {
