@@ -23,37 +23,36 @@ int key()
 //Python must be compiled with readchar, or read -n must work
 int key()
 {
-    //system("python -c 'import readchar;u=ord(readchar.readchar());f=open(\"c.txt\",\"w\");f.write(str(u));f.close()'"); //Obviously very hacked together
-    static vector<int> reserve;
-         ifstream i;
-         i.open("c.txt");
-         int u;
-    if(reserve.size()==0)
-    {
-         system("python py.py;wait");
-         while(!(i.eof()))
-         {
-               i >> u;
-               reserve.push_back(u);
-         }
-    }
-        u=reserve[0];
-        reserve.erase(reserve.begin());
-        i.close();
-		ofstream o;
-		o.open("c.txt",ios::trunc);
-		int j=0;
-		while(j != reserve.size())
+	static vector<int> reserve;
+	ifstream i;
+	i.open("c.txt");
+	int u;
+	if(reserve.size()==0)
+	{
+		system("python py.py;wait");
+		while(!(i.eof()))
 		{
-			o << reserve[j] << " ";
-			j++;
+			i >> u;
+			reserve.push_back(u);
 		}
-		o.close();
-		if(reserve.size()==1)
-		{
-			reserve.erase(reserve.begin());
-		}
-        return u;
+	}
+	u=reserve[0];
+	reserve.erase(reserve.begin());
+	i.close();
+	ofstream o;
+	o.open("c.txt",ios::trunc);
+	int j=0;
+	while(j != reserve.size())
+	{
+		o << reserve[j] << " ";
+		j++;
+	}
+	o.close();
+	if(reserve.size()==1)
+	{
+		reserve.erase(reserve.begin());
+	}
+	return u;
 }
 #endif
 
