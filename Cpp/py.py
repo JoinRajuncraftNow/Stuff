@@ -10,8 +10,8 @@ def key():
     u=readchar.readkey()
     i=0
     while i!=len(u):
-        f.write(str(ord(u[i]))+" ")
-        i+=1
+      f.write(str(ord(u[i]))+" ")
+      i+=1
     f.close()
   else:
     os.system("read -n 1 c; echo $c>temp.txt;echo -e -n '\\b'")
