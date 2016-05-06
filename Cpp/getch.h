@@ -55,10 +55,3 @@ int key()
 	return u;
 }
 #endif
-
-#include <iostream>
-int main()
-{
-	int u;
-	for(;;){u=key();cout << u << endl;}
-}
