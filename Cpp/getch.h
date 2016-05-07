@@ -29,7 +29,7 @@ int key()
 	if(reserve.size()==0)
 	{
 		system("python py.py;wait");
-		while(!(i.eof()))
+		while(!i.eof())
 		{
 			i >> u;
 			reserve.push_back(u);
@@ -48,9 +48,7 @@ int key()
 	}
 	o.close();
 	if(reserve.size()==1)
-	{
 		reserve.erase(reserve.begin());
-	}
 	return u;
 }
 #endif
