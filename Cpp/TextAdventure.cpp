@@ -300,14 +300,14 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 		cout << "Something approaches..." << endl << "A" << vowel(monster) << " " << monster << " jumps out!" << endl;
 		while(c==0)
 		{
-			string att;
+			char att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
 			cout << "Health: " << health << endl << "def: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl;
 			cout << "Command: ";
 			if(t==0)
 			{
-				getline(cin, att);
-				if(att=="b"||att=="B")
+				att=key();
+				if(att=='b'|att=='B')
 				{
 					cout << endl << "Big Slash!" << endl;
 					chance=gen(1,4);
@@ -319,7 +319,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 						whealth-=gen(15,50);
 					}
 				}else{
-					if(att=="q"||att=="Q")
+					if(att=='q'||att=='Q')
 					{
 						cout << endl << "Quick Slash!" << endl;
 						chance=gen(1,20);
@@ -331,7 +331,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 							whealth-=gen(5,15);
 						}
 					}else{
-						if(att=="d"||att=="D")
+						if(att=='d'||att=='D')
 						{
 							cout << endl << "Dodge!" << endl;
 							chance=gen(1,4);
@@ -344,7 +344,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
                                 			cout << "Failed." << endl;
                             				}
                         			}else{
-                            			if(att=="m"||att=="M")
+                            			if(att=='m'||att=='M')
                             			{
                                 			f=1;
                                 			if(m>0)
@@ -443,12 +443,12 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 		c=0;
 		while(c==0)
 		{
-			string att;
+			char att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl << "Command: ";
 			if(t==0)
 			{
-				getline(cin, att);
-				if(att=="b"||att=="B")
+				att = key();
+				if(att=='b'||att=='B')
 				{
 					cout << endl << "Big Slash!" << endl;
 					chance=gen(1,4);
@@ -460,7 +460,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 						whealth-=gen(15,50);
 					}
 				}else{
-					if(att=="q"||att=="Q")
+					if(att=='q'||att=='Q')
 					{
 						cout << endl << "Quick Slash!" << endl;
 						chance=gen(1,20);
@@ -472,7 +472,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 							whealth-=gen(5,15);
 						}
 					}else{
-						if(att=="d"||att=="D")
+						if(att=='d'||att=='D')
 						{
 							cout << endl << "Dodge!" << endl;
 							chance=gen(1,4);
@@ -485,7 +485,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
                                					cout << "Failed." << endl;
                         				}
                 				}else{
-                        				if(att=="m"||att=="M")
+                        				if(att=='m'||att=='M')
                         				{
                         				        f=1;
                         	        			if(m>0)
@@ -584,14 +584,14 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 		c=0;
 		while(c==0)
 		{
-			string att;
+			char att;
 			cout << "-------Combat-------" << endl << "B-Big slash: 15-50 damage, 25% chance of missing." << endl << "Q-Quick Slash: 5-12 damage, 10% chance of missing." << endl << "D-Dodge: 75% chance of dodging all damage." << endl << "M-Medkit: Restores you to full health." << endl << "--------------------" << endl;
 			cout << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl << "Enemy Health: " << whealth << endl; //problems occur here, no reason why!
 			cout << "Command: ";
 			if(t==0)
 			{
-				getline(cin, att);
-				if(att=="b"||att=="B")
+				att = key();
+				if(att=='b'||att=='B')
 				{
 					cout << endl << "Big Slash!" << endl;
 					chance=gen(1,4);
@@ -603,7 +603,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 						whealth-=gen(15,50);
 					}
 				}else{
-					if(att=="q"||att=="Q")
+					if(att=='q'||att=='Q')
 					{
 						cout << endl << "Quick Slash!" << endl;
 						chance=gen(1,20);
@@ -615,7 +615,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 							whealth-=gen(5,15);
 						}
 					}else{
-						if(att=="d"||att=="D")
+						if(att=='d'||att=='D')
 						{
 							cout << endl << "Dodge!" << endl;
 							chance=gen(1,4);
@@ -628,7 +628,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
                                 				cout << "Failed." << endl;
                         				}
                         			}else{
-                        				if(att=="m"||att=="M")
+                        				if(att=='m'||att=='M')
                             				{
                                 				f=1;
                                 				if(m>0)
