@@ -833,7 +833,7 @@ void command(char input, int& x, int& y, int& z, int& h, int& health, int& def, 
 							} else {
 							if(input==3) //Secret
 								{
-									cout << "Should have exited!"
+									cout << "Should have exited! But don't know how!" << endl;
 								}else{
 									if(input=='m'||input=='M')
 									{
