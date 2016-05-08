@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
-#include <getch.h>
+#include "getch.h"
 #define par health,m,def,x,y,z,qx,qy,qz,map,quest
 using namespace std;
 /*
@@ -801,53 +801,41 @@ void west(int& x, int& y, int& z) //Move west if you can
 	}
 }
 
-void command(string input, int& x, int& y, int& z, int& h, int& health, int& def, int& m, int& qx, int& qy, int& qz, int map[100][100][5], int& quest) //Tests for which command you inputted
+void command(char input, int& x, int& y, int& z, int& h, int& health, int& def, int& m, int& qx, int& qy, int& qz, int map[100][100][5], int& quest) //Tests for which command you inputted
 {
-	if(input=="n"||input=="N")
+	if(input=='n'||input=='n')
 	{
 		north(x, y, z);
 	} else {
-		if(input=="s"||input=="S")
+		if(input=='s'||input=='S')
 		{
 			south(x, y, z);
 		} else {
-			if(input=="e"||input=="E")
+			if(input=='e'||input=='E')
 			{
 				east(x, y, z);
 			} else {
-				if(input=="w"||input=="W")
+				if(input=='w'||input=='W')
 				{
 					west(x, y, z);
 				} else {
-					if(input=="h"||input=="H")
+					if(input=='h'||input=='H')
 					{
 					cout << "Commands:" << endl << "E-east" << endl << "W-west" << endl << "N-north" << endl << "S-south" << endl << "D-down" << endl << "U-up" << endl << "M-medkit" << endl << "V-save" << endl;
 					} else {
-						if(input=="u"||input=="U")
+						if(input=='u'||input=='U')
 						{	
 							up(x, y, z, h);
 						} else {
-							if(input=="D"||input=="d")
+							if(input=='d'||input=='D')
 							{
 								down(x, y, z, h);
 							} else {
-								if(input=="116728") //Secret
+							if(input==3) //Secret
 								{
-									cout << "Cheat Activated!" << endl;
-									cout << "X: ";
-									cin >> x;
-									cout << "Y: ";
-									cin >> y;
-									cout << "Z: ";
-									cin >> z;
-									cout << "Health: ";
-									cin >> health;
-									cout << "Defence: ";
-									cin >> def;
-									cout << "Medkits: ";
-									cin >> m;
+									cout << "Should have exited!"
 								}else{
-									if(input=="M"||input=="m")
+									if(input=='m'||input=='M')
 									{
 										if(m>0)
 										{
@@ -857,7 +845,7 @@ void command(string input, int& x, int& y, int& z, int& h, int& health, int& def
 											cout << "You have no medkits!" << endl;
 										}
 									}
-									else if(input=="V"||input=="v")
+									else if(input=='V'||input=='v')
 									{
 										save(par);
 									}
@@ -1021,7 +1009,8 @@ void endline() //What is this?
 int main()
 {
 	srand(time(NULL));
-	string com, pause;
+	string pause;
+	char com;
 	int x=0, y=0, z=0, def=0, num, m=0, quest=0, qx=1000, qy=1000, qz=1000,health=1000, menu, done=0;
 	int map[100][100][5];
 	//Just made this in like 2 mins. Will finish in english class.
@@ -1076,7 +1065,7 @@ int main()
 		}
 		cout << "Coordinates: " << "(" << x << ", " << y << ", " << z << ")" << endl << "Health: " << health << endl << "Defence: " << def << endl << "Medkits: " << m << endl;
 		cout << "Command: "; 
-		getline(cin, com);
+		com = key();
 		endline();
 		cout << "---------------------------------------------------------------------------" << endl;
 		command(com, x, y, z, num, health, def, m, qx, qy, qz, map, quest);
