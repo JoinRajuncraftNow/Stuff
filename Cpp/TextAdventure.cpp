@@ -803,7 +803,7 @@ void west(int& x, int& y, int& z) //Move west if you can
 
 void command(char input, int& x, int& y, int& z, int& h, int& health, int& def, int& m, int& qx, int& qy, int& qz, int map[100][100][5], int& quest) //Tests for which command you inputted
 {
-	if(input=='n'||input=='n')
+	if(input=='n'||input=='N')
 	{
 		north(x, y, z);
 	} else {
