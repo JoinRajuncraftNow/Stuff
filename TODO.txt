@@ -1,6 +1,2 @@
 Todo List for Alex:
-1. Finish Pet.cpp's file stuff and start working on the actual mechanics.
-2. Work on planned features for TextAdventureHardcore.cpp
-
-Todo List for Zach:
-1. Make an HTML version!
+1. Work on planned features for TextAdventureHardcore.cpp
