@@ -223,7 +223,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle
 			{
 				cout << "The " << boss_name << " Attacks!" <<  endl;
 				damage=gen(20,100)-def;
-				if(def>damage||def==damage)
+				if(def>(damage+def)||def==(damage+def))
 				{
 					if(f==1)
 					{
@@ -248,7 +248,7 @@ void boss(int& health, int def, int& m, int num) //Boss Battle
 					stun=1;
 					cout << "The " << boss_name << " Charges!" <<  endl << "You have been stunned!" << endl;
 					damage=gen(25, 200)-def;
-					if(def>damage||def==damage)
+					if(def>(damage+def)||def==(damage+def))
 					{
 						if(f==1)
 						{
@@ -369,7 +369,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 		{
 			cout << monster << " Attacks!" <<  endl;
 			damage=gen(5,25)-def;
-			if((def>damage||def==damage)&&f==0)
+			if((def>(damage+def)||def==(damage+def))&&f==0)
 			{
 				cout << "Your armor blocked the damage!" << endl;
 				damage=0;
@@ -390,7 +390,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			}else{
 				cout << monster << " Charges!" <<  endl;
 				damage=gen(10,25)-def;
-				if((def>damage||def==damage)&&f==0)
+				if((def>(damage+def)||def==(damage+def))&&f==0)
 				{
 					cout << "Your armor blocked the damage!" << endl;
 					damage=0;
@@ -510,7 +510,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			{
 				cout << monster << " Attacks!" <<  endl;
 				damage=gen(7,25)-def;
-				if((def>damage||def==damage)&&f==0)
+				if((def>(damage+def)||def==(damage+def))&&f==0)
 				{
 					cout << "Your armor blocked the damage!" << endl;
 					damage=0;
@@ -531,7 +531,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				}else{
 					cout << monster << " Charges!" <<  endl;
 					damage=gen(15,135)-def;
-					if((def>damage||def==damage)&&f==0)
+					if((def>(damage+def)||def==(damage+def))&&f==0)
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
@@ -653,7 +653,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			{
 				cout << monster << " Attacks!" <<  endl;
 				damage=gen(7,25)-def;
-				if((def>damage||def==damage)&&f==0)
+				if((def>(damage+def)||def==(damage+def))&&f==0)
 				{
 					cout << "Your armor blocked the damage!" << endl;
 					damage=0;
@@ -674,7 +674,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 				}else{
 					cout << monster << " Charges!" <<  endl;
 					damage=gen(15,135)-def;
-					if((def>damage||def==damage)&&f==0)
+					if((def>(damage+def)||def==(damage+def))&&f==0)
 					{
 						cout << "Your armor blocked the damage!" << endl;
 						damage=0;
