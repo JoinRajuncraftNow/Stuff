@@ -6,7 +6,6 @@ using namespace std;
 int read()
 {
 	int t=time(0);
-	int n=0;
 	ifstream in("data.txt");
 	in >> n;
 	in.close();
