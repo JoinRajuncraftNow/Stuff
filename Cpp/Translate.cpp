@@ -18,7 +18,7 @@ int main()
  }
  else
  {
-  cout<<"Get away from here, retard!";
+  cout << "Get away from here, retard!";
  }
  return 0;
 }
