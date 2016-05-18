@@ -51,4 +51,9 @@ int key()
 		reserve.erase(reserve.begin());
 	return u;
 }
+int getch() //Just in the case that Alex uses getch
+{
+	return key();
+}
+}
 #endif
