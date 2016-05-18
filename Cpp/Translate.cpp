@@ -1,10 +1,9 @@
 #include <iostream>
 #include <string>
 using namespace std;
-//Not going to make seperate functions because this is so short.
 int main()
 {
- int x=0, y=0; //So no possible errors and stuff
+ int x, y;
  string str, test="qwertyuiop[asdfghjkl;zxcvbnm,QWERTYUIOP{ASDFGHJKL:ZXCVBNM<";
  cout << "[1-Translate to/2-Translate from]" << endl;
  cin >> x;
