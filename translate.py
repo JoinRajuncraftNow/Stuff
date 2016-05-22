@@ -73,3 +73,19 @@ def phrase_from_alex(phrase):
   t=phrase.split(' ')
   r=[word_from_alex(word) for word in t]
   return " ".join(r)
+def get_input():
+  try:
+    return raw_input()
+  except:
+    return input()
+print("[1-Translate to/2-Translate from]")
+s=get_input()
+n=s.split(" ")[0]
+if n=="1":
+  s_=get_input()
+  print(phrase_to_alex(s_))
+elif n=="2":
+  s_=get_input()
+  print(phrase_from_alex(s_))
+else:
+  import sys
