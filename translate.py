@@ -54,7 +54,7 @@ def word_to_alex(word):
     else:
       r+=i
     j+=1
- return r
+  return r
 def word_from_alex(word):
   r=""
   j=0
