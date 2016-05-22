@@ -89,3 +89,4 @@ elif n=="2":
   print(phrase_from_alex(s_))
 else:
   import sys
+  sys.stdout.write("Get away from here, retard!")
