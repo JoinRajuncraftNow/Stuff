@@ -43,16 +43,7 @@ void load_others(int& health, int& m, int& def, int& x, int& y, int& z, int& qx,
 	}
 	ifstream inf;
 	inf.open("save_file.txt");
-	inf >> health;
-	inf >> m;
-	inf >> def;
-	inf >> x;
-	inf >> y;
-	inf >> z;
-	inf >> qx;
-	inf >> qy;
-	inf >> qz;
-	inf >> quest;
+	inf >> health >> m >> def >> x >> y >> z >> qx >> qy >> qz >> quest;
 	inf.close();
 }
 
