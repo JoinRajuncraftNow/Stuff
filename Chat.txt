@@ -22,4 +22,5 @@ int main()
   cout << whatever << endl;
   return 0;
 }
-Thanks, there was nothing in any tutorials I could find. I figured there had to be a simple way to do it. Are there any limits or anything on this? Can it be used for chars and such too?
+$ Thanks, there was nothing in any tutorials I could find. I figured there had to be a simple way to do it. Are there any limits or anything on this? Can it be used for chars and such too?
+# (STOP STEALING MY SIGIL!), Yes, you can use it for any type of variable. But there is a limitation: I don't think you can assign to those variables, you have to do that in the main function!
