@@ -22,3 +22,4 @@ int main()
   cout << whatever << endl;
   return 0;
 }
+Thanks, there was nothing in any tutorials I could find. I fugired there had to be a simple way to do it. Are there any limits or anything on this? Can it be used for chars and such too?
