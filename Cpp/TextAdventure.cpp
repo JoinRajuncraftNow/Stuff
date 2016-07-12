@@ -298,7 +298,7 @@ void combat(int z, int& num, int& health, int& def, int& m) //Main combat
 			if(t==0)
 			{
 				att=key();
-				if(att=='b'|att=='B')
+				if(att=='b'||att=='B')
 				{
 					cout << endl << "Big Slash!" << endl;
 					chance=gen(1,4);
