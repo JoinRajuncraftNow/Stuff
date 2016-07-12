@@ -55,5 +55,4 @@ int getch() //Just in the case that Alex uses getch
 {
 	return key();
 }
-}
 #endif
