@@ -4,7 +4,7 @@
 #include <ctime>
 #include <fstream>
 //#include "getch.h"
-#include <conio>
+#include <conio.h>
 #define par health,m,def,x,y,z,qx,qy,qz,map,quest
 using namespace std;
 /*
