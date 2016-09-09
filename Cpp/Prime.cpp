@@ -7,7 +7,7 @@ int main()
 	test=input;
 	while(test>0)
 	{
-		if(input%test==0) //If I remember correctly, that's how you do it.
+		if(input%test==0&&test!=input&&test!=1) //If I remember correctly, that's how you do it.
 		{
 			prime=0;
 			cout << endl << test;
