@@ -16,6 +16,7 @@ int main()
 	}
 	if(prime=1)
 	{
-		cout << "The number is Prime!";
+		cout << endl << "The number is Prime!";
 	}
+	cin.get()
 }
