@@ -14,9 +14,9 @@ int main()
 		}
 		test--;
 	}
-	if(prime=1)
+	if(prime==1)
 	{
 		cout << endl << "The number is Prime!";
 	}
-	cin.get();
+	cin>>prime; //To pause
 }
