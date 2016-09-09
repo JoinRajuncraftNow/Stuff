@@ -18,5 +18,5 @@ int main()
 	{
 		cout << endl << "The number is Prime!";
 	}
-	cin.get()
+	cin.get();
 }
