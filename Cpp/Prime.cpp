@@ -10,8 +10,10 @@ int main()
 	{
 		if(input%test==0&&test!=input&&test!=1) 
 		{
-			primet=0;
+			prime=0;
 			inputt=test;
+			testt=test;
+			primet=1;
 			while(testt>0)
 			{
 				if(inputt%testt==0&&testt!=inputt&&testt!=1)
@@ -25,12 +27,11 @@ int main()
 				cout << endl << test;
 			}
 		}
-		cin>>prime; //To pause
 		test--;
 	}
 	if(prime==1)
 	{
 		cout << endl << "The number is Prime!";
 	}
-	cin>>prime; //To pause
+	cin >> prime;
 }
