@@ -17,6 +17,8 @@ Everyone is free to spot bugs and such. After all, it is on github.
 Check out the planned features.
 If you have any suggestions, or just want to contact me. My email is thecajunthatrages@gmail.com
 */
+
+//CHANGE 19taylzj to YOUR USERNAME!
 #define key getch
 bool exists (string name) {
     ifstream f(name.c_str());
@@ -32,19 +34,19 @@ bool exists (string name) {
 void save_others(int health, int m, int def, int x, int y, int z, int qx, int qy, int qz,int quest)
 {
 	ofstream outf;
-	outf.open("save_file.txt",::std::ofstream::trunc | ::std::ofstream::out);
+	outf.open("C:\\Users\\19taylzj\\save_file.txt",::std::ofstream::trunc | ::std::ofstream::out);
 	outf << health << endl << m << endl << def << endl << x << endl << y << endl << z << endl << qx << endl << qy << endl << qz << endl << quest << endl;
 	outf.close();
 }
 
 void load_others(int& health, int& m, int& def, int& x, int& y, int& z, int& qx, int& qy, int& qz,int& quest)
 {
-	if(!exists("save_file.txt"))
+	if(!exists("C:\\Users\\19taylzj\\save_file.txt"))
 	{
 		return; //File doesn't exist, do nothing
 	}
 	ifstream inf;
-	inf.open("save_file.txt");
+	inf.open("C:\\Users\\19taylzj\\save_file.txt");
 	inf >> health >> m >> def >> x >> y >> z >> qx >> qy >> qz >> quest;
 	inf.close();
 }
@@ -53,7 +55,7 @@ void save_board(int board[100][100][5]) //Reference passed by default for arrays
 {
 	int i=0,j=0,k=0;
 	ofstream outf;
-	outf.open("board_file.txt",::std::ofstream::trunc | ::std::ofstream::out);
+	outf.open("C:\\Users\\19taylzj\\board_file.txt",::std::ofstream::trunc | ::std::ofstream::out);
 	while(i!=100)
 	{
 		j=0;
@@ -74,10 +76,10 @@ void save_board(int board[100][100][5]) //Reference passed by default for arrays
 
 void load_board(int board[100][100][5])
 {
-	if(!exists("board_file.txt")){ return; }
+	if(!exists("C:\\Users\\19taylzj\\board_file.txt")){ return; }
 	int i=0,j=0,k=0;
 	ifstream inf;
-	inf.open("board_file.txt");
+	inf.open("C:\\Users\\19taylzj\\board_file.txt");
 	while(i!=100)
 	{
 		inf >> board[i][j][k];
