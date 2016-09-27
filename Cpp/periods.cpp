@@ -1,6 +1,6 @@
 #include <time.h>
 #include <stdio.h>
-
+#include <iostream> //Oops, accidentally deeted it
 time_t
 day_seconds() 
 {
