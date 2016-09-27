@@ -1,6 +1,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <iostream> //Oops, accidentally deeted it
+using namespace std;
 //deeted it? LOL
 time_t day_seconds() 
 {
