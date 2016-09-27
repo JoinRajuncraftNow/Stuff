@@ -19,8 +19,8 @@ time_t day_seconds()
 int main() 
 {
 	cin.ignore(10000,'\n');
-	cout << day_seconds();
 	time_t t = day_seconds();
+	cout << day_seconds();
 	if(t<35700){
 		cout << "There are " << 35700-t << " seconds until 1st period ends!" << endl;
 	}else if(t<42000){
