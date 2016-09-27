@@ -1,5 +1,20 @@
 #include <time.h>
+#ifdef __linux
+#define LINUX
+#endif
+#ifdef __linux__
+#define LINUX
+#endif
+#ifdef __unix
+#define LINUX
+#endif
+#ifdef __unix__
+#define LINUX
+#endif
+#ifndef LINUX
 #include <windows.h>
+#endif
+#include <stdlib.h>
 #include <iostream>
 using namespace std;
 int day_seconds()
@@ -12,15 +27,19 @@ int main()
 {
 	while(true)
 	{
-		int seconds, minutes, hours, until;
-		if(day_seconds()<35700){
-			until=35700-day_seconds();
-		}else if(day_seconds()<42000){
-			until=42000-day_seconds();
-		}else if(day_seconds()<48000){
-			until=48000-day_seconds();
-		}else if(day_seconds()<55200){
-			until=55200-day_seconds();
+		int seconds, minutes, hours, until, ds;
+		ds = day_seconds();
+		if(ds<=35700){
+			until=35700-ds;
+		}else if(ds<=42000){
+			until=42000-ds;
+		}else if(ds<=48000){
+			until=48000-ds;
+		}else if(ds<=55200){
+			until=55200-ds;
+		} else {
+			cout << "Wrong time and/or glitch!" << endl;
+			return 0;
 		}
 		if(until<120)
 		{
@@ -36,7 +55,11 @@ int main()
 				cout << "There are " << minutes << " minutes, and " << seconds << " seconds until the bell!" << endl;
 			}
 		}
+#ifndef LINUX
 		Sleep(1000);
+#endif
+#ifdef LINUX
+		system("sleep 1");
 	}
 }
 /* PERIODS
