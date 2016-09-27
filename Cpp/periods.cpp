@@ -25,7 +25,7 @@ int main()
 	 cout << "There are " << until << " seconds until the bell!" << endl;
 	}else{
 		seconds=until%60;
-		minutes=(seconds-until)/60
+		minutes=(seconds-until)/60;
 	}
 	cin.ignore(10000,'\n');
 	main();
