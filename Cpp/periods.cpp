@@ -60,6 +60,7 @@ int main()
 #endif
 #ifdef LINUX
 		system("sleep 1");
+#endif
 	}
 }
 /* PERIODS
