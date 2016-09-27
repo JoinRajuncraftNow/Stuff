@@ -25,9 +25,16 @@ int main()
 	 cout << "There are " << until << " seconds until the bell!" << endl;
 	}else{
 		seconds=until%60;
-		minutes=(seconds-until)/60;
+		minutes=(until-seconds)/60;
+		if(minutes>60)
+		{
+			minutes-=60;
+			cout << "There is 1 hour, " << minutes << " minutes, and " << seconds << " seconds until the bell!" << endl;
+		}else{
+			cout << "There are " << minutes << " minutes, and " << seconds << " seconds until the bell!" << endl;
+		}
 	}
-	cin.ignore(10000,'\n');
+	Sleep(1000);
 	main();
 }
 /* PERIODS
