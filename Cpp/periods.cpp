@@ -1,8 +1,8 @@
 #include <time.h>
 #include <stdio.h>
 #include <iostream> //Oops, accidentally deeted it
-time_t
-day_seconds() 
+//deeted it? LOL
+time_t day_seconds() 
 {
 	time_t t1, t2;
 	struct tm tms;
@@ -15,19 +15,19 @@ day_seconds()
 	return t1 - t2;
 }
 
-int
-main() 
+int main() 
 {
 	cin.ignore(10000,'\n');
 	cout << day_seconds();
-	if(day_seconds()<35700){
-		cout << "There are " << 35700-day_seconds() << " seconds until 2nd period!" << endl;
-	}else if(day_seconds()<42000){
-		cout << "There are " << 42000-day_seconds() << " seconds until 2nd period!" << endl;
-	}else if(day_seconds()<48000){
-		cout << "There are " << 48000-day_seconds() << " seconds until 2nd period!" << endl;
-	}else if(day_seconds()<55200){
-		cout << "There are " << 55200-day_seconds() << " seconds until 2nd period!" << endl;//I will do conversions later, just testing now.
+	time_t t = day_seconds();
+	if(t<35700){
+		cout << "There are " << 35700-t << " seconds until 1st period ends!" << endl;
+	}else if(t<42000){
+		cout << "There are " << 42000-t << " seconds until 2nd period ends!" << endl;
+	}else if(t<48000){
+		cout << "There are " << 48000-t << " seconds until 3rd period ends!" << endl;
+	}else if(t<55200){
+		cout << "There are " << 55200-t << " seconds until 4th period ends!" << endl;//I will do conversions later, just testing now.
 	}
 	return 0;
 }
