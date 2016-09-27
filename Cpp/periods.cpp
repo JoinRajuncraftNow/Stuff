@@ -10,14 +10,22 @@ int day_seconds()
 }
 int main() 
 {
+	int seconds, minutes, hours, until;
 	if(day_seconds()<35700){
-		cout << "There are " << 35700-day_seconds() << " seconds until 1st period ends!" << endl;
+		until=35700-day_seconds();
 	}else if(day_seconds()<42000){
-		cout << "There are " << 42000-day_seconds() << " seconds until 2nd period ends!" << endl;
+		until=42000-day_seconds();
 	}else if(day_seconds()<48000){
-		cout << "There are " << 48000-day_seconds() << " seconds until 3rd period ends!" << endl;
+		until=48000-day_seconds();
 	}else if(day_seconds()<55200){
-		cout << "There are " << 55200-day_seconds() << " seconds until 4th period ends!" << endl;//I will do conversions later, just testing now.
+		until=55200-day_seconds();
+	}
+	if(until<120)
+	{
+	 cout << "There are " << until << " seconds until the bell!" << endl;
+	}else{
+		seconds=until%60;
+		minutes=(seconds-until)/60
 	}
 	cin.ignore(10000,'\n');
 	main();
