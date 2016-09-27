@@ -10,17 +10,17 @@ int day_seconds()
 }
 int main() 
 {
-	cin.ignore(10000,'\n');
-	if(t<35700){
+	if(day_seconds()<35700){
 		cout << "There are " << 35700-day_seconds() << " seconds until 1st period ends!" << endl;
-	}else if(t<42000){
+	}else if(day_seconds()<42000){
 		cout << "There are " << 42000-day_seconds() << " seconds until 2nd period ends!" << endl;
-	}else if(t<48000){
+	}else if(day_seconds()<48000){
 		cout << "There are " << 48000-day_seconds() << " seconds until 3rd period ends!" << endl;
-	}else if(t<55200){
+	}else if(day_seconds()<55200){
 		cout << "There are " << 55200-day_seconds() << " seconds until 4th period ends!" << endl;//I will do conversions later, just testing now.
 	}
-	return 0;
+	cin.ignore(10000,'\n');
+	main();
 }
 /* PERIODS
 9:55 - 35,700
