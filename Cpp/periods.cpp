@@ -1,34 +1,24 @@
 #include <time.h>
-#include <stdio.h>
-#include <iostream> //Oops, accidentally deeted it
+#include <windows.h>
+#include <iostream>
 using namespace std;
-//deeted it? LOL
-time_t day_seconds() 
+int day_seconds()
 {
-	time_t t1, t2;
-	struct tm tms;
-	time(&t1);
-	localtime_r(&t1, &tms);
-	tms.tm_hour = 0;
-	tms.tm_min = 0;
-	tms.tm_sec = 0;
-	t2 = mktime(&tms);
-	return t1 - t2;
+	time_t stamp=time(NULL);
+	struct tm* diferencia=localtime(&stamp);
+	return ((diferencia->tm_hour*3600)+(diferencia->tm_min*60)+(diferencia->tm_sec));
 }
-
 int main() 
 {
 	cin.ignore(10000,'\n');
-	time_t t = day_seconds();
-	cout << day_seconds();
 	if(t<35700){
-		cout << "There are " << 35700-t << " seconds until 1st period ends!" << endl;
+		cout << "There are " << 35700-day_seconds() << " seconds until 1st period ends!" << endl;
 	}else if(t<42000){
-		cout << "There are " << 42000-t << " seconds until 2nd period ends!" << endl;
+		cout << "There are " << 42000-day_seconds() << " seconds until 2nd period ends!" << endl;
 	}else if(t<48000){
-		cout << "There are " << 48000-t << " seconds until 3rd period ends!" << endl;
+		cout << "There are " << 48000-day_seconds() << " seconds until 3rd period ends!" << endl;
 	}else if(t<55200){
-		cout << "There are " << 55200-t << " seconds until 4th period ends!" << endl;//I will do conversions later, just testing now.
+		cout << "There are " << 55200-day_seconds() << " seconds until 4th period ends!" << endl;//I will do conversions later, just testing now.
 	}
 	return 0;
 }
