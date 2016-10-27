@@ -3,7 +3,7 @@
 using namespace std;
 bool testprime(int input) //A simpler and faster prime function than I normally make.
 {
-  if(input%2==0){ return false; }
+ 	if(input%2==0){ return false; }
 	bool prime=true;
 	input=ceil(sqrt(input)); //Square root input, then round up.
 	int test=input;
