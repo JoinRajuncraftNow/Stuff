@@ -20,6 +20,8 @@ bool testprime(int input) //A simpler and faster prime function than I normally 
 int main() //main function
 {
 	int num;
+	cin.clear();
 	cin >> num; //User input into integer 'num'
-	cout << testprime(num) << endl; //Output result of testprime
+	cout << testprime(num) << endl << endl; //Output result of testprime
+	main();
 }
