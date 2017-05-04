@@ -8,7 +8,7 @@ string vowel(string arg) //Little helper function for grammar, just tells if an 
 }
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return (rand() % (y + 1) + x); //%y did not give the top number, thus one needs % (y+1)
+	return (rand() % (y - x + 1) + x); //%y did not give the top number, thus one needs % (y+1). AND somehow I screwed that up.
 }
 
 void death() //Outputs "You have died!" then stops.
